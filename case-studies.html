@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Studies | The Solian Wolves</title>
+    <meta name="description"
+        content="See the data. Real results from real businesses. Before and after transformations.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        /* Specific Styles for Visualizers */
+        .comparison-section {
+            padding: var(--spacing-lg) 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .visualizer-card {
+            background: #0a0a0a;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .label-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 99px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .badge-bad {
+            background: rgba(239, 68, 68, 0.2);
+            color: #ef4444;
+            border: 1px solid #ef4444;
+        }
+
+        .badge-good {
+            background: rgba(34, 197, 94, 0.2);
+            color: #22c55e;
+            border: 1px solid #22c55e;
+        }
+
+        /* Code Diff Styles */
+        .code-block {
+            font-family: 'Courier New', monospace;
+            font-size: 0.8rem;
+            line-height: 1.5;
+            color: #d4d4d8;
+        }
+
+        .code-line {
+            display: block;
+        }
+
+        .code-line.red {
+            background: rgba(239, 68, 68, 0.1);
+            color: #fca5a5;
+        }
+
+        .code-line.green {
+            background: rgba(34, 197, 94, 0.1);
+            color: #86efac;
+        }
+
+        /* Lighthouse Score Styles */
+        .lh-circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .lh-bad {
+            border: 8px solid #ef4444;
+            color: #ef4444;
+        }
+
+        .lh-good {
+            border: 8px solid #22c55e;
+            color: #22c55e;
+            box-shadow: 0 0 30px rgba(34, 197, 94, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav style="position: fixed; top: 0; width: 100%; padding: 2rem; z-index: 100; mix-blend-mode: difference;">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="font-weight: 700; font-size: 1.2rem; letter-spacing: -0.02em;">THE SOLIAN WOLVES</div>
+            <div>
+                <a href="index.html#services"
+                    style="margin-left: 2rem; font-size: 0.9rem; text-transform: uppercase;">Services</a>
+                <a href="index.html#pricing"
+                    style="margin-left: 2rem; font-size: 0.9rem; text-transform: uppercase;">Pricing</a>
+                <a href="index.html#work"
+                    style="margin-left: 2rem; font-size: 0.9rem; text-transform: uppercase;">Work</a>
+                <a href="index.html#contact" class="btn btn-outline"
+                    style="padding: 0.5rem 1.5rem; margin-left: 2rem;">Audit Me</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="section-padding" style="padding-top: 15vh; padding-bottom: 5vh; text-align: center;">
+        <div class="container">
+            <h1>Evidence. Not Promises.</h1>
+            <p style="color: var(--text-secondary); max-width: 600px; margin: 1rem auto;">Detailed breakdowns of how we
+                fix, optimize, and scale stores.</p>
+        </div>
+    </div>
+
+    <!-- Case Study 1: The Spaghetti Code Fix -->
+    <section class="comparison-section">
+        <div class="container">
+            <h2>Case Study #01: The "Frankenstein" Theme</h2>
+            <p style="color: var(--text-secondary); max-width: 600px;">A 7-figure store was crashing during BFCM because
+                of 5 years of accumulated uninstalled app code. We refactored the entire architecture.</p>
+
+            <div class="comparison-grid">
+                <!-- Before -->
+                <div class="visualizer-card">
+                    <div class="label-badge badge-bad">BEFORE: BLOATED LEGACY CODE</div>
+                    <div class="code-block" style="margin-top: 1.5rem;">
+                        <span class="code-line red">- &lt;script src="app1.js"&gt;&lt;/script&gt;</span>
+                        <span class="code-line red">- &lt;script src="app2-legacy.js"&gt;&lt;/script&gt;</span>
+                        <span class="code-line">- {% for product in collection %}</span>
+                        <span class="code-line red">- {% include 'snippet-heavy' %}</span>
+                        <span class="code-line">- &lt;div class="grid-item"&gt;</span>
+                        <span class="code-line red">- &lt;!-- nested loops slowing render --&gt;</span>
+                        <span class="code-line">- &lt;/div&gt;</span>
+                        <span class="code-line">- {% endfor %}</span>
+                    </div>
+                </div>
+                <!-- After -->
+                <div class="visualizer-card">
+                    <div class="label-badge badge-good">AFTER: OPTIMIZED MODULES</div>
+                    <div class="code-block" style="margin-top: 1.5rem;">
+                        <span class="code-line green">+ &lt;script type="module"
+                            src="main.min.js"&gt;&lt;/script&gt;</span>
+                        <span class="code-line">+ {% render 'product-card', product: product %}</span>
+                        <span class="code-line">// Data fetching via Modern API Layers</span>
+                        <span class="code-line">// Lazy loaded images</span>
+                        <span class="code-line">// Critical CSS inlined</span>
+                        <span class="code-line green">+ Speed Index: 0.8s</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study 2: Speed & Performance -->
+    <section class="comparison-section">
+        <div class="container">
+            <h2>Case Study #02: Core Web Vitals Rescue</h2>
+            <p style="color: var(--text-secondary); max-width: 600px;">Google started penalizing this store for slow
+                Mobile LCP. We stripped the bloat and optimized the asset delivery pipeline.</p>
+
+            <div class="comparison-grid">
+                <!-- Before -->
+                <div class="visualizer-card" style="text-align: center;">
+                    <div class="label-badge badge-bad">BEFORE</div>
+                    <div style="margin-top: 2rem;">
+                        <div class="lh-circle lh-bad">32</div>
+                        <p style="margin-top: 1rem; color: #ef4444; font-weight: 500;">Performance Score</p>
+                    </div>
+                </div>
+                <!-- After -->
+                <div class="visualizer-card" style="text-align: center;">
+                    <div class="label-badge badge-good">AFTER</div>
+                    <div style="margin-top: 2rem;">
+                        <div class="lh-circle lh-good counter" data-target="98">0</div>
+                        <p style="margin-top: 1rem; color: #22c55e; font-weight: 500;">Performance Score</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study 3: SEO Listing -->
+    <section class="comparison-section">
+        <div class="container">
+            <h2>Case Study #03: Search Dominance</h2>
+            <p style="color: var(--text-secondary); max-width: 600px;">Moving from generic metadata to Rich Snippets
+                with JSON-LD schema integration.</p>
+
+            <div class="comparison-grid">
+                <!-- Before -->
+                <div class="visualizer-card">
+                    <div class="label-badge badge-bad">BEFORE</div>
+                    <div style="margin-top: 1.5rem; font-family: arial, sans-serif;">
+                        <div style="color: #1a0dab; font-size: 1.2rem; margin-bottom: 2px;">Buy Shoes Online | Best
+                            Sneaker Store</div>
+                        <div style="color: #006621; font-size: 0.9rem; margin-bottom: 2px;">
+                            www.example.com/products/shoes</div>
+                        <span style="color: #545454; font-size: 0.9rem;">We sell shoes. Buy sneakers here. Good
+                            prices.</span>
+                    </div>
+                </div>
+                <!-- After -->
+                <div class="visualizer-card">
+                    <div class="label-badge badge-good">AFTER</div>
+                    <div style="margin-top: 1.5rem; font-family: arial, sans-serif;">
+                        <div style="color: #1a0dab; font-size: 1.2rem; margin-bottom: 2px;">Premium Leather Sneakers |
+                            Urban Thread</div>
+                        <div style="color: #006621; font-size: 0.9rem; margin-bottom: 2px;">www.urbanthread.com/sneakers
+                        </div>
+                        <div style="color: #545454; font-size: 0.9rem;">
+                            <span style="color: #e67e22;">★★★★★</span> Rating: 4.9 - 1,204 reviews - $120.00 - In
+                            stock<br>
+                            Shop the latest collection of handcrafted leather sneakers. Free shipping over $100.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study 4: Customer Increase -->
+    <section class="comparison-section" style="border-bottom: none;">
+        <div class="container">
+            <h2>Case Study #04: The Revenue Graph</h2>
+            <p style="color: var(--text-secondary); max-width: 600px;">The result of Code + Speed + SEO fixing? 40% net
+                new customers in 90 days.</p>
+
+            <div class="visualizer-card"
+                style="margin-top: 2rem; height: 300px; display: flex; align-items: flex-end; justify-content: space-around; padding-bottom: 0;">
+                <div class="label-badge badge-good" style="top: 1rem; left: 1rem; right: auto;">CUSTOMER GROWTH</div>
+
+                <!-- Simple CSS Bar Chart -->
+                <div style="text-align: center; width: 10%;">
+                    <div style="height: 100px; background: #333; margin: 0 auto; border-radius: 4px 4px 0 0;"></div>
+                    <div style="margin-top: 0.5rem; color: var(--text-secondary); font-size: 0.8rem;">Month 1</div>
+                </div>
+                <div style="text-align: center; width: 10%;">
+                    <div style="height: 120px; background: #333; margin: 0 auto; border-radius: 4px 4px 0 0;"></div>
+                    <div style="margin-top: 0.5rem; color: var(--text-secondary); font-size: 0.8rem;">Month 2</div>
+                </div>
+                <div style="text-align: center; width: 10%;">
+                    <div style="height: 150px; background: #444; margin: 0 auto; border-radius: 4px 4px 0 0;"></div>
+                    <div style="margin-top: 0.5rem; color: var(--text-secondary); font-size: 0.8rem;">Month 3</div>
+                </div>
+                <div style="text-align: center; width: 10%;">
+                    <!-- Animated Bar via JS or just static for now -->
+                    <div class="growth-bar"
+                        style="height: 0; background: #3b82f6; margin: 0 auto; border-radius: 4px 4px 0 0; transition: height 1.5s ease-out; box-shadow: 0 0 30px rgba(59, 130, 246, 0.3);">
+                    </div>
+                    <div style="margin-top: 0.5rem; font-weight: 700; color: #fff; font-size: 0.9rem;">Month 4 (Fix)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="padding: 2rem 0; border-top: 1px solid var(--border-color); margin-top: 4rem;">
+        <div class="container"
+            style="display: flex; justify-content: space-between; color: var(--text-secondary); font-size: 0.9rem;">
+            <div>&copy; 2026 The Solian Wolves. All rights reserved.</div>
+            <div style="display: flex; gap: 2rem;">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+            </div>
+            <div style="display: flex; gap: 1rem; align-items: center; margin-left: auto; padding-left: 2rem;">
+                <span style="font-size: 0.8rem;">Secure Payments:</span>
+                <svg title="PayPal" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M20.05 6.35C19.7 5.05 18.5 4 16.5 4H7.5C6.9 4 6.5 4.4 6.4 5L4.1 19.6C4 20.2 4.5 20.6 5.1 20.6H9.4L10.3 15H13C17.5 15 21 11.5 20.05 6.35Z"
+                        fill="#00457C" />
+                    <path
+                        d="M17.15 6.35C16.8 5.05 15.6 4 13.6 4H7.5C6.9 4 6.5 4.4 6.4 5L5.7 9.4H13.6C16.6 9.4 18.2 7.7 17.15 6.35Z"
+                        fill="#0079C1" />
+                    <path
+                        d="M9.4 20.6H13.8L14.7 15H10.3L9.4 20.6ZM9.4 20.6H5.1C4.5 20.6 4 20.2 4.1 19.6L5.6 9.4H6.4L9.4 20.6Z"
+                        fill="#0079C1" />
+                </svg>
+                <!-- Bank/Wire SVG -->
+                <svg title="Bank Transfer" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 10H22V13H2V10Z" fill="#555" />
+                    <path d="M4 14H8V20H4V14Z" fill="#555" />
+                    <path d="M10 14H14V20H10V14Z" fill="#555" />
+                    <path d="M16 14H20V20H16V14Z" fill="#555" />
+                    <path d="M12 2L2 7V9H22V7L12 2Z" fill="#555" />
+                    <path d="M2 21H22V23H2V21Z" fill="#555" />
+                </svg>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script>
+        // Inline script for specific page animations or we can move to main.js
+        // Let's add a simple script here for the counter and bar chart to be safe
+        document.addEventListener('DOMContentLoaded', () => {
+            // Animate Counter
+            const counters = document.querySelectorAll('.counter');
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const duration = 2000; // ms
+                const increment = target / (duration / 16);
+
+                let current = 0;
+                const updateCounter = () => {
+                    current += increment;
+                    if (current < target) {
+                        counter.innerText = Math.ceil(current);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+
+                // Trigger when visible
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            updateCounter();
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                });
+                observer.observe(counter);
+            });
+
+            // Animate Bar
+            const bar = document.querySelector('.growth-bar');
+            if (bar) {
+                const barObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.height = '240px'; // Final height
+                            barObserver.unobserve(entry.target);
+                        }
+                    });
+                });
+                barObserver.observe(bar);
+            }
+        });
+    </script>
+</body>
+
+</html>
