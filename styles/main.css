@@ -28,6 +28,14 @@
     --radius-sm: 4px;
     --radius-md: 12px;
     --radius-lg: 24px;
+
+    /* Premium Button Colors */
+    --gold: #D4AF37;
+    --gold-hover: #F4CF57;
+    --royal-purple: #7851A9;
+    --royal-purple-hover: #9370DB;
+    --scarlet-blue: #4169E1;
+    --scarlet-blue-hover: #5B7FE8;
 }
 
 /* Reset & Base */
@@ -188,6 +196,43 @@ img {
 .btn-outline:hover {
     border-color: var(--text-primary);
     background: rgba(255, 255, 255, 0.05);
+}
+
+/* Premium Payment Button Variants */
+.btn-gold {
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-hover) 100%);
+    color: #000;
+    border: none;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.btn-gold:hover {
+    background: linear-gradient(135deg, var(--gold-hover) 0%, var(--gold) 100%);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+}
+
+.btn-purple {
+    background: linear-gradient(135deg, var(--royal-purple) 0%, var(--royal-purple-hover) 100%);
+    color: #fff;
+    border: none;
+    box-shadow: 0 4px 15px rgba(120, 81, 169, 0.3);
+}
+
+.btn-purple:hover {
+    background: linear-gradient(135deg, var(--royal-purple-hover) 0%, var(--royal-purple) 100%);
+    box-shadow: 0 6px 20px rgba(120, 81, 169, 0.5);
+}
+
+.btn-blue {
+    background: linear-gradient(135deg, var(--scarlet-blue) 0%, var(--scarlet-blue-hover) 100%);
+    color: #fff;
+    border: none;
+    box-shadow: 0 4px 15px rgba(65, 105, 225, 0.3);
+}
+
+.btn-blue:hover {
+    background: linear-gradient(135deg, var(--scarlet-blue-hover) 0%, var(--scarlet-blue) 100%);
+    box-shadow: 0 6px 20px rgba(65, 105, 225, 0.5);
 }
 
 /* Responsive Adjustments */
