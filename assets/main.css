@@ -472,7 +472,7 @@ section {
     position: relative;
     background: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #050505 70%);
     overflow: visible;
-    padding: 140px 20px 80px;
+    padding: 80px 20px 40px;
 }
 
 .hero-content {
@@ -483,9 +483,9 @@ section {
 
 .hero-logo {
     display: block;
-    width: 180px;
-    height: 180px;
-    margin: 0 auto 2rem;
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 1.5rem;
     border-radius: 50%;
     overflow: hidden;
     position: relative;
