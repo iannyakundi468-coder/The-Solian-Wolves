@@ -465,13 +465,14 @@ section {
 
 /* Hero Styles */
 .hero {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     background: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #050505 70%);
     overflow: visible;
+    padding: 140px 20px 80px;
 }
 
 .hero-content {
@@ -482,9 +483,9 @@ section {
 
 .hero-logo {
     display: block;
-    width: 200px;
+    width: 180px;
     height: auto;
-    margin: 0 auto var(--spacing-md);
+    margin: 0 auto 2rem;
     border-radius: 0;
     overflow: visible;
     position: relative;
