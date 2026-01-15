@@ -1,0 +1,29 @@
+<div class="product-template container section-padding">
+  <div class="product-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
+    <div class="product-media">
+      {% if product.featured_image %}
+        <img src="{{ product.featured_image | img_url: '800x800' }}" alt="{{ product.title }}" style="width: 100%; border-radius: var(--radius-md);">
+      {% else %}
+        <div style="width: 100%; aspect-ratio: 1; background: #1a1a1a; display: flex; align-items: center; justify-content: center; border-radius: var(--radius-md); border: 1px dashed var(--border-color);">
+          <span style="color: var(--text-secondary);">No image available</span>
+        </div>
+      {% endif %}
+    </div>
+    
+    <div class="product-info">
+      <h1 style="font-size: 3rem; margin-bottom: 1rem;">{{ product.title }}</h1>
+      <div class="price" style="font-size: 2rem; font-weight: 700; color: #3b82f6; margin-bottom: 2rem;">
+        {{ product.price | money }}
+      </div>
+      
+      <div class="description" style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 2rem;">
+        {{ product.description }}
+      </div>
+      
+      <form action="/cart/add" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+        <button type="submit" class="btn btn-blue" style="width: 100%; padding: 1rem;">Add to Cart</button>
+      </form>
+    </div>
+  </div>
+</div>

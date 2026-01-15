@@ -1,0 +1,14 @@
+<div class="collection-template container section-padding">
+  <h1 class="text-center" style="font-size: 3rem; margin-bottom: 4rem;">{{ collection.title }}</h1>
+  
+  <div class="product-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+    {% for product in collection.products %}
+      <div class="product-card" style="border: 1px solid var(--border-color); padding: 2rem; border-radius: var(--radius-md); background: rgba(59,130,246,0.05);">
+        <h3 style="margin-bottom: 1rem;">{{ product.title }}</h3>
+        <div style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">{{ product.price | money }}</div>
+        <p style="color: var(--text-secondary); margin-bottom: 2rem;">{{ product.description | strip_html | truncatewords: 20 }}</p>
+        <a href="{{ product.url }}" class="btn btn-blue" style="width: 100%;">View Details</a>
+      </div>
+    {% endfor %}
+  </div>
+</div>
