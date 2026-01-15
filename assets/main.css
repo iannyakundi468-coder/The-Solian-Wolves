@@ -481,11 +481,14 @@ section {
 }
 
 .hero-logo {
+    display: block;
     width: 200px;
     height: auto;
     margin: 0 auto var(--spacing-md);
     border-radius: 0;
     overflow: visible;
+    position: relative;
+    z-index: 5;
     animation: float 6s ease-in-out infinite;
 }
 
