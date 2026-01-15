@@ -484,12 +484,14 @@ section {
 .hero-logo {
     display: block;
     width: 180px;
-    height: auto;
+    height: 180px;
     margin: 0 auto 2rem;
-    border-radius: 0;
-    overflow: visible;
+    border-radius: 50%;
+    overflow: hidden;
     position: relative;
     z-index: 5;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.05);
     animation: float 6s ease-in-out infinite;
 }
 
