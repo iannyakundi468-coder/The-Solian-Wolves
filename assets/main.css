@@ -471,7 +471,7 @@ section {
     justify-content: center;
     position: relative;
     background: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #050505 70%);
-    overflow: hidden;
+    overflow: visible;
 }
 
 .hero-content {
