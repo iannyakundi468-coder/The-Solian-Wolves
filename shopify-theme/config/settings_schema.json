@@ -1,0 +1,33 @@
+[
+    {
+        "name": "theme_info",
+        "theme_name": "The Solian Wolves",
+        "theme_version": "1.0.0",
+        "theme_author": "The Solian Wolves",
+        "theme_documentation_url": "",
+        "theme_support_url": ""
+    },
+    {
+        "name": "Colors",
+        "settings": [
+            {
+                "type": "color",
+                "id": "color_primary",
+                "label": "Primary Color",
+                "default": "#3b82f6"
+            },
+            {
+                "type": "color",
+                "id": "color_gold",
+                "label": "Gold Accent",
+                "default": "#D4AF37"
+            },
+            {
+                "type": "color",
+                "id": "color_purple",
+                "label": "Royal Purple",
+                "default": "#7851A9"
+            }
+        ]
+    }
+]

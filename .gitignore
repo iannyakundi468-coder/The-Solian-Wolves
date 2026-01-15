@@ -1,0 +1,16 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Shopify specific
+config/settings_data.json
+.shopify/
+
+# Local development
+node_modules/
+.env
+*.log
+
+# Temp files
+tmp/
+dist/

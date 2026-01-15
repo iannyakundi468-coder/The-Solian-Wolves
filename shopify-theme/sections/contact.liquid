@@ -1,0 +1,55 @@
+<section id="contact" class="section-padding">
+    <div class="container text-center">
+        <div id="contact-container"
+            style="max-width: 600px; margin: 0 auto; padding: 4rem; border: 1px solid var(--border-color); border-radius: 2rem; background: radial-gradient(circle at center, #111, #050505); transition: all 0.5s ease;">
+            <div id="form-step-1">
+                <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Ready to scale?</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 2rem;">Stop losing sales to bad UX and slow
+                    code.
+                    Let's build something powerful.</p>
+                <form id="contact-form"
+                    style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
+                    <input type="email" id="contact-email" name="email" placeholder="Your Work Email" required
+                        style="padding: 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-color); background: #000; color: #fff; font-family: inherit;">
+
+                    <div id="contact-additional-fields"
+                        style="display: none; flex-direction: column; gap: 1rem; opacity: 0; transform: translateY(10px); transition: all 0.4s ease;">
+                        <input type="url" name="website" placeholder="Your Website URL" required
+                            style="padding: 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-color); background: #000; color: #fff; font-family: inherit;">
+                        <textarea name="details" placeholder="How can we help you dominate?"
+                            style="padding: 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-color); background: #000; color: #fff; font-family: inherit; min-height: 100px; resize: vertical;"></textarea>
+                    </div>
+
+                    <button type="submit" id="contact-submit" class="btn" style="width: 100%;">Get Your
+                        Audit</button>
+                </form>
+                <p style="font-size: 0.8rem; color: var(--text-secondary);">No spam. Just value.</p>
+            </div>
+
+            <div id="thank-you-section"
+                style="display: none; opacity: 0; transform: translateY(20px); transition: all 0.6s ease;">
+                <div style="font-size: 4rem; margin-bottom: 1rem;">🐺</div>
+                <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Thank You!</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 2.5rem; font-size: 1.1rem;">
+                    Thank You for contacting us, we will be in touch in less than 24 hours.
+                </p>
+
+                <div id="upsell-container" style="display: none;">
+                    <h3
+                        style="font-size: 1.2rem; margin-bottom: 1.5rem; color: #3b82f6; text-transform: uppercase; letter-spacing: 0.1em;">
+                        Recommended Next Steps</h3>
+                    <div id="upsell-plans" style="display: grid; gap: 1rem; text-align: left;">
+                        <!-- Dynamically populated -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+  "name": "Contact",
+  "settings": []
+}
+{% endschema %}
