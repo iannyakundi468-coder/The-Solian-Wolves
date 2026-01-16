@@ -1,7 +1,8 @@
-<header class="hero bg-scanning">
+<section class="hero bg-scanning" aria-labelledby="hero-title">
     <div class="hero-content">
         <div class="hero-logo">
             <img src="{{ 'logo.jpg' | asset_url }}" alt="The Solian Wolves Logo"
+                width="140" height="140"
                 style="width: 100%; height: 100%; object-fit: cover; display: block;" fetchpriority="high">
         </div>
 
@@ -20,11 +21,11 @@
         </h1>
         <p style="max-width: 600px; margin: 1rem auto 2rem;">We turn tech-debt into growth. Our audits and fixes have recovered over $10M for high-growth digital brands.</p>
         
-        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;">
-
-            <a href="#contact" class="btn btn-blue pricing-trigger" data-service="free-audit" style="border-radius: 100px; padding: 1.2rem 2.5rem;">Secure My Free Audit</a>
-            <a href="#services" class="btn btn-outline" style="border-radius: 100px; padding: 1.2rem 2.5rem;">View Solutions</a>
+        <div class="hero-actions" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;">
+            <a href="#contact" class="btn btn-blue pricing-trigger" data-service="free-audit" style="border-radius: 100px; padding: 1.2rem 2.5rem; min-width: 200px;">Secure My Free Audit</a>
+            <a href="#services" class="btn btn-outline" style="border-radius: 100px; padding: 1.2rem 2.5rem; min-width: 200px;">View Solutions</a>
         </div>
+
 
         <!-- Trusted By Section - High Contrast Ad Style -->
         <div style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 2.5rem; width: 100%; max-width: 900px; margin: 0 auto;">

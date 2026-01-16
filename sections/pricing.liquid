@@ -1,7 +1,7 @@
-<section id="pricing" class="section-padding"
+<section id="pricing" class="section-padding" aria-labelledby="pricing-title"
     style="background: linear-gradient(to bottom, #0a0a0a, #050505); content-visibility: auto; contain-intrinsic-size: 100vh;">
     <div class="container">
-        <h2 class="text-center animate-on-scroll" style="font-size: 3rem; margin-bottom: 0.5rem;">Investment Plans
+        <h2 id="pricing-title" class="text-center animate-on-scroll" style="font-size: 3rem; margin-bottom: 0.5rem;">Investment Plans
         </h2>
         <div class="text-center animate-on-scroll"
             style="margin-bottom: var(--spacing-lg); color: var(--text-secondary); font-size: 0.9rem;">
@@ -25,7 +25,7 @@
                         <div style="color: var(--text-secondary); margin-bottom: 2rem;">
                             {{ product.description | strip_html | truncatewords: 20 }}
                         </div>
-                        <a href="{{ product.url }}" class="btn btn-blue pricing-trigger" style="width: 100%;">View Details</a>
+                        <a href="{{ product.url }}" class="btn btn-blue pricing-trigger" style="width: 100%;" aria-label="View details for {{ product.title }}">View Details</a>
                     </div>
                 {% endfor %}
             {% else %}
@@ -51,7 +51,7 @@
                         <li>✓ <strong>Strategy Call (NEW)</strong></li>
                     </ul>
                     <a href="#contact" class="btn btn-gold pricing-trigger" data-service="audit"
-                        style="width: 100%;">Book Now</a>
+                        style="width: 100%;" aria-label="Book a Deep Dive Audit now">Book Now</a>
                 </div>
 
                 <!-- Plan 2: Subscription -->
@@ -72,7 +72,7 @@
                         <li>✓ Dedicated Project Manager</li>
                     </ul>
                     <a href="#contact" class="btn btn-purple pricing-trigger" data-service="cro"
-                        style="width: 100%;">Start Scaling</a>
+                        style="width: 100%;" aria-label="Start scaling with a Growth Partner plan">Start Scaling</a>
                 </div>
 
                 <!-- Plan 3: Enterprise -->
@@ -91,7 +91,7 @@
                         <li>✓ 24/7 Slack & Support</li>
                     </ul>
                     <a href="#contact" class="btn btn-blue pricing-trigger" data-service="apps"
-                        style="width: 100%;">Contact Us</a>
+                        style="width: 100%;" aria-label="Contact us for a Custom Dominance plan quote">Contact Us</a>
                 </div>
             {% endif %}
 

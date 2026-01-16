@@ -40,9 +40,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 
     <!-- LCP Optimizations -->
-    <link rel="preload" as="image" href="{{ 'logo.jpg' | asset_url }}">
+    <link rel="preload" as="image" href="{{ 'logo.jpg' | asset_url }}" fetchpriority="high">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://www.paypal.com">
+    <link rel="preconnect" href="https://www.paypalobjects.com">
+
 
     <!-- Styles -->
     {{ 'main.css' | asset_url | stylesheet_tag }}
@@ -56,7 +59,11 @@
 </head>
 
 <body>
-    {{ content_for_layout }}
+    <a href="#MainContent" class="skip-to-content">Skip to content</a>
+
+    <main id="MainContent" role="main" tabindex="-1">
+        {{ content_for_layout }}
+    </main>
 
     <!-- Main JavaScript -->
     {{ 'main.js' | asset_url | script_tag }}
