@@ -118,25 +118,26 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function openServiceModal(serviceKey) {
-        if (!serviceKey || !serviceData[serviceKey]) return;
-        if (!modal) return;
+        if (!serviceKey || !serviceData[serviceKey] || !modal) return;
 
         const data = serviceData[serviceKey];
         currentService = data;
 
+        // Batch DOM updates before showing modal
         if (modalTitle) modalTitle.innerText = data.title;
         if (modalDesc) modalDesc.innerText = data.desc;
         if (modalPrice) modalPrice.innerText = data.price;
 
-        // Populate List
         if (modalExpectations) {
-            modalExpectations.innerHTML = '';
+            const fragment = document.createDocumentFragment();
             data.expectations.forEach(item => {
                 const li = document.createElement('li');
                 li.innerHTML = `<span style="color: #3b82f6; margin-right: 0.5rem;">✓</span> ${item}`;
                 li.style.marginBottom = '0.5rem';
-                modalExpectations.appendChild(li);
+                fragment.appendChild(li);
             });
+            modalExpectations.innerHTML = '';
+            modalExpectations.appendChild(fragment);
         }
 
         resetModalViews();
@@ -155,7 +156,11 @@ document.addEventListener('DOMContentLoaded', () => {
             };
         }
 
-        modal.style.display = 'flex';
+        // Show modal in the next frame to avoid presentation delay
+        requestAnimationFrame(() => {
+            modal.style.display = 'flex';
+            modal.setAttribute('aria-hidden', 'false');
+        });
     }
 
     // --- 3. Event Listeners ---
@@ -168,16 +173,20 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetElement = document.getElementById(targetId);
 
             if (targetElement) {
-                targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                // Optional: add a brief highlight effect
-                targetElement.style.transition = 'background 0.5s';
-                const originalBg = targetElement.style.background;
-                targetElement.style.background = 'rgba(59, 130, 246, 0.05)';
-                setTimeout(() => {
-                    targetElement.style.background = originalBg;
-                }, 1000);
+                requestAnimationFrame(() => {
+                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    
+                    // Yield non-essential highlight to main thread idle time
+                    setTimeout(() => {
+                        targetElement.style.transition = 'background 0.5s';
+                        const originalBg = targetElement.style.background;
+                        targetElement.style.background = 'rgba(59, 130, 246, 0.05)';
+                        setTimeout(() => {
+                            targetElement.style.background = originalBg;
+                        }, 1000);
+                    }, 100);
+                });
             } else {
-                // Fallback to modal if detail section doesn't exist
                 openServiceModal(serviceKey);
             }
         });
@@ -463,30 +472,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- 4. Page Animations & Observers ---
 
-    // Smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    // Smooth scroll - Optimized for INP
+    const smoothLinks = document.querySelectorAll('a[href^="#"]');
+    smoothLinks.forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault();
             const href = this.getAttribute('href');
             if (href === '#' || href === '') return;
             const target = document.querySelector(href);
             if (target) {
+                e.preventDefault();
                 target.scrollIntoView({ behavior: 'smooth' });
             }
-        });
+        }, { passive: false });
     });
 
-    // Observer Logic (consolidated)
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, { threshold: 0.1 });
+    // Observer Logic - Optimized for INP (yield to main thread)
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '50px' // Start slightly before entering viewport
+    };
 
-    const animateElements = document.querySelectorAll('.animate-on-scroll');
-    animateElements.forEach(el => observer.observe(el));
+    const observer = new IntersectionObserver((entries) => {
+        // Process entries in smaller batches to avoid long tasks
+        requestAnimationFrame(() => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target); // Stop observing once visible to save CPU
+                }
+            });
+        });
+    }, observerOptions);
+
+    // Initialize observer in a background task
+    setTimeout(() => {
+        const animateElements = document.querySelectorAll('.animate-on-scroll');
+        animateElements.forEach(el => observer.observe(el));
+    }, 0);
 
 });
