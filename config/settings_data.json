@@ -1,7 +1,65 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "current": {
-        "color_primary": "#3b82f6",
-        "color_gold": "#D4AF37",
-        "color_purple": "#7851A9"
-    }
+  "current": {
+    "color_primary": "#3b82f6",
+    "color_gold": "#D4AF37",
+    "color_purple": "#7851A9",
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {}
+      },
+      "hero": {
+        "type": "hero",
+        "settings": {}
+      },
+      "services": {
+        "type": "services",
+        "settings": {}
+      },
+      "stats": {
+        "type": "stats",
+        "settings": {}
+      },
+      "service-details": {
+        "type": "service-details",
+        "settings": {}
+      },
+      "pricing": {
+        "type": "pricing",
+        "settings": {
+          "collection": "investment-plans"
+        }
+      },
+      "testimonials": {
+        "type": "testimonials",
+        "settings": {}
+      },
+      "team": {
+        "type": "team",
+        "settings": {}
+      },
+      "service-modal": {
+        "type": "service-modal",
+        "settings": {}
+      },
+      "contact": {
+        "type": "contact",
+        "settings": {}
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {}
+      }
+    },
+    "content_for_index": []
+  }
 }
