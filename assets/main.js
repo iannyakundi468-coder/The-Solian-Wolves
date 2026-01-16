@@ -186,9 +186,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Pricing Button Clicks
     document.querySelectorAll('.pricing-trigger').forEach(btn => {
         btn.addEventListener('click', (e) => {
-            e.preventDefault();
             const serviceKey = btn.getAttribute('data-service');
-            openServiceModal(serviceKey);
+            if (serviceKey) {
+                e.preventDefault();
+                openServiceModal(serviceKey);
+            }
         });
     });
 
