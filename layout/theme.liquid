@@ -43,17 +43,6 @@
     <link rel="preload" as="image" href="{{ 'logo.jpg' | asset_url }}" fetchpriority="high">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://www.paypal.com">
-    <link rel="preconnect" href="https://www.paypalobjects.com">
-
-
-    <!-- Styles -->
-    {{ 'main.css' | asset_url | stylesheet_tag }}
-
-    <!-- PayPal SDK -->
-    <link rel="preconnect" href="https://www.paypal.com">
-    <link rel="preconnect" href="https://www.paypalobjects.com">
-    <script async src="https://www.paypal.com/sdk/js?client-id=AaIj-jDw0zhnIbcX63U9xOhMKM0_DQoCa8q6zD_3kotNYLIJflIFCxXNyGZj5NMULNvKRSPQSnkBpHfg&currency=USD&vault=true"></script>
 
     {{ content_for_header }}
 </head>

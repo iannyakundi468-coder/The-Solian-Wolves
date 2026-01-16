@@ -8,16 +8,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalExpectations = document.getElementById('modal-expectations');
     const modalPrice = document.getElementById('modal-price');
 
-    // Payment UI Elements
-    const paymentSelection = document.getElementById('payment-selection');
-    const viewPayPal = document.getElementById('view-paypal');
-    const viewCard = document.getElementById('view-card');
-    const btnPayPayPal = document.getElementById('btn-pay-paypal');
-    const btnPayCard = document.getElementById('btn-pay-card');
-    const btnContactCustom = document.getElementById('btn-contact-custom');
-    const backBtns = document.querySelectorAll('#back-from-paypal, #back-from-card');
+    const modalCtaLink = document.getElementById('modal-cta-link');
 
     let currentService = null;
+
+    // Mapping of service keys to their Shopify Product handles/URLs
+    // The user has created these products in Shopify
+    const serviceUrls = {
+        'audit': '/products/deep-dive-audit',
+        'cro': '/products/growth-partner-cro',
+        'seo': '/products/seo-listings',
+        'apps': '/products/custom-app-development'
+    };
 
     const serviceData = {
         audit: {
@@ -33,9 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Free 30-min Strategy Call"
             ],
             price: "$997 (Limited Offer)",
-            rawPrice: 997,
-            billingType: 'one-time',
-            link: "#audit-checkout"
+            link: serviceUrls.audit
         },
         cro: {
             title: "Growth Partner (CRO)",
@@ -50,10 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Dedicated Project Manager"
             ],
             price: "$4,500/mo",
-            rawPrice: 4500,
-            billingType: 'subscription',
-            planId: 'P-8M889809WC5135716NFSZP6A', // Live PayPal Plan ID
-            link: "#cro-checkout"
+            link: serviceUrls.cro
         },
         seo: {
             title: "SEO Listings",
@@ -65,10 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Rich Snippets Implementation"
             ],
             price: "$2,500/mo",
-            rawPrice: 2500,
-            billingType: 'subscription',
-            planId: 'P-3BV81863N5378132YNFSZJ3Y', // Live PayPal Plan ID
-            link: "#seo-checkout"
+            link: serviceUrls.seo
         },
         apps: {
             title: "Custom App Development",
@@ -83,9 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "White-label Analytics Dashboard"
             ],
             price: "Custom",
-            rawPrice: null,
-            billingType: 'one-time',
-            link: "#contact"
+            link: serviceUrls.apps
         },
         'free-audit': {
             title: "Free One-Time Audit",
@@ -97,8 +89,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 "3 Actionable Tips"
             ],
             price: "Free",
-            rawPrice: 0,
-            billingType: 'one-time',
             link: "#contact"
         }
     };
@@ -108,12 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function resetModalViews() {
         if (!paymentSelection) return;
         paymentSelection.style.display = 'flex';
-        if (viewPayPal) viewPayPal.style.display = 'none';
-        if (viewCard) viewCard.style.display = 'none';
-
-        // Reset Buttons Visibility
-        if (btnPayPayPal) btnPayPayPal.style.display = 'flex';
-        if (btnPayCard) btnPayCard.style.display = 'flex';
+        if (modalCtaLink) modalCtaLink.style.display = 'flex';
         if (btnContactCustom) btnContactCustom.style.display = 'none';
     }
 
@@ -142,18 +127,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
         resetModalViews();
 
-        // Handle Custom / Free Logic
-        if ((data.price === 'Custom' || data.price === 'Free') && btnContactCustom) {
-            if (btnPayPayPal) btnPayPayPal.style.display = 'none';
-            if (btnPayCard) btnPayCard.style.display = 'none';
-            btnContactCustom.style.display = 'flex';
-            btnContactCustom.innerText = data.price === 'Free' ? 'Get Your Free Audit' : 'Contact Us';
+        // Handle Custom / Free / Normal Link Logic
+        if (modalCtaLink) {
+            modalCtaLink.href = data.link;
 
-            btnContactCustom.onclick = () => {
-                modal.style.display = 'none';
-                const contactSection = document.querySelector('#contact');
-                if (contactSection) contactSection.scrollIntoView({ behavior: 'smooth' });
-            };
+            if (data.price === 'Custom' || data.price === 'Free') {
+                modalCtaLink.style.display = 'none';
+                if (btnContactCustom) {
+                    btnContactCustom.style.display = 'flex';
+                    btnContactCustom.innerText = data.price === 'Free' ? 'Get Your Free Audit' : 'Contact Us';
+                    btnContactCustom.onclick = () => {
+                        modal.style.display = 'none';
+                        const contactSection = document.querySelector('#contact');
+                        if (contactSection) contactSection.scrollIntoView({ behavior: 'smooth' });
+                    };
+                }
+            } else {
+                modalCtaLink.style.display = 'flex';
+                if (btnContactCustom) btnContactCustom.style.display = 'none';
+            }
         }
 
         // Show modal in the next frame to avoid presentation delay
@@ -162,6 +154,8 @@ document.addEventListener('DOMContentLoaded', () => {
             modal.setAttribute('aria-hidden', 'false');
         });
     }
+
+    // --- 3. Event Listeners ---
 
     // --- 3. Event Listeners ---
 
@@ -175,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (targetElement) {
                 requestAnimationFrame(() => {
                     targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    
+
                     // Yield non-essential highlight to main thread idle time
                     setTimeout(() => {
                         targetElement.style.transition = 'background 0.5s';
@@ -215,132 +209,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.target === modal) {
             modal.style.display = 'none';
         }
-    });
-
-    // Payment Flow - PayPal Wallet
-    if (btnPayPayPal) {
-        btnPayPayPal.addEventListener('click', () => {
-            if (!paymentSelection || !viewPayPal) return;
-            paymentSelection.style.display = 'none';
-            viewPayPal.style.display = 'block';
-
-            const container = document.getElementById('paypal-button-container');
-            if (container) container.innerHTML = '';
-
-            if (currentService && window.paypal) {
-                const config = {
-                    fundingSource: paypal.FUNDING.PAYPAL,
-                    createOrder: function (data, actions) {
-                        if (currentService.billingType === 'one-time' && currentService.rawPrice > 0) {
-                            return actions.order.create({
-                                purchase_units: [{
-                                    amount: {
-                                        currency_code: 'USD',
-                                        value: currentService.rawPrice.toString()
-                                    },
-                                    description: currentService.title
-                                }]
-                            });
-                        }
-                    },
-                    createSubscription: function (data, actions) {
-                        if (currentService.billingType === 'subscription') {
-                            return actions.subscription.create({
-                                'plan_id': currentService.planId
-                            });
-                        }
-                    },
-                    onApprove: function (data, actions) {
-                        console.log('Payment Approved:', data);
-                        if (currentService.billingType === 'subscription') {
-                            alert('Subscription successful! ID: ' + data.subscriptionID);
-                        } else {
-                            return actions.order.capture().then(function (details) {
-                                alert('Transaction completed by ' + details.payer.name.given_name);
-                            });
-                        }
-                        modal.style.display = 'none';
-                    },
-                    onCancel: function (data) {
-                        console.log('Payment Cancelled:', data);
-                    },
-                    onError: function (err) {
-                        console.error('PayPal Error:', err);
-                        alert('There was an error with the PayPal flow. Please try again or contact us.');
-                    }
-                };
-
-                paypal.Buttons(config).render('#paypal-button-container');
-            }
-        });
-    }
-
-    // Payment Flow - Card
-    if (btnPayCard) {
-        btnPayCard.addEventListener('click', () => {
-            if (!paymentSelection || !viewCard) return;
-            paymentSelection.style.display = 'none';
-            viewCard.style.display = 'block';
-
-            const container = document.getElementById('card-button-container');
-            if (container) container.innerHTML = '';
-
-            if (currentService && window.paypal) {
-                const config = {
-                    style: {
-                        layout: 'vertical'
-                    },
-                    fundingSource: paypal.FUNDING.CARD,
-                    createOrder: function (data, actions) {
-                        if (currentService.billingType === 'one-time' && currentService.rawPrice > 0) {
-                            return actions.order.create({
-                                purchase_units: [{
-                                    amount: {
-                                        currency_code: 'USD',
-                                        value: currentService.rawPrice.toString()
-                                    },
-                                    description: currentService.title
-                                }]
-                            });
-                        }
-                    },
-                    createSubscription: function (data, actions) {
-                        if (currentService.billingType === 'subscription') {
-                            return actions.subscription.create({
-                                'plan_id': currentService.planId
-                            });
-                        }
-                    },
-                    onApprove: function (data, actions) {
-                        console.log('Card Payment Approved:', data);
-                        if (currentService.billingType === 'subscription') {
-                            alert('Subscription successful! ID: ' + data.subscriptionID);
-                        } else {
-                            return actions.order.capture().then(function (details) {
-                                alert('Transaction completed by ' + details.payer.name.given_name);
-                            });
-                        }
-                        modal.style.display = 'none';
-                    },
-                    onCancel: function (data) {
-                        console.log('Card Payment Cancelled:', data);
-                    },
-                    onError: function (err) {
-                        console.error('Card PayPal Error:', err);
-                        alert('There was an error processing your card. Please try again or use a different method.');
-                    }
-                };
-
-                paypal.Buttons(config).render('#card-button-container');
-            }
-        });
-    }
-
-    // Back Buttons
-    backBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            resetModalViews();
-        });
     });
 
     // --- 4. Contact Form Handler (Multi-step) ---

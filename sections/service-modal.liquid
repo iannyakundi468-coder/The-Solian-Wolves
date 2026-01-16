@@ -23,58 +23,20 @@
                 </div>
             </div>
 
-            <!-- Payment Selection -->
+            <!-- Shopify Native Checkout Navigation -->
             <div id="payment-selection" style="display: flex; gap: 1rem; flex-direction: column;">
-                <button id="btn-pay-paypal" class="btn"
-                    style="width: 100%; background: #0079C1; color: white; border: none; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
-                    <!-- PayPal Icon White -->
+                <a id="modal-cta-link" href="#" class="btn btn-blue"
+                    style="width: 100%; justify-content: center; display: flex; align-items: center; gap: 0.5rem; text-decoration: none; padding: 1rem;">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M20.05 6.35C19.7 5.05 18.5 4 16.5 4H7.5C6.9 4 6.5 4.4 6.4 5L4.1 19.6C4 20.2 4.5 20.6 5.1 20.6H9.4L10.3 15H13C17.5 15 21 11.5 20.05 6.35Z"
-                            fill="white" />
-                        <path
-                            d="M17.15 6.35C16.8 5.05 15.6 4 13.6 4H7.5C6.9 4 6.5 4.4 6.4 5L5.7 9.4H13.6C16.6 9.4 18.2 7.7 17.15 6.35Z"
-                            fill="white" />
-                        <path
-                            d="M9.4 20.6H13.8L14.7 15H10.3L9.4 20.6ZM9.4 20.6H5.1C4.5 20.6 4 20.2 4.1 19.6L5.6 9.4H6.4L9.4 20.6Z"
-                            fill="white" />
+                        <path d="M5 22H19V6H5V22ZM7 8H17V20H7V8Z" fill="currentColor"/>
+                        <path d="M9 4V6H15V4H9ZM8 2H16V8H8V2Z" fill="currentColor"/>
                     </svg>
-                    Pay with PayPal
-                </button>
-                <button id="btn-pay-card" class="btn btn-outline"
-                    style="width: 100%; justify-content: center; display: flex; align-items: center; gap: 0.5rem;">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2 10H22V13H2V10Z" fill="currentColor" />
-                        <path d="M4 14H8V20H4V14Z" fill="currentColor" />
-                        <path d="M10 14H14V20H10V14Z" fill="currentColor" />
-                        <path d="M16 14H20V20H16V14Z" fill="currentColor" />
-                        <path d="M12 2L2 7V9H22V7L12 2Z" fill="currentColor" />
-                        <path d="M2 21H22V23H2V21Z" fill="currentColor" />
-                    </svg>
-                    Pay with Card
-                </button>
+                    Secure My Slot
+                </a>
                 <button id="btn-contact-custom" class="btn"
                     style="display: none; width: 100%; justify-content: center;">
                     Contact to Book
                 </button>
-            </div>
-
-            <!-- PayPal View -->
-            <div id="view-paypal" style="display: none;">
-                <div id="paypal-button-container"></div>
-                <button id="back-from-paypal"
-                    style="background: none; border: none; color: var(--text-secondary); margin-top: 1rem; cursor: pointer; text-decoration: underline; width: 100%;">Back</button>
-            </div>
-
-            <!-- Card View -->
-            <div id="view-card" style="display: none;">
-                <div
-                    style="margin-bottom: 1rem; color: var(--text-secondary); text-align: center; font-size: 0.9rem;">
-                    Secure Credit/Debit Card Payment via PayPal
-                </div>
-                <div id="card-button-container"></div>
-                <button id="back-from-card"
-                    style="background: none; border: none; color: var(--text-secondary); margin-top: 1rem; cursor: pointer; text-decoration: underline; width: 100%;">Back</button>
             </div>
 
         </div>
