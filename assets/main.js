@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalDesc = document.getElementById('modal-desc');
     const modalExpectations = document.getElementById('modal-expectations');
     const modalPrice = document.getElementById('modal-price');
+    const paymentSelection = document.getElementById('payment-selection');
+    const btnContactCustom = document.getElementById('btn-contact-custom');
 
     const modalCtaLink = document.getElementById('modal-cta-link');
 
