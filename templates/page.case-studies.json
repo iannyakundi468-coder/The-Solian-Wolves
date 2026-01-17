@@ -1,0 +1,12 @@
+{
+  "name": "Case Studies",
+  "sections": {
+    "main": {
+      "type": "main-case-studies",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

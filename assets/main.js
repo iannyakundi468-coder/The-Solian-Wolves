@@ -15,84 +15,102 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentService = null;
 
     // Mapping of service keys to their Shopify Product handles/URLs
-    // The user has created these products in Shopify
     const serviceUrls = {
         'audit': '/products/deep-dive-audit',
         'cro': '/products/growth-partner-cro',
         'seo': '/products/seo-listings',
-        'apps': '/products/custom-app-development'
+        'apps': '/products/custom-app-development',
+        'free-audit': '#contact'
     };
 
+    // Helper to get Shopify data or fallback to hardcoded
+    function getProductData(handle, fallback) {
+        const shopifyData = window.ShopifyProductData && window.ShopifyProductData[handle];
+        if (shopifyData) {
+            return {
+                title: shopifyData.title,
+                desc: shopifyData.desc || fallback.desc,
+                price: shopifyData.price,
+                link: shopifyData.url
+            };
+        }
+        return fallback;
+    }
+
     const serviceData = {
-        audit: {
+        audit: getProductData('deep-dive-audit', {
             title: "Deep Dive Audit",
             desc: "A surgical analysis of your digital presence. We find where you're bleeding money.",
-            expectations: [
-                "Comprehensive UX/UI Audit",
-                "Performance & Speed Analysis",
-                "SEO Gap Analysis & Keyword Blueprint",
-                "Competitor Benchmark Report",
-                "Accessibility (a11y) Compliance Check",
-                "Tech Stack Modernization Roadmap",
-                "Free 30-min Strategy Call"
-            ],
             price: "$997 (Limited Offer)",
             link: serviceUrls.audit
-        },
-        cro: {
+        }),
+        cro: getProductData('growth-partner-cro', {
             title: "Growth Partner (CRO)",
             desc: "Continuous testing and optimization to maximize your Revenue Per User.",
-            expectations: [
-                "Everything in Deep Dive Audit",
-                "Monthly A/B Testing Regime",
-                "Heatmap & User Behavior Analysis",
-                "Funnel & Checkout Optimization",
-                "Cart Abandonment Recovery Tuning",
-                "Weekly Tactical Strategy Syncs",
-                "Dedicated Project Manager"
-            ],
             price: "$4,500/mo",
             link: serviceUrls.cro
-        },
-        seo: {
+        }),
+        seo: getProductData('seo-listings', {
             title: "SEO Listings",
             desc: "Climb the rankings and own your niche with technical and content SEO.",
-            expectations: [
-                "Keyword Strategy & Gap Analysis",
-                "Technical SEO Fixes (Schema/Speed)",
-                "Backlink Profile Analysis",
-                "Rich Snippets Implementation"
-            ],
             price: "$2,500/mo",
             link: serviceUrls.seo
-        },
-        apps: {
+        }),
+        apps: getProductData('custom-app-development', {
             title: "Custom App Development",
             desc: "Bespoke software solutions to solve unique business problems.",
-            expectations: [
-                "Full-Stack Development Team (24/7)",
-                "Custom App & SaaS Architecture",
-                "Headless & Headless API Integration",
-                "Enterprise Security Hardening",
-                "Infrastructure & Database Tuning",
-                "Unlimited UI/UX Design Requests",
-                "White-label Analytics Dashboard"
-            ],
             price: "Custom",
             link: serviceUrls.apps
-        },
+        }),
         'free-audit': {
             title: "Free One-Time Audit",
             desc: "A complimentary high-level review to identify immediate opportunities for improvement.",
-            expectations: [
-                "Basic Speed Check",
-                "UX Quick Win Report",
-                "SEO Health Check",
-                "3 Actionable Tips"
-            ],
             price: "Free",
-            link: "#contact"
+            link: serviceUrls['free-audit']
         }
+    };
+
+    // Keep expectations hardcoded for now as they are not in the product description
+    const serviceExpectations = {
+        audit: [
+            "Comprehensive UX/UI Audit",
+            "Performance & Speed Analysis",
+            "SEO Gap Analysis & Keyword Blueprint",
+            "Competitor Benchmark Report",
+            "Accessibility (a11y) Compliance Check",
+            "Tech Stack Modernization Roadmap",
+            "Free 30-min Strategy Call"
+        ],
+        cro: [
+            "Everything in Deep Dive Audit",
+            "Monthly A/B Testing Regime",
+            "Heatmap & User Behavior Analysis",
+            "Funnel & Checkout Optimization",
+            "Cart Abandonment Recovery Tuning",
+            "Weekly Tactical Strategy Syncs",
+            "Dedicated Project Manager"
+        ],
+        seo: [
+            "Keyword Strategy & Gap Analysis",
+            "Technical SEO Fixes (Schema/Speed)",
+            "Backlink Profile Analysis",
+            "Rich Snippets Implementation"
+        ],
+        apps: [
+            "Full-Stack Development Team (24/7)",
+            "Custom App & SaaS Architecture",
+            "Headless & Headless API Integration",
+            "Enterprise Security Hardening",
+            "Infrastructure & Database Tuning",
+            "Unlimited UI/UX Design Requests",
+            "White-label Analytics Dashboard"
+        ],
+        'free-audit': [
+            "Basic Speed Check",
+            "UX Quick Win Report",
+            "SEO Health Check",
+            "3 Actionable Tips"
+        ]
     };
 
     // --- 2. Helper Functions ---
@@ -115,9 +133,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (modalDesc) modalDesc.innerText = data.desc;
         if (modalPrice) modalPrice.innerText = data.price;
 
+        const expectations = serviceExpectations[serviceKey] || [];
         if (modalExpectations) {
             const fragment = document.createDocumentFragment();
-            data.expectations.forEach(item => {
+            expectations.forEach(item => {
                 const li = document.createElement('li');
                 li.innerHTML = `<span style="color: #3b82f6; margin-right: 0.5rem;">✓</span> ${item}`;
                 li.style.marginBottom = '0.5rem';

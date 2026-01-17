@@ -1,0 +1,275 @@
+<style>
+    /* Specific Styles for Case Studies */
+    .comparison-section {
+        padding: var(--spacing-lg) 0;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .comparison-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin-top: 2rem;
+        align-items: center;
+    }
+
+    @media (max-width: 768px) {
+        .comparison-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .visualizer-card {
+        background: #0a0a0a;
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-md);
+        padding: 1.5rem;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .label-badge {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        padding: 0.25rem 0.75rem;
+        border-radius: 99px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    .badge-bad {
+        background: rgba(239, 68, 68, 0.2);
+        color: #ef4444;
+        border: 1px solid #ef4444;
+    }
+
+    .badge-good {
+        background: rgba(34, 197, 94, 0.2);
+        color: #22c55e;
+        border: 1px solid #22c55e;
+    }
+
+    .code-block {
+        font-family: 'Courier New', monospace;
+        font-size: 0.8rem;
+        line-height: 1.5;
+        color: #d4d4d8;
+    }
+
+    .code-line {
+        display: block;
+    }
+
+    .code-line.red {
+        background: rgba(239, 68, 68, 0.1);
+        color: #fca5a5;
+    }
+
+    .code-line.green {
+        background: rgba(34, 197, 94, 0.1);
+        color: #86efac;
+    }
+
+    .lh-circle {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .lh-bad {
+        border: 8px solid #ef4444;
+        color: #ef4444;
+    }
+
+    .lh-good {
+        border: 8px solid #22c55e;
+        color: #22c55e;
+        box-shadow: 0 0 30px rgba(34, 197, 94, 0.2);
+    }
+</style>
+
+<div class="section-padding" style="padding-top: 15vh; padding-bottom: 5vh; text-align: center;">
+    <div class="container">
+        <h1>{{ page.title }}</h1>
+        <div class="rte" style="color: var(--text-secondary); max-width: 600px; margin: 1rem auto;">
+            {{ page.content }}
+        </div>
+    </div>
+</div>
+
+<!-- Case Study 1 -->
+<section class="comparison-section">
+    <div class="container">
+        <h2>Case Study #01: The "Frankenstein" Theme</h2>
+        <p style="color: var(--text-secondary); max-width: 600px;">A 7-figure store was crashing during BFCM because of 5 years of accumulated uninstalled app code. We refactored the entire architecture.</p>
+
+        <div class="comparison-grid">
+            <div class="visualizer-card">
+                <div class="label-badge badge-bad">BEFORE: BLOATED LEGACY CODE</div>
+                <div class="code-block" style="margin-top: 1.5rem;">
+                    <span class="code-line red">- &lt;script src="app1.js"&gt;&lt;/script&gt;</span>
+                    <span class="code-line red">- &lt;script src="app2-legacy.js"&gt;&lt;/script&gt;</span>
+                    <span class="code-line">- {% for product in collection %}</span>
+                    <span class="code-line red">- {% include 'snippet-heavy' %}</span>
+                    <span class="code-line">- &lt;div class="grid-item"&gt;</span>
+                    <span class="code-line red">- &lt;!-- nested loops slowing render --&gt;</span>
+                    <span class="code-line">- &lt;/div&gt;</span>
+                    <span class="code-line">- {% endfor %}</span>
+                </div>
+            </div>
+            <div class="visualizer-card">
+                <div class="label-badge badge-good">AFTER: OPTIMIZED MODULES</div>
+                <div class="code-block" style="margin-top: 1.5rem;">
+                    <span class="code-line green">+ &lt;script type="module" src="main.min.js"&gt;&lt;/script&gt;</span>
+                    <span class="code-line">+ {% render 'product-card', product: product %}</span>
+                    <span class="code-line">// Data fetching via Modern API Layers</span>
+                    <span class="code-line">// Lazy loaded images</span>
+                    <span class="code-line">// Critical CSS inlined</span>
+                    <span class="code-line green">+ Speed Index: 0.8s</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Case Study 2 -->
+<section class="comparison-section">
+    <div class="container">
+        <h2>Case Study #02: Core Web Vitals Rescue</h2>
+        <p style="color: var(--text-secondary); max-width: 600px;">Google started penalizing this store for slow Mobile LCP. We stripped the bloat and optimized the asset delivery pipeline.</p>
+
+        <div class="comparison-grid">
+            <div class="visualizer-card" style="text-align: center;">
+                <div class="label-badge badge-bad">BEFORE</div>
+                <div style="margin-top: 2rem;">
+                    <div class="lh-circle lh-bad">32</div>
+                    <p style="margin-top: 1rem; color: #ef4444; font-weight: 500;">Performance Score</p>
+                </div>
+            </div>
+            <div class="visualizer-card" style="text-align: center;">
+                <div class="label-badge badge-good">AFTER</div>
+                <div style="margin-top: 2rem;">
+                    <div class="lh-circle lh-good counter" data-target="98">0</div>
+                    <p style="margin-top: 1rem; color: #22c55e; font-weight: 500;">Performance Score</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Case Study 3 -->
+<section class="comparison-section">
+    <div class="container">
+        <h2>Case Study #03: Search Dominance</h2>
+        <p style="color: var(--text-secondary); max-width: 600px;">Moving from generic metadata to Rich Snippets with JSON-LD schema integration.</p>
+
+        <div class="comparison-grid">
+            <div class="visualizer-card">
+                <div class="label-badge badge-bad">BEFORE</div>
+                <div style="margin-top: 1.5rem; font-family: arial, sans-serif;">
+                    <div style="color: #1a0dab; font-size: 1.2rem; margin-bottom: 2px;">Buy Shoes Online | Best Sneaker Store</div>
+                    <div style="color: #006621; font-size: 0.9rem; margin-bottom: 2px;">www.example.com/products/shoes</div>
+                    <span style="color: #545454; font-size: 0.9rem;">We sell shoes. Buy sneakers here. Good prices.</span>
+                </div>
+            </div>
+            <div class="visualizer-card">
+                <div class="label-badge badge-good">AFTER</div>
+                <div style="margin-top: 1.5rem; font-family: arial, sans-serif;">
+                    <div style="color: #1a0dab; font-size: 1.2rem; margin-bottom: 2px;">Premium Leather Sneakers | Urban Thread</div>
+                    <div style="color: #006621; font-size: 0.9rem; margin-bottom: 2px;">www.urbanthread.com/sneakers</div>
+                    <div style="color: #545454; font-size: 0.9rem;">
+                        <span style="color: #e67e22;">★★★★★</span> Rating: 4.9 - 1,204 reviews - $120.00 - In stock<br>
+                        Shop the latest collection of handcrafted leather sneakers. Free shipping over $100.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Case Study 4 -->
+<section class="comparison-section" style="border-bottom: none;">
+    <div class="container">
+        <h2>Case Study #04: The Revenue Graph</h2>
+        <p style="color: var(--text-secondary); max-width: 600px;">The result of Code + Speed + SEO fixing? 40% net new customers in 90 days.</p>
+
+        <div class="visualizer-card" style="margin-top: 2rem; height: 300px; display: flex; align-items: flex-end; justify-content: space-around; padding-bottom: 0;">
+            <div class="label-badge badge-good" style="top: 1rem; left: 1rem; right: auto;">CUSTOMER GROWTH</div>
+            <div style="text-align: center; width: 10%;">
+                <div style="height: 100px; background: #333; margin: 0 auto; border-radius: 4px 4px 0 0;"></div>
+                <div style="margin-top: 0.5rem; color: var(--text-secondary); font-size: 0.8rem;">Month 1</div>
+            </div>
+            <div style="text-align: center; width: 10%;">
+                <div style="height: 120px; background: #333; margin: 0 auto; border-radius: 4px 4px 0 0;"></div>
+                <div style="margin-top: 0.5rem; color: var(--text-secondary); font-size: 0.8rem;">Month 2</div>
+            </div>
+            <div style="text-align: center; width: 10%;">
+                <div style="height: 150px; background: #444; margin: 0 auto; border-radius: 4px 4px 0 0;"></div>
+                <div style="margin-top: 0.5rem; color: var(--text-secondary); font-size: 0.8rem;">Month 3</div>
+            </div>
+            <div style="text-align: center; width: 10%;">
+                <div class="growth-bar" style="height: 0; background: #3b82f6; margin: 0 auto; border-radius: 4px 4px 0 0; transition: height 1.5s ease-out; box-shadow: 0 0 30px rgba(59, 130, 246, 0.3);"></div>
+                <div style="margin-top: 0.5rem; font-weight: 700; color: #fff; font-size: 0.9rem;">Month 4 (Fix)</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const counters = document.querySelectorAll('.counter');
+        counters.forEach(counter => {
+            const target = +counter.getAttribute('data-target');
+            const duration = 2000;
+            const increment = target / (duration / 16);
+            let current = 0;
+            const updateCounter = () => {
+                current += increment;
+                if (current < target) {
+                    counter.innerText = Math.ceil(current);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        updateCounter();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            });
+            observer.observe(counter);
+        });
+
+        const bar = document.querySelector('.growth-bar');
+        if (bar) {
+            const barObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.height = '240px';
+                        barObserver.unobserve(entry.target);
+                    }
+                });
+            });
+            barObserver.observe(bar);
+        }
+    });
+</script>
+
+{% schema %}
+{
+  "name": "Case Studies Template",
+  "settings": []
+}
+{% endschema %}
