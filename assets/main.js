@@ -17,8 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Mapping of service keys to their Shopify Product handles/URLs
     const serviceUrls = {
         'audit': '/products/deep-dive-audit',
+        'web-dev': '/products/full-cycle-website-development',
         'cro': '/products/growth-partner-cro',
         'seo': '/products/seo-listings',
+        'partner': '/products/white-collar-partner-service',
         'apps': '/products/custom-app-development',
         'free-audit': '#contact'
     };
@@ -44,6 +46,12 @@ document.addEventListener('DOMContentLoaded', () => {
             price: "$997 (Limited Offer)",
             link: serviceUrls.audit
         }),
+        'web-dev': getProductData('web-dev', {
+            title: "Full-Cycle Website Development",
+            desc: "Custom-built revenue engines from concept to deployment. Optimized for sub-second speed and global scale.",
+            price: "Custom Quote",
+            link: serviceUrls['web-dev']
+        }),
         cro: getProductData('growth-partner-cro', {
             title: "Growth Partner (CRO)",
             desc: "Continuous testing and optimization to maximize your Revenue Per User.",
@@ -55,6 +63,12 @@ document.addEventListener('DOMContentLoaded', () => {
             desc: "Climb the rankings and own your niche with technical and content SEO.",
             price: "$2,500/mo",
             link: serviceUrls.seo
+        }),
+        partner: getProductData('partner', {
+            title: "White Collar Partner Service",
+            desc: "Elite C-suite level technical and strategic advisory that embeds our senior leadership into your business.",
+            price: "Monthly Retainer",
+            link: serviceUrls.partner
         }),
         apps: getProductData('custom-app-development', {
             title: "Custom App Development",
@@ -81,6 +95,14 @@ document.addEventListener('DOMContentLoaded', () => {
             "Tech Stack Modernization Roadmap",
             "Free 30-min Strategy Call"
         ],
+        'web-dev': [
+            "Conceptual Architecture & UX Prototyping",
+            "Premium Design Systems & UI Excellence",
+            "High-Performance Engineering (Next.js/Shopify)",
+            "Global Multi-Currency & Language Setup",
+            "Continuous Integration & Deployment (CI/CD)",
+            "Post-Launch Technical Support (24/7)"
+        ],
         cro: [
             "Everything in Deep Dive Audit",
             "Monthly A/B Testing Regime",
@@ -95,6 +117,14 @@ document.addEventListener('DOMContentLoaded', () => {
             "Technical SEO Fixes (Schema/Speed)",
             "Backlink Profile Analysis",
             "Rich Snippets Implementation"
+        ],
+        partner: [
+            "Fractional CTO & Strategic Advisory",
+            "Tech Stack Consolidation & Cost Recovery",
+            "Senior Technical Hiring & Vetting Support",
+            "Scale-Ready Infrastructure Roadmapping",
+            "Direct 24/7 VIP Communication Line",
+            "Investor & Acquisition Technical Prep"
         ],
         apps: [
             "Full-Stack Development Team (24/7)",
