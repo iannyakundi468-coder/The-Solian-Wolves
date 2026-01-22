@@ -37,15 +37,30 @@
     {% endif %}
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link rel="preload" href="https://fonts.gstatic.com/s/spacegrotesk/v15/V8mQoQDjQSkFtoMM3T6rjS3F9XRaMDvDVGL2.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Critical CSS -->
+    <style>
+        :root { --bg-color: #050505; --text-primary: #ffffff; --text-secondary: #a1a1aa; --font-heading: 'Space Grotesk', system-ui, sans-serif; --font-body: 'Inter', system-ui, sans-serif; --spacing-sm: 1rem; --spacing-md: 2rem; --radius-sm: 4px; }
+        body { background-color: var(--bg-color); color: var(--text-primary); font-family: var(--font-body); margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+        .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #050505 70%); text-align: center; }
+        .hero-content { max-width: 800px; padding: 0 20px; }
+        .hero h1 { font-size: clamp(3rem, 8vw, 6rem); margin-bottom: var(--spacing-sm); font-family: var(--font-heading); line-height: 1; }
+        .hero p { font-size: clamp(1.1rem, 2vw, 1.5rem); color: var(--text-secondary); margin-bottom: var(--spacing-md); }
+        .hero-logo { width: 140px; height: 140px; margin: 0 auto 1.5rem; border-radius: 50%; border: 2px solid rgba(255,255,255,0.1); overflow: hidden; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 1rem 2rem; font-family: var(--font-heading); font-weight: 600; border-radius: var(--radius-sm); border: 1px solid transparent; text-decoration: none; }
+        .btn-blue { background: linear-gradient(135deg, #4169E1 0%, #5B7FE8 100%); color: #fff; }
+    </style>
 
     <!-- Styles -->
     {{ 'main.css' | asset_url | stylesheet_tag }}
 
     <!-- LCP Optimizations -->
     <link rel="preload" as="image" href="{{ 'logo.jpg' | asset_url }}" fetchpriority="high">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
 
     {{ content_for_header }}
 </head>

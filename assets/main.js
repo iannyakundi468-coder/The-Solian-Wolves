@@ -429,10 +429,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    // Initialize observer in a background task
-    setTimeout(() => {
-        const animateElements = document.querySelectorAll('.animate-on-scroll');
-        animateElements.forEach(el => observer.observe(el));
-    }, 0);
+    // Initialize observer in a background task (Idle)
+    if ('requestIdleCallback' in window) {
+        requestIdleCallback(() => {
+            const animateElements = document.querySelectorAll('.animate-on-scroll');
+            animateElements.forEach(el => observer.observe(el));
+        });
+    } else {
+        setTimeout(() => {
+            const animateElements = document.querySelectorAll('.animate-on-scroll');
+            animateElements.forEach(el => observer.observe(el));
+        }, 100);
+    }
 
 });
