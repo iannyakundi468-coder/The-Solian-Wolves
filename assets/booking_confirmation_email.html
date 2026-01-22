@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmed - The Solian Wolves</title>
+    <style>
+        /* Basic reset */
+        body,
+        table,
+        td,
+        a {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        table,
+        td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        img {
+            -ms-interpolation-mode: bicubic;
+        }
+
+        /* Outlook link fix */
+        #outlook a {
+            padding: 0;
+        }
+
+        /* Disable auto-link on iOS */
+        a[x-apple-data-detectors] {
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+
+        /* Responsive styles */
+        @media screen and (max-width: 600px) {
+            .container {
+                width: 100% !important;
+            }
+
+            .content-padding {
+                padding: 20px !important;
+            }
+        }
+    </style>
+</head>
+
+<body
+    style="margin: 0; padding: 0; background-color: #050505; font-family: 'Inter', system-ui, -apple-system, sans-serif;">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #050505;">
+        <tr>
+            <td align="center" style="padding: 40px 0 20px 0;">
+                <!-- Logo -->
+                <table border="0" cellpadding="0" cellspacing="0" width="600" class="container">
+                    <tr>
+                        <td align="center">
+                            <img src="https://cdn.shopify.com/s/files/1/0854/2571/1411/files/logo_wolves_small.png?v=1710000000"
+                                alt="The Solian Wolves" width="100"
+                                style="display: block; width: 100px; border-radius: 50%;">
+                            <!-- Note: User should replace the above URL with their actual Shopify logo URL -->
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" style="padding-bottom: 40px;">
+                <table border="0" cellpadding="0" cellspacing="0" width="600" class="container"
+                    style="background-color: #0f0f0f; border: 1px solid #27272a; border-radius: 12px; overflow: hidden;">
+                    <!-- Header Image / Accent -->
+                    <tr>
+                        <td style="background: linear-gradient(135deg, #4169E1 0%, #5B7FE8 100%); height: 4px;"></td>
+                    </tr>
+
+                    <!-- Content Body -->
+                    <tr>
+                        <td class="content-padding" style="padding: 40px;">
+                            <h1
+                                style="color: #ffffff; font-size: 24px; margin: 0 0 20px 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: -0.02em;">
+                                Booking Confirmed, {{ customer.first_name | default: 'there' }}.
+                            </h1>
+                            <p style="color: #a1a1aa; font-size: 16px; line-height: 1.6; margin: 0 0 30px 0;">
+                                We've received your booking for <strong>{{ order_name }}</strong>. Our team is already
+                                gearing up to dive into your project and help you stop leaving revenue on the table.
+                            </p>
+
+                            <!-- Booking Summary -->
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                                style="background-color: #161616; border-radius: 8px; margin-bottom: 30px;">
+                                <tr>
+                                    <td style="padding: 20px;">
+                                        <p
+                                            style="color: #ffffff; font-size: 14px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; margin: 0 0 15px 0;">
+                                            Booking Details</p>
+                                        {% for line in line_items %}
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                                            style="margin-bottom: 10px;">
+                                            <tr>
+                                                <td style="color: #ffffff; font-size: 16px; font-weight: 500;">{{
+                                                    line.title }}</td>
+                                                <td align="right"
+                                                    style="color: #ffffff; font-size: 16px; font-weight: 500;">{{
+                                                    line.price | money }}</td>
+                                            </tr>
+                                        </table>
+                                        {% endfor %}
+                                        <div style="border-top: 1px solid #27272a; margin: 15px 0; padding-top: 15px;">
+                                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                <tr>
+                                                    <td style="color: #a1a1aa; font-size: 16px;">Total Paid</td>
+                                                    <td align="right"
+                                                        style="color: #ffffff; font-size: 18px; font-weight: 700; color: #3b82f6;">
+                                                        {{ total_price | money }}</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- Next Steps -->
+                            <h2
+                                style="color: #ffffff; font-size: 18px; margin: 0 0 15px 0; font-family: 'Space Grotesk', sans-serif;">
+                                Next Steps</h2>
+                            <ul
+                                style="color: #a1a1aa; font-size: 15px; padding-left: 20px; margin: 0 0 30px 0; line-height: 1.8;">
+                                <li><strong>The Blueprint:</strong> Review our <a
+                                        href="{{ shop.url }}/preview?view=blueprint"
+                                        style="color: #3b82f6; text-decoration: underline;">Master Onboarding & Strategy
+                                        Blueprint</a> (3000+ words of surgical strategy).</li>
+                                <li><strong>Onboarding:</strong> You'll receive a separate email within 24 hours with a
+                                    link to our onboarding form.</li>
+                                <li><strong>Audit Phase:</strong> Once the form is complete, our wolves start the
+                                    deep-dive audit.</li>
+                                <li><strong>Strategy Call:</strong> We'll reach out to schedule your 1-on-1 strategy
+                                    call once the audit is finalized.</li>
+                            </ul>
+
+                            <!-- CTA Button -->
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td align="center">
+                                        <a href="{{ shop.url }}"
+                                            style="background: linear-gradient(135deg, #4169E1 0%, #5B7FE8 100%); color: #ffffff; padding: 16px 32px; border-radius: 100px; text-decoration: none; font-weight: 600; font-size: 16px; display: inline-block; box-shadow: 0 4px 15px rgba(65, 105, 225, 0.3);">
+                                            View Order Status
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Footer Info -->
+                    <tr>
+                        <td style="padding: 0 40px 40px 40px; border-top: 1px solid #27272a;">
+                            <p style="color: #a1a1aa; font-size: 14px; margin: 30px 0 0 0; text-align: center;">
+                                Have questions? Just reply to this email or reach us at <a
+                                    href="mailto:{{ shop.email }}" style="color: #3b82f6; text-decoration: none;">{{
+                                    shop.email }}</a>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" style="padding-bottom: 40px;">
+                <p style="color: #71717a; font-size: 12px;">
+                    &copy; {{ "now" | date: "%Y" }} {{ shop.name }}. All rights reserved.<br>
+                    Designed by The Solian Wolves.
+                </p>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
