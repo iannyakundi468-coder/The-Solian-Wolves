@@ -7,22 +7,36 @@
                 <p style="color: var(--text-secondary); margin-bottom: 2rem;">Stop losing sales to bad UX and slow
                     code.
                     Let's build something powerful.</p>
-                <form id="contact-form"
-                    style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
-                    <input type="email" id="contact-email" name="email" placeholder="Your Work Email" required
+                {% form 'contact', id: 'contact-form' %}
+                    {% if form.posted_successfully? %}
+                        <script>
+                            document.addEventListener('DOMContentLoaded', () => {
+                                const formStep1 = document.getElementById('form-step-1');
+                                const thankYouSection = document.getElementById('thank-you-section');
+                                if (formStep1 && thankYouSection) {
+                                    formStep1.style.display = 'none';
+                                    thankYouSection.style.display = 'block';
+                                    thankYouSection.style.opacity = '1';
+                                    thankYouSection.style.transform = 'translateY(0)';
+                                }
+                            });
+                        </script>
+                    {% endif %}
+
+                    <input type="email" id="contact-email" name="contact[email]" placeholder="Your Work Email" required
                         style="padding: 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-color); background: #000; color: #fff; font-family: inherit;">
 
                     <div id="contact-additional-fields"
                         style="display: none; flex-direction: column; gap: 1rem; opacity: 0; transform: translateY(10px); transition: all 0.4s ease;">
-                        <input type="url" name="website" placeholder="Your Website URL" required
+                        <input type="url" name="contact[website]" placeholder="Your Website URL" required
                             style="padding: 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-color); background: #000; color: #fff; font-family: inherit;">
-                        <textarea name="details" placeholder="How can we help you dominate?"
+                        <textarea name="contact[body]" placeholder="How can we help you dominate?"
                             style="padding: 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-color); background: #000; color: #fff; font-family: inherit; min-height: 100px; resize: vertical;"></textarea>
                     </div>
 
                     <button type="submit" id="contact-submit" class="btn" style="width: 100%;">Get Your
                         Audit</button>
-                </form>
+                {% endform %}
                 <p style="font-size: 0.8rem; color: var(--text-secondary);">No spam. Just value.</p>
             </div>
 

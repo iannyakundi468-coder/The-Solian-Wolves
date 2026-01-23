@@ -29,11 +29,13 @@ document.addEventListener('DOMContentLoaded', () => {
     function getProductData(handle, fallback) {
         const shopifyData = window.ShopifyProductData && window.ShopifyProductData[handle];
         if (shopifyData) {
+            // Construct direct checkout link if variantId exists
+            const checkoutLink = shopifyData.variantId ? `/cart/${shopifyData.variantId}:1` : shopifyData.url;
             return {
                 title: shopifyData.title,
                 desc: shopifyData.desc || fallback.desc,
                 price: shopifyData.price,
-                link: shopifyData.url
+                link: checkoutLink
             };
         }
         return fallback;
@@ -303,32 +305,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const formData = new FormData(contactForm);
-            const data = Object.fromEntries(formData.entries());
-
-            if (data.email) {
-                // Simulate form submission (In production, use fetch to your backend or Formspree)
-                console.log('Form Submitted:', data);
-
-                // Switch to Thank You state
-                if (formStep1 && thankYouSection) {
-                    formStep1.style.opacity = '0';
-                    setTimeout(() => {
-                        formStep1.style.display = 'none';
-                        thankYouSection.style.display = 'block';
-                        setTimeout(() => {
-                            thankYouSection.style.opacity = '1';
-                            thankYouSection.style.transform = 'translateY(0)';
-                            showUpsellLogic();
-                        }, 10);
-                    }, 500);
-                }
-            }
-        });
-    }
+    // Non-functional mock handler removed. Using Shopify native {% form 'contact' %} in contact.liquid
 
     function showUpsellLogic() {
         if (!upsellContainer || !upsellPlans) return;

@@ -25,7 +25,7 @@
                         <div style="color: var(--text-secondary); margin-bottom: 2rem;">
                             {{ product.description | strip_html | truncatewords: 20 }}
                         </div>
-                        <a href="{{ product.url }}" class="btn btn-blue pricing-trigger" style="width: 100%;" aria-label="View details for {{ product.title }}">View Details</a>
+                        <a href="/cart/{{ product.first_available_variant.id }}:1" class="btn btn-blue" style="width: 100%;" aria-label="Book {{ product.title }} now">Book Now</a>
                     </div>
                 {% endfor %}
             {% else %}
@@ -50,7 +50,7 @@
                         <li>✓ SEO Keyword Blueprint</li>
                         <li>✓ <strong>Strategy Call (NEW)</strong></li>
                     </ul>
-                    <a href="#contact" class="btn btn-gold pricing-trigger" data-service="audit"
+                    <a href="/cart/9078390161698:1" class="btn btn-gold"
                         style="width: 100%;" aria-label="Book a Deep Dive Audit now">Book Now</a>
                 </div>
 
@@ -71,7 +71,7 @@
                         <li>✓ Unlimited A/B Testing</li>
                         <li>✓ Dedicated Project Manager</li>
                     </ul>
-                    <a href="#contact" class="btn btn-purple pricing-trigger" data-service="cro"
+                    <a href="/cart/9078390653154:1" class="btn btn-purple"
                         style="width: 100%;" aria-label="Start scaling with a Growth Partner plan">Start Scaling</a>
                 </div>
 
