@@ -97,11 +97,11 @@
     }
 </style>
 
-<div class="section-padding" style="padding-top: 15vh; padding-bottom: 5vh; text-align: center;">
+<div class="section-padding" style="padding-top: 120px; padding-bottom: 5vh; text-align: center;">
     <div class="container">
-        <h1>{{ page.title }}</h1>
-        <div class="rte" style="color: var(--text-secondary); max-width: 600px; margin: 1rem auto;">
-            {{ page.content }}
+        <h1 style="font-size: clamp(2.5rem, 5vw, 4rem);">Surgical <span style="color: #3b82f6;">Results</span></h1>
+        <div class="rte" style="color: var(--text-secondary); max-width: 600px; margin: 1rem auto; font-size: 1.1rem;">
+            Deep dives into technical debt, performance bottlenecks, and the code that drives revenue.
         </div>
     </div>
 </div>
@@ -109,13 +109,19 @@
 <!-- Case Study 1 -->
 <section class="comparison-section">
     <div class="container">
-        <h2>Case Study #01: The "Frankenstein" Theme</h2>
-        <p style="color: var(--text-secondary); max-width: 600px;">A 7-figure store was crashing during BFCM because of 5 years of accumulated uninstalled app code. We refactored the entire architecture.</p>
+        <div style="margin-bottom: 2rem;">
+            <div style="font-size: 0.8rem; color: #3b82f6; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem;">Inventory #01</div>
+            <h2>The "Frankenstein" Theme Refactor</h2>
+            <p style="color: var(--text-secondary); max-width: 700px; font-size: 1rem; margin-top: 1rem;">
+                <strong>Problem:</strong> A 7-figure store was crashing during BFCM because of 5 years of accumulated uninstalled app code. Scripts were fighting for the same cycles, leading to high TBT.<br>
+                <strong>Solution:</strong> We refactored the entire architecture, stripping 1.2MB of dead JS and moving to a modular, render-safe architecture.
+            </p>
+        </div>
 
         <div class="comparison-grid">
             <div class="visualizer-card">
-                <div class="label-badge badge-bad">BEFORE: BLOATED LEGACY CODE</div>
-                <div class="code-block" style="margin-top: 1.5rem;">
+                <div class="label-badge badge-bad">BEFORE: BLOATED LEGACY</div>
+                <div class="code-block" style="margin-top: 2rem;">
                     <span class="code-line red">- &lt;script src="app1.js"&gt;&lt;/script&gt;</span>
                     <span class="code-line red">- &lt;script src="app2-legacy.js"&gt;&lt;/script&gt;</span>
                     <span class="code-line">- {% for product in collection %}</span>
@@ -128,12 +134,12 @@
             </div>
             <div class="visualizer-card">
                 <div class="label-badge badge-good">AFTER: OPTIMIZED MODULES</div>
-                <div class="code-block" style="margin-top: 1.5rem;">
+                <div class="code-block" style="margin-top: 2rem;">
                     <span class="code-line green">+ &lt;script type="module" src="main.min.js"&gt;&lt;/script&gt;</span>
                     <span class="code-line">+ {% render 'product-card', product: product %}</span>
                     <span class="code-line">// Data fetching via Modern API Layers</span>
-                    <span class="code-line">// Lazy loaded images</span>
-                    <span class="code-line">// Critical CSS inlined</span>
+                    <span class="code-line">// Lazy loaded images (decoding="async")</span>
+                    <span class="code-line">// Critical CSS inlined in <head></span>
                     <span class="code-line green">+ Speed Index: 0.8s</span>
                 </div>
             </div>
@@ -144,22 +150,28 @@
 <!-- Case Study 2 -->
 <section class="comparison-section">
     <div class="container">
-        <h2>Case Study #02: Core Web Vitals Rescue</h2>
-        <p style="color: var(--text-secondary); max-width: 600px;">Google started penalizing this store for slow Mobile LCP. We stripped the bloat and optimized the asset delivery pipeline.</p>
+        <div style="margin-bottom: 2rem;">
+            <div style="font-size: 0.8rem; color: #3b82f6; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem;">Inventory #02</div>
+            <h2>Core Web Vitals Rescue</h2>
+            <p style="color: var(--text-secondary); max-width: 700px; font-size: 1rem; margin-top: 1rem;">
+                <strong>Problem:</strong> Google started penalizing this store for slow Mobile LCP (5.8s), leading to a 15% drop in organic traffic.<br>
+                <strong>Solution:</strong> We stripped the theme bloat, optimized the asset delivery pipeline, and implemented edge-caching for all static assets.
+            </p>
+        </div>
 
         <div class="comparison-grid">
-            <div class="visualizer-card" style="text-align: center;">
+            <div class="visualizer-card" style="text-align: center; padding: 3rem 1.5rem;">
                 <div class="label-badge badge-bad">BEFORE</div>
-                <div style="margin-top: 2rem;">
+                <div style="margin-top: 1rem;">
                     <div class="lh-circle lh-bad">32</div>
-                    <p style="margin-top: 1rem; color: #ef4444; font-weight: 500;">Performance Score</p>
+                    <p style="margin-top: 1.5rem; color: #ef4444; font-weight: 600; font-size: 0.9rem;">LOW PERFORMANCE</p>
                 </div>
             </div>
-            <div class="visualizer-card" style="text-align: center;">
+            <div class="visualizer-card" style="text-align: center; padding: 3rem 1.5rem;">
                 <div class="label-badge badge-good">AFTER</div>
-                <div style="margin-top: 2rem;">
+                <div style="margin-top: 1rem;">
                     <div class="lh-circle lh-good counter" data-target="98">0</div>
-                    <p style="margin-top: 1rem; color: #22c55e; font-weight: 500;">Performance Score</p>
+                    <p style="margin-top: 1.5rem; color: #22c55e; font-weight: 600; font-size: 0.9rem;">ELITE PERFORMANCE</p>
                 </div>
             </div>
         </div>
@@ -169,22 +181,28 @@
 <!-- Case Study 3 -->
 <section class="comparison-section">
     <div class="container">
-        <h2>Case Study #03: Search Dominance</h2>
-        <p style="color: var(--text-secondary); max-width: 600px;">Moving from generic metadata to Rich Snippets with JSON-LD schema integration.</p>
+        <div style="margin-bottom: 2rem;">
+            <div style="font-size: 0.8rem; color: #3b82f6; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem;">Inventory #03</div>
+            <h2>Technical SEO: Search Dominance</h2>
+            <p style="color: var(--text-secondary); max-width: 700px; font-size: 1rem; margin-top: 1rem;">
+                <strong>Problem:</strong> Lack of semantic depth meant search engines couldn't understand product availability or ratings, leading to low CTR.<br>
+                <strong>Solution:</strong> Full transition to Rich Snippets with specialized JSON-LD schema integration for every product and collection.
+            </p>
+        </div>
 
         <div class="comparison-grid">
             <div class="visualizer-card">
-                <div class="label-badge badge-bad">BEFORE</div>
-                <div style="margin-top: 1.5rem; font-family: arial, sans-serif;">
-                    <div style="color: #1a0dab; font-size: 1.2rem; margin-bottom: 2px;">Buy Shoes Online | Best Sneaker Store</div>
+                <div class="label-badge badge-bad">LEGACY SERP</div>
+                <div style="margin-top: 2rem; font-family: arial, sans-serif;">
+                    <div style="color: #1a0dab; font-size: 1.2rem; margin-bottom: 2px; text-decoration: underline;">Buy Shoes Online | Best Sneaker Store</div>
                     <div style="color: #006621; font-size: 0.9rem; margin-bottom: 2px;">www.example.com/products/shoes</div>
                     <span style="color: #545454; font-size: 0.9rem;">We sell shoes. Buy sneakers here. Good prices.</span>
                 </div>
             </div>
             <div class="visualizer-card">
-                <div class="label-badge badge-good">AFTER</div>
-                <div style="margin-top: 1.5rem; font-family: arial, sans-serif;">
-                    <div style="color: #1a0dab; font-size: 1.2rem; margin-bottom: 2px;">Premium Leather Sneakers | Urban Thread</div>
+                <div class="label-badge badge-good">OPTIMIZED SERP</div>
+                <div style="margin-top: 2rem; font-family: arial, sans-serif;">
+                    <div style="color: #1a0dab; font-size: 1.2rem; margin-bottom: 2px; text-decoration: underline;">Premium Leather Sneakers | Urban Thread</div>
                     <div style="color: #006621; font-size: 0.9rem; margin-bottom: 2px;">www.urbanthread.com/sneakers</div>
                     <div style="color: #545454; font-size: 0.9rem;">
                         <span style="color: #e67e22;">★★★★★</span> Rating: 4.9 - 1,204 reviews - $120.00 - In stock<br>
@@ -199,26 +217,31 @@
 <!-- Case Study 4 -->
 <section class="comparison-section" style="border-bottom: none;">
     <div class="container">
-        <h2>Case Study #04: The Revenue Graph</h2>
-        <p style="color: var(--text-secondary); max-width: 600px;">The result of Code + Speed + SEO fixing? 40% net new customers in 90 days.</p>
+        <div style="margin-bottom: 3rem;">
+            <div style="font-size: 0.8rem; color: #3b82f6; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem;">Phase Results</div>
+            <h2>The Revenue Growth Engine</h2>
+            <p style="color: var(--text-secondary); max-width: 700px; font-size: 1rem; margin-top: 1rem;">
+                <strong>The Result:</strong> The combination of Code Refactoring + Speed Optimization + SEO Authority Fixes resulted in 40% net new customers within 90 days.
+            </p>
+        </div>
 
-        <div class="visualizer-card" style="margin-top: 2rem; height: 300px; display: flex; align-items: flex-end; justify-content: space-around; padding-bottom: 0;">
-            <div class="label-badge badge-good" style="top: 1rem; left: 1rem; right: auto;">CUSTOMER GROWTH</div>
-            <div style="text-align: center; width: 10%;">
-                <div style="height: 100px; background: #333; margin: 0 auto; border-radius: 4px 4px 0 0;"></div>
-                <div style="margin-top: 0.5rem; color: var(--text-secondary); font-size: 0.8rem;">Month 1</div>
+        <div class="visualizer-card" style="margin-top: 2rem; height: 350px; display: flex; align-items: flex-end; justify-content: space-around; padding: 2rem 1rem 0;">
+            <div class="label-badge badge-good" style="top: 1.5rem; left: 1.5rem; right: auto;">REVENUE ASCENSION</div>
+            <div style="text-align: center; width: 15%;">
+                <div style="height: 100px; background: #222; margin: 0 auto; border-radius: 4px 4px 0 0; border: 1px solid #333;"></div>
+                <div style="margin-top: 1rem; color: var(--text-secondary); font-size: 0.75rem; font-weight: 600;">BASELINE</div>
             </div>
-            <div style="text-align: center; width: 10%;">
-                <div style="height: 120px; background: #333; margin: 0 auto; border-radius: 4px 4px 0 0;"></div>
-                <div style="margin-top: 0.5rem; color: var(--text-secondary); font-size: 0.8rem;">Month 2</div>
+            <div style="text-align: center; width: 15%;">
+                <div style="height: 120px; background: #222; margin: 0 auto; border-radius: 4px 4px 0 0; border: 1px solid #333;"></div>
+                <div style="margin-top: 1rem; color: var(--text-secondary); font-size: 0.75rem; font-weight: 600;">MONTH 2</div>
             </div>
-            <div style="text-align: center; width: 10%;">
-                <div style="height: 150px; background: #444; margin: 0 auto; border-radius: 4px 4px 0 0;"></div>
-                <div style="margin-top: 0.5rem; color: var(--text-secondary); font-size: 0.8rem;">Month 3</div>
+            <div style="text-align: center; width: 15%;">
+                <div style="height: 150px; background: #333; margin: 0 auto; border-radius: 4px 4px 0 0; border: 1px solid #444;"></div>
+                <div style="margin-top: 1rem; color: var(--text-secondary); font-size: 0.75rem; font-weight: 600;">MONTH 3</div>
             </div>
-            <div style="text-align: center; width: 10%;">
-                <div class="growth-bar" style="height: 0; background: #3b82f6; margin: 0 auto; border-radius: 4px 4px 0 0; transition: height 1.5s ease-out; box-shadow: 0 0 30px rgba(59, 130, 246, 0.3);"></div>
-                <div style="margin-top: 0.5rem; font-weight: 700; color: #fff; font-size: 0.9rem;">Month 4 (Fix)</div>
+            <div style="text-align: center; width: 20%;">
+                <div class="growth-bar" style="height: 0; background: linear-gradient(to top, #3b82f6, #60a5fa); margin: 0 auto; border-radius: 6px 6px 0 0; transition: height 1.5s cubic-bezier(0.16, 1, 0.3, 1); box-shadow: 0 0 40px rgba(59, 130, 246, 0.2);"></div>
+                <div style="margin-top: 1rem; font-weight: 800; color: #fff; font-size: 0.9rem;">+40% POST-FIX</div>
             </div>
         </div>
     </div>
