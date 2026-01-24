@@ -124,22 +124,22 @@
                 <div class="code-block" style="margin-top: 2rem;">
                     <span class="code-line red">- &lt;script src="app1.js"&gt;&lt;/script&gt;</span>
                     <span class="code-line red">- &lt;script src="app2-legacy.js"&gt;&lt;/script&gt;</span>
-                    <span class="code-line">- {% for product in collection %}</span>
-                    <span class="code-line red">- {% include 'snippet-heavy' %}</span>
+                    <span class="code-line">- {% raw %}{% for product in collection %}{% endraw %}</span>
+                    <span class="code-line red">- {% raw %}{% include 'snippet-heavy' %}{% endraw %}</span>
                     <span class="code-line">- &lt;div class="grid-item"&gt;</span>
                     <span class="code-line red">- &lt;!-- nested loops slowing render --&gt;</span>
                     <span class="code-line">- &lt;/div&gt;</span>
-                    <span class="code-line">- {% endfor %}</span>
+                    <span class="code-line">- {% raw %}{% endfor %}{% endraw %}</span>
                 </div>
             </div>
             <div class="visualizer-card">
                 <div class="label-badge badge-good">AFTER: OPTIMIZED MODULES</div>
                 <div class="code-block" style="margin-top: 2rem;">
                     <span class="code-line green">+ &lt;script type="module" src="main.min.js"&gt;&lt;/script&gt;</span>
-                    <span class="code-line">+ {% render 'product-card', product: product %}</span>
+                    <span class="code-line">+ {% raw %}{% render 'product-card', product: product %}{% endraw %}</span>
                     <span class="code-line">// Data fetching via Modern API Layers</span>
                     <span class="code-line">// Lazy loaded images (decoding="async")</span>
-                    <span class="code-line">// Critical CSS inlined in <head></span>
+                    <span class="code-line">// Critical CSS inlined in &lt;head&gt;</span>
                     <span class="code-line green">+ Speed Index: 0.8s</span>
                 </div>
             </div>
