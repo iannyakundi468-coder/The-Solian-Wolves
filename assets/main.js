@@ -359,17 +359,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- 4. Page Animations & Observers ---
 
-    // Smooth scroll - Optimized for INP
-    const smoothLinks = document.querySelectorAll('a[href^="#"]');
-    smoothLinks.forEach(anchor => {
+    // --- 5. Navigation Helpers ---
+
+    function smoothScrollTo(targetId) {
+        const target = document.querySelector(targetId);
+        if (target) {
+            const headerOffset = 100; // Offset for fixed nav
+            const elementPosition = target.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
+    }
+
+    // Handle initial hash on load
+    if (window.location.hash) {
+        // Delay slightly to ensure layout is stable
+        setTimeout(() => {
+            smoothScrollTo(window.location.hash);
+        }, 300);
+    }
+
+    // Smooth scroll for anchors
+    document.querySelectorAll('a[href^="#"], a[href^="/#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
-            if (href === '#' || href === '') return;
-            const target = document.querySelector(href);
-            if (target) {
-                e.preventDefault();
-                target.scrollIntoView({ behavior: 'smooth' });
+            const targetId = href.startsWith('/#') ? href.substring(1) : href;
+
+            if (targetId === '#' || targetId === '') return;
+
+            // If on home page and clicking a home anchor, scroll smooth
+            if (window.location.pathname === '/' || window.location.pathname === '/index' || window.location.pathname === '') {
+                const target = document.querySelector(targetId);
+                if (target) {
+                    e.preventDefault();
+                    smoothScrollTo(targetId);
+                }
             }
+            // Otherwise follow the link naturally to the home page where the hash logic will take over
         }, { passive: false });
     });
 

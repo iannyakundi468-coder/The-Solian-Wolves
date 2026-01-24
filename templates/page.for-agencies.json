@@ -1,0 +1,12 @@
+{
+    "name": "For Agencies",
+    "sections": {
+        "main": {
+            "type": "main-for-agencies",
+            "settings": {}
+        }
+    },
+    "order": [
+        "main"
+    ]
+}
