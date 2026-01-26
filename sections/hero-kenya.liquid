@@ -1,0 +1,50 @@
+<section class="hero bg-scanning" aria-labelledby="hero-title">
+    <div class="hero-content">
+        <div class="hero-logo">
+            <img src="{{ 'logo.jpg' | asset_url }}" alt="The Solian Wolves Logo"
+                width="140" height="140"
+                style="width: 100%; height: 100%; object-fit: cover; display: block;" fetchpriority="high">
+        </div>
+
+
+
+
+
+        <div class="hero-badge">
+
+            <span style="background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.2); padding: 0.4rem 1rem; border-radius: 100px; font-size: 0.75rem; color: #3b82f6; font-weight: 600; letter-spacing: 0.05em;">
+                ⚡ KENYA'S PREMIER GROWTH AGENCY
+            </span>
+        </div>
+        <h1 style="margin-top: 1rem;">
+            Stop Leaving <span style="color: #3b82f6;">Money</span> on the Table.
+        </h1>
+        <p style="max-width: 600px; margin: 1rem auto 2rem;">We turn tech-debt into growth. Our audits and fixes aim to recover over Ksh 1 Billion for high-growth brands.</p>
+        
+        <div class="hero-actions" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;">
+            <a href="#contact" class="btn btn-blue pricing-trigger" data-service="free-audit" style="border-radius: 100px; padding: 1.2rem 2.5rem; min-width: 200px;">Get My Free Audit</a>
+            <a href="/pages/for-agencies" class="btn btn-outline" style="border-radius: 100px; padding: 1.2rem 2.5rem; min-width: 200px; border-color: rgba(59,130,246,0.3); color: #3b82f6;">Agency Partners</a>
+            <a href="#services" class="btn btn-outline" style="border-radius: 100px; padding: 1.2rem 2.5rem; min-width: 200px;">View Solutions</a>
+        </div>
+
+
+        <!-- Trusted By Section - High Contrast Ad Style -->
+        <div style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 2.5rem; width: 100%; max-width: 900px; margin: 0 auto;">
+            <p style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--text-secondary); margin-bottom: 2rem;">Powering Excellence for Industry Leaders</p>
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; opacity: 0.4; filter: contrast(0.5) brightness(1.5);">
+                <div style="font-weight: 800; font-size: 1.2rem; letter-spacing: -0.05em;">SHOPIFY</div>
+                <div style="font-weight: 800; font-size: 1.2rem; letter-spacing: -0.05em;">STRIPE</div>
+                <div style="font-weight: 800; font-size: 1.2rem; letter-spacing: -0.05em;">MPESA</div>
+                <div style="font-weight: 800; font-size: 1.2rem; letter-spacing: -0.05em;">NEXT.JS</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% schema %}
+{
+  "name": "Hero Kenya",
+  "settings": []
+}
+{% endschema %}

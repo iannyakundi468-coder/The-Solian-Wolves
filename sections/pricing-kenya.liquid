@@ -1,0 +1,114 @@
+<section id="pricing-kenya" class="section-padding" aria-labelledby="pricing-title"
+    style="background: linear-gradient(to bottom, #0a0a0a, #050505); content-visibility: auto; contain-intrinsic-size: 100vh;">
+    <div class="container">
+        <h2 id="pricing-title" class="text-center animate-on-scroll" style="font-size: 3rem; margin-bottom: 0.5rem;">Investment Plans
+        </h2>
+        <div class="text-center animate-on-scroll"
+            style="margin-bottom: var(--spacing-lg); color: var(--text-secondary); font-size: 0.9rem;">
+            <span
+                style="display: inline-block; border: 1px solid #3b82f6; padding: 0.2rem 0.8rem; border-radius: 20px; color: #3b82f6; margin-right: 0.5rem;">🇰🇪
+                Kenya Special Offer</span>
+            Localized pricing for Kenyan businesses.
+        </div>
+
+        <div class="pricing-grid"
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; align-items: start;">
+
+            {% if section.settings.collection != blank %}
+                {% for product in collections[section.settings.collection].products limit: 3 %}
+                    <div class="pricing-card"
+                        style="border: 1px solid #3b82f6; padding: 2rem; border-radius: var(--radius-md); background: rgba(59,130,246,0.05); position: relative;">
+                        <h3 style="margin-bottom: 0.5rem;">{{ product.title }}</h3>
+                        <div style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem;">
+                            {{ product.price | money }}
+                        </div>
+                        <div style="color: var(--text-secondary); margin-bottom: 2rem;">
+                            {{ product.description | strip_html | truncatewords: 20 }}
+                        </div>
+                        <a href="/cart/{{ product.first_available_variant.id }}:1" class="btn btn-blue" style="width: 100%;" aria-label="Book {{ product.title }} now">Book Now</a>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="pricing-card"
+                    style="border: 1px solid #3b82f6; padding: 2rem; border-radius: var(--radius-md); background: rgba(59,130,246,0.05); position: relative;">
+                    <div
+                        style="position: absolute; top: -12px; left: 20px; background: #3b82f6; color: #fff; padding: 4px 12px; border-radius: 4px; font-size: 0.7rem; font-weight: 700;">
+                        KENYA OFFER</div>
+                    <h3 style="margin-bottom: 0.5rem;">Deep Dive Audit</h3>
+                    <div style="margin-bottom: 1rem;">
+                        <span
+                            style="text-decoration: line-through; color: var(--text-secondary); font-size: 1.2rem;">Ksh 60,000</span>
+                        <div style="font-size: 2.5rem; font-weight: 700;">Ksh 35,000<span
+                                style="font-size: 1rem; color: var(--text-secondary); font-weight: 400;">/one-time</span>
+                        </div>
+                    </div>
+                    <p style="color: var(--text-secondary); margin-bottom: 2rem;">Deep dive analysis to uncover why you
+                        are leaving money on the table.</p>
+                    <ul style="list-style: none; color: var(--text-secondary); margin-bottom: 2rem; line-height: 2;">
+                        <li>✓ Comprehensive UX Audit</li>
+                        <li>✓ Competitor Benchmark</li>
+                        <li>✓ SEO Keyword Blueprint</li>
+                        <li>✓ <strong>Strategy Call (NEW)</strong></li>
+                    </ul>
+                    <a href="#contact" class="btn btn-gold"
+                        style="width: 100%;" aria-label="Book a Deep Dive Audit now">Book Now</a>
+                </div>
+
+                <!-- Plan 2: Subscription -->
+                <div class="pricing-card"
+                    style="border: 1px solid #3b82f6; padding: 2rem; border-radius: var(--radius-md); background: linear-gradient(145deg, rgba(59,130,246,0.1), transparent); position: relative; transform: scale(1.05);">
+                    <div
+                        style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #3b82f6; color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600;">
+                        MOST POPULAR</div>
+                    <h3 style="margin-bottom: 0.5rem;">Growth Partner</h3>
+                    <div style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem;">Ksh 85,000<span
+                            style="font-size: 1rem; color: var(--text-secondary); font-weight: 400;">/month</span></div>
+                    <p style="color: var(--text-secondary); margin-bottom: 2rem;">Continuous optimization and
+                        development to scale your store.</p>
+                    <ul style="list-style: none; color: #fff; margin-bottom: 2rem; line-height: 2;">
+                        <li>✓ <strong>Everything in Audit</strong></li>
+                        <li>✓ Weekly Heatmap Analysis</li>
+                        <li>✓ Unlimited A/B Testing</li>
+                        <li>✓ Dedicated Project Manager</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-purple"
+                        style="width: 100%;" aria-label="Start scaling with a Growth Partner plan">Start Scaling</a>
+                </div>
+
+                <!-- Plan 3: Enterprise -->
+                <div class="pricing-card"
+                    style="border: 1px solid var(--border-color); padding: 2rem; border-radius: var(--radius-md); background: rgba(255,255,255,0.03);">
+                    <h3 style="margin-bottom: 0.5rem;">Total Dominance</h3>
+                    <div style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem;">Custom<span
+                            style="font-size: 1rem; color: var(--text-secondary); font-weight: 400;">/project</span>
+                    </div>
+                    <p style="color: var(--text-secondary); margin-bottom: 2rem;">For high-volume brands looking for a
+                        dedicated technical team.</p>
+                    <ul style="list-style: none; color: var(--text-secondary); margin-bottom: 2rem; line-height: 2;">
+                        <li>✓ Infrastructure Tuning</li>
+                        <li>✓ Unlimited UI/UX Requests</li>
+                        <li>✓ White-label Analytics</li>
+                        <li>✓ 24/7 Slack & Support</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-blue pricing-trigger" data-service="apps"
+                        style="width: 100%;" aria-label="Contact us for a Custom Dominance plan quote">Contact Us</a>
+                </div>
+            {% endif %}
+
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+  "name": "Pricing Kenya",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Select Collection",
+      "info": "If selected, products from this collection will replace the hardcoded plans above."
+    }
+  ]
+}
+{% endschema %}
