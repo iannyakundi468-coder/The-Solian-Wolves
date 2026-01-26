@@ -1,6 +1,18 @@
 <header role="banner">
     <nav class="main-nav" role="navigation" aria-label="Main Navigation" style="position: fixed; top: 0; width: 100%; padding: 1.5rem 2rem; z-index: 100; mix-blend-mode: difference;">
         <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+        {% if page.template_suffix == 'landing-kenya' %}
+            <a href="{{ page.url }}" class="logo" style="text-decoration: none; color: inherit;" aria-label="The Solian Wolves Kenya">
+                <div style="font-weight: 700; font-size: 1.2rem; letter-spacing: -0.02em;">THE SOLIAN WOLVES</div>
+            </a>
+            <div class="nav-links" style="display: flex; align-items: center;">
+                <a href="#services"
+                    style="margin-left: 2rem; font-size: 0.9rem; text-transform: uppercase; padding: 0.5rem;" aria-label="Our Services">Services</a>
+                <a href="#pricing-kenya" style="margin-left: 2rem; font-size: 0.9rem; text-transform: uppercase; padding: 0.5rem;" aria-label="View Pricing">Pricing</a>
+                <a href="#work" style="margin-left: 2rem; font-size: 0.9rem; text-transform: uppercase; padding: 0.5rem;" aria-label="Our Work">Work</a>
+                <a href="#contact" class="btn btn-outline" style="padding: 0.6rem 1.8rem; margin-left: 2rem;" aria-label="Book a Free Audit">Audit Me</a>
+            </div>
+        {% else %}
             <a href="/" class="logo" style="text-decoration: none; color: inherit;" aria-label="{{ shop.name }} Home">
                 <div style="font-weight: 700; font-size: 1.2rem; letter-spacing: -0.02em;">THE SOLIAN WOLVES</div>
             </a>
@@ -15,6 +27,7 @@
                 <a href="/#work" style="margin-left: 2rem; font-size: 0.9rem; text-transform: uppercase; padding: 0.5rem;" aria-label="Our Work">Work</a>
                 <a href="/#contact" class="btn btn-outline" style="padding: 0.6rem 1.8rem; margin-left: 2rem;" aria-label="Book a Free Audit">Audit Me</a>
             </div>
+        {% endif %}
         </div>
     </nav>
 </header>
