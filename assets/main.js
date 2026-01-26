@@ -234,9 +234,39 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.pricing-trigger').forEach(btn => {
         btn.addEventListener('click', (e) => {
             const serviceKey = btn.getAttribute('data-service');
+            const context = btn.getAttribute('data-context'); // Check for 'kenya' context
+
             if (serviceKey) {
                 e.preventDefault();
-                openServiceModal(serviceKey);
+
+                if (context === 'kenya') {
+                    // Kenya Flow: Direct to Contact Form
+                    const contactSection = document.querySelector('#contact');
+                    if (contactSection) {
+                        contactSection.scrollIntoView({ behavior: 'smooth' });
+
+                        // Optional: Update submit button to show context
+                        const contactSubmit = document.getElementById('contact-submit');
+                        const contactBody = document.querySelector('textarea[name="contact[body]"]');
+
+                        if (contactSubmit) {
+                            const serviceName = serviceData[serviceKey] ? serviceData[serviceKey].title : serviceKey;
+                            contactSubmit.innerText = `Get KES Offer: ${serviceName}`;
+
+                            // Pre-fill body if empty
+                            if (contactBody && !contactBody.value) {
+                                contactBody.value = `I am interested in the ${serviceName} (Kenya Offer). Please send me more details.`;
+                            }
+                        }
+
+                        // Focus email field if available
+                        const contactEmail = document.getElementById('contact-email');
+                        if (contactEmail) contactEmail.focus();
+                    }
+                } else {
+                    // Default Flow: Open Modal
+                    openServiceModal(serviceKey);
+                }
             }
         });
     });

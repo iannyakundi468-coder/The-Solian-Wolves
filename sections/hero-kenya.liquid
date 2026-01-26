@@ -12,7 +12,7 @@
 
         <div class="hero-badge">
 
-            <span style="background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.2); padding: 0.4rem 1rem; border-radius: 100px; font-size: 0.75rem; color: #3b82f6; font-weight: 600; letter-spacing: 0.05em;">
+            <span class="pulse-badge" style="background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.2); padding: 0.4rem 1rem; border-radius: 100px; font-size: 0.75rem; color: #3b82f6; font-weight: 600; letter-spacing: 0.05em;">
                 ⚡ KENYA'S PREMIER GROWTH AGENCY
             </span>
         </div>
@@ -37,6 +37,77 @@
                 <div style="font-weight: 800; font-size: 1.2rem; letter-spacing: -0.05em;">MPESA</div>
                 <div style="font-weight: 800; font-size: 1.2rem; letter-spacing: -0.05em;">NEXT.JS</div>
             </div>
+        </div>
+    </div>
+
+    <style>
+        .kenya-ticker-wrap {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            background: rgba(0, 0, 0, 0.8);
+            border-top: 1px solid rgba(59, 130, 246, 0.2);
+            backdrop-filter: blur(5px);
+            padding: 10px 0;
+            z-index: 10;
+        }
+
+        .kenya-ticker {
+            display: flex;
+            width: fit-content;
+            animation: ticker 30s linear infinite;
+        }
+
+        .kenya-ticker-item {
+            flex-shrink: 0;
+            padding: 0 2rem;
+            color: var(--text-secondary);
+            font-family: var(--font-heading);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        @keyframes ticker {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .pulse-badge {
+            animation: pulse-border 2s infinite;
+        }
+
+        @keyframes pulse-border {
+            0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(59, 130, 246, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
+        }
+    </style>
+
+    <div class="kenya-ticker-wrap">
+        <div class="kenya-ticker">
+            <div class="kenya-ticker-item">🇰🇪 Trusted in Nairobi</div>
+            <div class="kenya-ticker-item">⚡ M-Pesa Integrated</div>
+            <div class="kenya-ticker-item">🚀 99.9% Uptime</div>
+            <div class="kenya-ticker-item">💎 Shopify Partners</div>
+            <div class="kenya-ticker-item">🇰🇪 Trusted in Nairobi</div>
+            <div class="kenya-ticker-item">⚡ M-Pesa Integrated</div>
+            <div class="kenya-ticker-item">🚀 99.9% Uptime</div>
+            <div class="kenya-ticker-item">💎 Shopify Partners</div>
+             <!-- Repeat for seamless loop -->
+            <div class="kenya-ticker-item">🇰🇪 Trusted in Nairobi</div>
+            <div class="kenya-ticker-item">⚡ M-Pesa Integrated</div>
+            <div class="kenya-ticker-item">🚀 99.9% Uptime</div>
+            <div class="kenya-ticker-item">💎 Shopify Partners</div>
+            <div class="kenya-ticker-item">🇰🇪 Trusted in Nairobi</div>
+            <div class="kenya-ticker-item">⚡ M-Pesa Integrated</div>
+            <div class="kenya-ticker-item">🚀 99.9% Uptime</div>
+            <div class="kenya-ticker-item">💎 Shopify Partners</div>
         </div>
     </div>
 </section>
