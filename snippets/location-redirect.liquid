@@ -1,0 +1,40 @@
+<script>
+  (function() {
+    // 1. Check if we are already on the Kenya page to avoid infinite loops
+    // Assumes the handle 'kenya-landing' or a specific URL pattern
+    if (window.location.pathname.includes('kenya-landing') || window.location.pathname.includes('landing-kenya')) {
+      return;
+    }
+
+    // 2. Check Session Storage to avoid repeated API calls
+    const storedCountry = sessionStorage.getItem('user_country');
+    const targetCountryCode = 'KE'; // Kenya
+    const targetUrl = '/pages/kenya-landing';
+
+    if (storedCountry) {
+      if (storedCountry === targetCountryCode) {
+        window.location.replace(targetUrl);
+      }
+      return;
+    }
+
+    // 3. Fetch Country from GeoJS (Free, fast IP-based geolocation)
+    fetch('https://get.geojs.io/v1/ip/country.json')
+      .then(response => response.json())
+      .then(data => {
+        const country = data.country;
+        
+        // Store for future page loads in this session
+        sessionStorage.setItem('user_country', country);
+
+        // 4. Redirect if Match
+        if (country === targetCountryCode) {
+           console.log('Redirecting to Kenya Landing Page...');
+           window.location.replace(targetUrl);
+        }
+      })
+      .catch(err => {
+        console.warn('GeoIP fetch failed, defaulting to main site.', err);
+      });
+  })();
+</script>
