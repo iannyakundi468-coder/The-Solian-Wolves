@@ -1,35 +1,33 @@
 <section class="section-padding" style="background: radial-gradient(circle at center, #111, #050505); min-height: 80vh; display: flex; align-items: center;">
     <div class="container text-center">
         <div style="max-width: 800px; margin: 0 auto;">
+            {% if section.settings.badge_text != blank %}
             <div style="display: inline-block; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.2); padding: 0.5rem 1.2rem; border-radius: 100px; font-size: 0.8rem; color: #3b82f6; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 2rem;">
-                Agency Partnership Path
+                {{ section.settings.badge_text }}
             </div>
+            {% endif %}
+            
             <h1 style="font-size: clamp(3rem, 6vw, 5rem); margin-bottom: 1.5rem; line-height: 1;">
-                We handle the <span style="color: #3b82f6;">code</span>;<br>You keep the <span style="color: #3b82f6;">client</span>.
+                {{ section.settings.heading | replace: '<strong>', '<span style="color: #3b82f6;">' | replace: '</strong>', '</span>' }}
             </h1>
+            
             <p style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 3rem; line-height: 1.6;">
-                Scale your agency without the overhead. We provide elite technical support, surgical backend optimizations, and custom Shopify engineering on a white-label basis.
+                {{ section.settings.intro_text }}
             </p>
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; text-align: left; margin-bottom: 4rem;">
-                <div class="glass-card" style="padding: 2rem; border: 1px solid var(--border-color); border-radius: 1.5rem;">
-                    <h3 style="color: #fff; margin-bottom: 1rem;">White Label Service</h3>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem;">We operate behind the scenes. We sign your NDAs, follow your protocols, and deliver work that looks like yours.</p>
+                {% for block in section.blocks %}
+                <div class="glass-card" style="padding: 2rem; border: 1px solid var(--border-color); border-radius: 1.5rem;" {{ block.shopify_attributes }}>
+                    <h3 style="color: #fff; margin-bottom: 1rem;">{{ block.settings.title }}</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">{{ block.settings.text }}</p>
                 </div>
-                <div class="glass-card" style="padding: 2rem; border: 1px solid var(--border-color); border-radius: 1.5rem;">
-                    <h3 style="color: #fff; margin-bottom: 1rem;">Overflow Capacity</h3>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Never turn down a project again. We handle the heavy lifting on complex backends, migrations, and performance fixing.</p>
-                </div>
-                <div class="glass-card" style="padding: 2rem; border: 1px solid var(--border-color); border-radius: 1.5rem;">
-                    <h3 style="color: #fff; margin-bottom: 1rem;">Surgical Backend</h3>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Apps, custom logic, and high-performance scripts. We tackle the technical debt that standard themes can't handle.</p>
-                </div>
+                {% endfor %}
             </div>
 
             <div style="background: rgba(59,130,246,0.05); border: 1px solid rgba(59,130,246,0.2); padding: 3rem; border-radius: 2rem;">
-                <h2 style="font-size: 2rem; margin-bottom: 1rem;">Fixed Hourly Rates for Partners</h2>
-                <p style="color: var(--text-secondary); margin-bottom: 2rem;">Consistent pricing for long-term strategic partners. No surprises, just performance.</p>
-                <a href="#contact" class="btn btn-blue pricing-trigger" data-service="agencies" style="width: 100%; max-width: 350px;">Apply for Partnership</a>
+                <h2 style="font-size: 2rem; margin-bottom: 1rem;">{{ section.settings.cta_heading }}</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 2rem;">{{ section.settings.cta_text }}</p>
+                <a href="{{ section.settings.cta_link }}" class="btn btn-blue pricing-trigger" data-service="agencies" style="width: 100%; max-width: 350px;">{{ section.settings.cta_button_label }}</a>
             </div>
         </div>
     </div>
@@ -50,6 +48,103 @@
 {% schema %}
 {
   "name": "Agency Partners",
-  "settings": []
+  "settings": [
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Badge Text",
+      "default": "Agency Partnership Path"
+    },
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "<p>We handle the <strong>code</strong>;<br>You keep the <strong>client</strong>.</p>",
+      "info": "Use Bold text to highlight in blue."
+    },
+    {
+      "type": "textarea",
+      "id": "intro_text",
+      "label": "Intro Text",
+      "default": "Scale your agency without the overhead. We provide elite technical support, surgical backend optimizations, and custom Shopify engineering on a white-label basis."
+    },
+    {
+      "type": "header",
+      "content": "CTA Section"
+    },
+    {
+      "type": "text",
+      "id": "cta_heading",
+      "label": "CTA Heading",
+      "default": "Fixed Hourly Rates for Partners"
+    },
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "CTA Text",
+      "default": "Consistent pricing for long-term strategic partners. No surprises, just performance."
+    },
+    {
+      "type": "text",
+      "id": "cta_button_label",
+      "label": "Button Label",
+      "default": "Apply for Partnership"
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "Button Link",
+      "default": "/pages/contact"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature Card",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Feature Title"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text",
+          "default": "Feature description goes here."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Agency Partners",
+      "blocks": [
+        {
+          "type": "feature",
+          "settings": {
+            "title": "White Label Service",
+            "text": "We operate behind the scenes. We sign your NDAs, follow your protocols, and deliver work that looks like yours."
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "title": "Overflow Capacity",
+            "text": "Never turn down a project again. We handle the heavy lifting on complex backends, migrations, and performance fixing."
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "title": "Surgical Backend",
+            "text": "Apps, custom logic, and high-performance scripts. We tackle the technical debt that standard themes can't handle."
+          }
+        }
+      ]
+    }
+  ]
 }
 {% endschema %}
