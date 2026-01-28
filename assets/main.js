@@ -21,7 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
         'cro': '/products/growth-partner-cro',
         'seo': '/products/seo-listings',
         'apps': '/products/custom-app-development',
-        'free-audit': '#contact'
+        'free-audit': '#contact',
+        'agencies': '#contact'
     };
 
     // Helper to get Shopify data or fallback to hardcoded
@@ -76,6 +77,12 @@ document.addEventListener('DOMContentLoaded', () => {
             desc: "A complimentary high-level review to identify immediate opportunities for improvement.",
             price: "Free",
             link: serviceUrls['free-audit']
+        },
+        agencies: {
+            title: "Agency Partnership",
+            desc: "White-label technical execution for creative agencies. We handle the code, you keep the client.",
+            price: "Custom Rates",
+            link: serviceUrls.agencies
         }
     };
 
@@ -127,6 +134,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "UX Quick Win Report",
             "SEO Health Check",
             "3 Actionable Tips"
+        ],
+        agencies: [
+            "White-Label NDA Protection",
+            "Overflow Development Capacity",
+            "Complex Backend Solutions",
+            "Speed Optimization for Clients",
+            "Priority Support Channel"
         ]
     };
 
