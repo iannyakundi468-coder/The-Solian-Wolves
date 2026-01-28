@@ -5,9 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>{{ page_title }}{% if current_tags %} &ndash; {{ current_tags | join: ', ' }}{% endif %}{% if current_page != 1 %} &ndash; Page {{ current_page }}{% endif %}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}</title>
+    <title>
+        {%- if template == 'index' -%}
+            The Solian Wolves | Software Company & Web Design Agency Nairobi
+        {%- else -%}
+            {{ page_title }}{% if current_tags %} &ndash; {{ current_tags | join: ', ' }}{% endif %}{% if current_page != 1 %} &ndash; Page {{ current_page }}{% endif %}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}
+        {%- endif -%}
+    </title>
 
-    {% if page_description %}
+    {% if template == 'index' %}
+        <meta name="description" content="The Solian Wolves is a premier technical agency in Nairobi specializing in high-performance web development, systems architecture, and custom software solutions.">
+    {% elsif page_description %}
         <meta name="description" content="{{ page_description | escape }}">
     {% endif %}
 
@@ -62,9 +70,43 @@
     <link rel="preload" as="image" href="{{ 'logo.jpg' | asset_url }}" fetchpriority="high">
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
 
-    {% render 'location-redirect' %}
+    <!-- {% render 'location-redirect' %} -->
 
     {{ content_for_header }}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "The Solian Wolves",
+      "image": "https://solianwolves.com/assets/logo.png",
+      "@id": "https://solianwolves.com",
+      "url": "https://solianwolves.com",
+      "telephone": "+254714729996",
+      "priceRange": "$$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Nairobi",
+        "addressRegion": "Nairobi City",
+        "addressCountry": "KE"
+      },
+      "areaServed": [
+        "Nairobi",
+        "Westlands",
+        "Kilimani",
+        "Upper Hill",
+        "Industrial Area"
+      ],
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -1.2921,
+        "longitude": 36.8219
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/the-solian-wolves",
+        "https://github.com/solianwolves"
+      ]
+    }
+    </script>
 </head>
 
 <body>
