@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'cro': '/products/growth-partner-cro',
         'seo': '/products/seo-listings',
         'apps': '/products/custom-app-development',
-        'free-audit': '#contact',
+        'free-mini-audit': '#contact',
         'agencies': '#contact'
     };
 
@@ -72,11 +72,11 @@ document.addEventListener('DOMContentLoaded', () => {
             price: "Custom",
             link: serviceUrls.apps
         }),
-        'free-audit': {
-            title: "Free One-Time Audit",
+        'free-mini-audit': {
+            title: "Free Mini Audit",
             desc: "A complimentary high-level review to identify immediate opportunities for improvement.",
             price: "Free",
-            link: serviceUrls['free-audit']
+            link: serviceUrls['free-mini-audit']
         },
         agencies: {
             title: "Agency Partnership",
@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "Unlimited UI/UX Design Requests",
             "White-label Analytics Dashboard"
         ],
-        'free-audit': [
+        'free-mini-audit': [
             "Basic Speed Check",
             "UX Quick Win Report",
             "SEO Health Check",
@@ -343,7 +343,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let upsellingItems = [];
 
-        if (!currentServiceKey || currentServiceKey === 'free-audit' || currentServiceKey === 'audit') {
+        if (!currentServiceKey || currentServiceKey === 'free-mini-audit' || currentServiceKey === 'audit') {
             // Upsell to Growth Partner and Total Dominance
             upsellingItems = ['cro', 'apps'];
         } else if (currentServiceKey === 'cro' || currentServiceKey === 'seo') {
