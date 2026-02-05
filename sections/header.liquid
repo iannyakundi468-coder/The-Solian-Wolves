@@ -6,8 +6,24 @@
                 <div style="font-weight: 700; font-size: 1.2rem; letter-spacing: -0.02em;">THE SOLIAN WOLVES</div>
             </a>
             <div class="nav-links" style="display: flex; align-items: center;">
-                <a href="#services"
-                    style="margin-left: 2rem; font-size: 0.9rem; text-transform: uppercase; padding: 0.5rem;" aria-label="Our Services">Services</a>
+                <div class="nav-dropdown" style="margin-left: 2rem; position: relative; display: inline-block;">
+                    <a href="/#services" style="font-size: 0.9rem; text-transform: uppercase; padding: 0.5rem;" aria-label="Our Services">Services ▾</a>
+                    <div class="dropdown-content" style="display: none; position: absolute; background-color: #000; min-width: 200px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1; border: 1px solid #333; border-radius: 4px; padding: 0.5rem 0;">
+                        <a href="/pages/web-architecture" style="color: #fff; padding: 12px 16px; text-decoration: none; display: block; font-size: 0.85rem;">Web Architecture</a>
+                        <a href="/pages/local-seo" style="color: #fff; padding: 12px 16px; text-decoration: none; display: block; font-size: 0.85rem;">Local SEO</a>
+                        <a href="/pages/conversion-engineering" style="color: #fff; padding: 12px 16px; text-decoration: none; display: block; font-size: 0.85rem;">CRO & Growth</a>
+                        <a href="/pages/custom-systems" style="color: #fff; padding: 12px 16px; text-decoration: none; display: block; font-size: 0.85rem;">Custom Apps</a>
+                        <a href="/pages/technical-audits" style="color: #fff; padding: 12px 16px; text-decoration: none; display: block; font-size: 0.85rem;">Technical Audits</a>
+                        <div style="height: 1px; background: #333; margin: 0.5rem 0;"></div>
+                        <a href="/pages/for-agencies" style="color: #fff; padding: 12px 16px; text-decoration: none; display: block; font-size: 0.85rem;">For Agencies</a>
+                    </div>
+                </div>
+                
+                <style>
+                    .nav-dropdown:hover .dropdown-content { display: block; }
+                    .dropdown-content a:hover { background-color: #111; color: #3b82f6 !important; }
+                </style>
+
                 <a href="#pricing-kenya" style="margin-left: 2rem; font-size: 0.9rem; text-transform: uppercase; padding: 0.5rem;" aria-label="View Pricing">Pricing</a>
                 <a href="#work" style="margin-left: 2rem; font-size: 0.9rem; text-transform: uppercase; padding: 0.5rem;" aria-label="Our Work">Work</a>
                 <a href="#contact" class="btn btn-outline" style="padding: 0.6rem 1.8rem; margin-left: 2rem;" aria-label="Book a Free Mini Audit">MINI AUDIT</a>
