@@ -116,11 +116,10 @@
         {{ content_for_layout }}
     </main>
 
-    {% section 'service-modal' %}
     {% section 'footer' %}
 
     <!-- Main JavaScript -->
-    {{ 'main.js' | asset_url | script_tag }}
+    {{ 'main.js' | asset_url | script_tag | replace: '<script', '<script defer' }}
 </body>
 
 </html>
