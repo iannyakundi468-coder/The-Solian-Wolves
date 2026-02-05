@@ -1,0 +1,84 @@
+<section class="service-page section-padding" style="padding-top: 15vh;">
+    <div class="container">
+        <div class="service-header text-center animate-on-scroll">
+            <h1 class="service-title" style="background: linear-gradient(to right, #fff, #fbbf24); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Local Search Dominance</h1>
+            <p class="service-subtitle">Own your area code. Appear before competitors.</p>
+        </div>
+
+        <div class="service-content-grid">
+            <div class="detail-content animate-on-scroll">
+                <h3>For Founders</h3>
+                <p>Be the first name your customers see. We ensure you own your neighborhood, city, and region on Google Maps and Search.</p>
+                
+                <h3 style="margin-top: 2rem;">For CTOs</h3>
+                <p>We implement structured data (JSON-LD) for LocalBusiness, coordinate geo-coordinates across directories, and manage NAP consistency to trigger Google's local algorithm authority.</p>
+                
+                <ul class="detail-features" style="margin-top: 2rem;">
+                    <li>Google Business Profile Optimization</li>
+                    <li>JSON-LD Local Schema Injection</li>
+                    <li>Citation Consistency Audit</li>
+                    <li>Geo-Targeted Content Strategy</li>
+                    <li>Review Velocity Management</li>
+                </ul>
+                
+                <div class="cta-group" style="margin-top: 3rem;">
+                    <a href="/pages/contact" class="btn btn-gold">Dominate Local</a>
+                </div>
+            </div>
+            
+            <div class="detail-visual animate-on-scroll">
+                <div style="background: rgba(255, 215, 0, 0.05); padding: 2.5rem; border-radius: 12px; border: 1px solid rgba(255, 215, 0, 0.2);">
+                    <h4 style="color: #fff; margin-bottom: 1.5rem;">Map Pack Strategy</h4>
+                    <p style="font-size: 1rem; color: var(--text-secondary); margin-bottom: 2rem;">Top 3 positions on the Local Pack receive 70% of click-throughs. We engineer your profile to rank there.</p>
+                    <div style="display:flex; gap: 1rem; align-items: center;">
+                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fbbf24" style="width: 3rem; height: 3rem;"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" /><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" /></svg>
+                         <div>
+                             <div style="color: #fff; font-weight: bold;">Local Authority</div>
+                             <div style="color: var(--text-secondary); font-size: 0.8rem;">Geo-Coordinate Optimization</div>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .service-content-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+    .service-title { font-size: 3.5rem; margin-bottom: 1rem; }
+    .service-subtitle { font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 4rem; }
+    @media (max-width: 768px) {
+        .service-content-grid { grid-template-columns: 1fr; }
+        .service-title { font-size: 2.5rem; }
+    }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Local Search Dominance",
+  "provider": {
+    "@type": "Organization",
+    "name": "Antigravity"
+  },
+  "description": "Own your area code. We optimize your Google Maps, Schema data, and local citations so you appear before competitors.",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "2500"
+  }
+}
+</script>
+
+{% schema %}
+{
+  "name": "Service - SEO",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Service - SEO"
+    }
+  ]
+}
+{% endschema %}

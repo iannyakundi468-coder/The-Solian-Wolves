@@ -1,0 +1,88 @@
+<section class="service-page section-padding" style="padding-top: 15vh;">
+    <div class="container">
+        <div class="service-header text-center animate-on-scroll">
+            <h1 class="service-title">High-Velocity Web Architecture</h1>
+            <p class="service-subtitle">Sub-second, mobile-first digital infrastructure.</p>
+        </div>
+
+        <div class="service-content-grid">
+            <div class="detail-content animate-on-scroll">
+                <h3>For Founders</h3>
+                <p>We build digital assets that load instantly and rank efficiently. Speed converts. Slow sites are a liability.</p>
+                
+                <h3 style="margin-top: 2rem;">For CTOs</h3>
+                <p>No bloatware. We use Next.js or Liquid for server-side rendering, implement edge caching, and optimize the critical rendering path to achieve sub-100ms TFB and 90+ Lighthouse scores.</p>
+                
+                <ul class="detail-features" style="margin-top: 2rem;">
+                    <li>Sub-Second Load Times (Core Web Vitals Optimized)</li>
+                    <li>Mobile-First Responsive Design</li>
+                    <li>SEO-Native Architecture (SSR/SSG)</li>
+                    <li>Global CDN & Edge Caching</li>
+                    <li>Headless Integration Capabilities</li>
+                </ul>
+                
+                <div class="cta-group" style="margin-top: 3rem;">
+                    <a href="/pages/contact" class="btn btn-blue">Get Blueprint</a>
+                </div>
+            </div>
+            
+            <div class="detail-visual animate-on-scroll">
+                <div style="background: rgba(147, 51, 234, 0.05); padding: 2.5rem; border-radius: 12px; border: 1px solid rgba(147, 51, 234, 0.2);">
+                    <h4 style="color: #fff; margin-bottom: 2rem;">The Speed Advantage</h4>
+                    <div class="process-step">
+                        <div class="step-number" style="background: #9333ea;">1</div>
+                        <p>Code Splitting & Minification</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number" style="background: #9333ea;">2</div>
+                        <p>Image Optimization (AVIF/WebP)</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number" style="background: #9333ea;">3</div>
+                        <p>Instant Interaction</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .service-title { font-size: 3.5rem; margin-bottom: 1rem; background: linear-gradient(to right, #fff, #9333ea); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .service-subtitle { font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 4rem; }
+    .service-content-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+    @media (max-width: 768px) {
+        .service-content-grid { grid-template-columns: 1fr; }
+        .service-title { font-size: 2.5rem; }
+    }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "High-Velocity Web Architecture",
+  "provider": {
+    "@type": "Organization",
+    "name": "Antigravity"
+  },
+  "description": "We build sub-second, mobile-first digital infrastructure designed to rank #1 on Google and convert traffic instantly.",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "Custom"
+  }
+}
+</script>
+
+{% schema %}
+{
+  "name": "Service - Web Dev",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Service - Web Dev"
+    }
+  ]
+}
+{% endschema %}

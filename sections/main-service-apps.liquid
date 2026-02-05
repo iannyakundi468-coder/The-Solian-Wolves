@@ -1,0 +1,84 @@
+<section class="service-page section-padding" style="padding-top: 15vh;">
+    <div class="container">
+        <div class="service-header text-center animate-on-scroll">
+            <h1 class="service-title" style="background: linear-gradient(to right, #fff, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Custom Business Systems</h1>
+            <p class="service-subtitle">Automate operations. Outgrow Excel.</p>
+        </div>
+
+        <div class="service-content-grid">
+            <div class="detail-content animate-on-scroll">
+                <h3>For Founders</h3>
+                <p>Your business is unique; your software should be too. We build exact-fit systems for inventory, logistics, and customer management.</p>
+                
+                <h3 style="margin-top: 2rem;">For CTOs</h3>
+                <p>Scalable microservices architecture. We build using standard stacks (Node, Python, SQL/NoSQL) with robust API layers, ensuring your internal tools talk perfectly to your ERP and CRM.</p>
+                
+                <ul class="detail-features" style="margin-top: 2rem;">
+                    <li>Custom Inventory Management Systems (IMS)</li>
+                    <li>Logistics & Route Planning Tools</li>
+                    <li>Bespoke CRMs & Dashboarding</li>
+                    <li>Legacy System API Integrations</li>
+                    <li>Automated Workflow Scripts</li>
+                </ul>
+                
+                <div class="cta-group" style="margin-top: 3rem;">
+                    <a href="/pages/contact" class="btn btn-purple">Build System</a>
+                </div>
+            </div>
+            
+            <div class="detail-visual animate-on-scroll">
+                <code style="background: #09090b; padding: 2rem; border-radius: 8px; font-size: 0.9rem; color: #a855f7; border: 1px solid #27272a; display: block; font-family: monospace; line-height: 1.6; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                    class InventorySystem {<br>
+                    &nbsp;&nbsp;constructor() {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;this.status = "Optimized";<br>
+                    &nbsp;&nbsp;}<br><br>
+                    &nbsp;&nbsp;optimizeStock() {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;this.analyzeVelocity();<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;return "Capital Freed";<br>
+                    &nbsp;&nbsp;}<br>
+                    }
+                </code>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .service-content-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+    .service-title { font-size: 3.5rem; margin-bottom: 1rem; }
+    .service-subtitle { font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 4rem; }
+    @media (max-width: 768px) {
+        .service-content-grid { grid-template-columns: 1fr; }
+        .service-title { font-size: 2.5rem; }
+    }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Custom Business Systems",
+  "provider": {
+    "@type": "Organization",
+    "name": "Antigravity"
+  },
+  "description": "We build custom inventory, logistics, and CRM software tailored to automate your specific operational bottlenecks.",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "Custom"
+  }
+}
+</script>
+
+{% schema %}
+{
+  "name": "Service - Apps",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Service - Apps"
+    }
+  ]
+}
+{% endschema %}

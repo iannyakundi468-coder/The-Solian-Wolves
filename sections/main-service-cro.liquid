@@ -1,0 +1,78 @@
+<section class="service-page section-padding" style="padding-top: 15vh;">
+    <div class="container">
+        <div class="service-header text-center animate-on-scroll">
+            <h1 class="service-title" style="background: linear-gradient(to right, #fff, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Conversion Engineering</h1>
+            <p class="service-subtitle">Turn passive visitors into paying revenue.</p>
+        </div>
+
+        <div class="service-content-grid">
+            <div class="detail-content animate-on-scroll">
+                <h3>For Founders</h3>
+                <p>Stop leaking revenue. We smooth out the friction in your checkout process to turn more visitors into paying customers.</p>
+                
+                <h3 style="margin-top: 2rem;">For CTOs</h3>
+                <p>We use event tracking, heatmap analysis, and A/B testing frameworks to mathematically prove which UI patterns yield higher conversion rates (CR) and average order value (AOV).</p>
+                
+                <ul class="detail-features" style="margin-top: 2rem;">
+                    <li>Data-Driven A/B Testing</li>
+                    <li>User Journey Flowcharts</li>
+                    <li>Checkout Friction Removal</li>
+                    <li>Value Proposition Clarity</li>
+                    <li>Trust Signal Optimization</li>
+                </ul>
+                
+                <div class="cta-group" style="margin-top: 3rem;">
+                    <a href="/pages/contact" class="btn btn-blue">Optimize Now</a>
+                </div>
+            </div>
+            
+            <div class="detail-visual animate-on-scroll">
+                <div style="text-align: center; border: 2px dashed #3b82f6; padding: 4rem 2rem; border-radius: 12px; background: rgba(59, 130, 246, 0.05);">
+                    <div style="font-size: 1rem; color: #3b82f6; text-transform: uppercase; margin-bottom: 1.5rem; letter-spacing: 0.1em;">Target Metric</div>
+                    <div style="font-size: 4.5rem; font-weight: 800; color: #fff; line-height: 1;">ROAS</div>
+                    <div style="color: var(--text-secondary); margin-top: 1rem; font-size: 1.1rem;">Return On Ad Spend</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .service-content-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+    .service-title { font-size: 3.5rem; margin-bottom: 1rem; }
+    .service-subtitle { font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 4rem; }
+    @media (max-width: 768px) {
+        .service-content-grid { grid-template-columns: 1fr; }
+        .service-title { font-size: 2.5rem; }
+    }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Conversion Engineering",
+  "provider": {
+    "@type": "Organization",
+    "name": "Antigravity"
+  },
+  "description": "We re-engineer your user flows to turn passive visitors into paying clients using data-driven psychology.",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "4500"
+  }
+}
+</script>
+
+{% schema %}
+{
+  "name": "Service - CRO",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Service - CRO"
+    }
+  ]
+}
+{% endschema %}
