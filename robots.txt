@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Block legacy and config files
+Disallow: /_legacy_site/
+Disallow: /config/
+Disallow: /locales/
+Disallow: /sections/
+Disallow: /snippets/
+Disallow: /templates/
+Disallow: /layout/
+
+Sitemap: https://solianwolves.com/sitemap.xml

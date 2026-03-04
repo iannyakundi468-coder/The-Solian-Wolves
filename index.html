@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>The Solian Wolves | Software Company & Web Design Agency Nairobi</title>
+
+    <meta name="description" content="The Solian Wolves is a premier technical agency in Nairobi specializing in high-performance web development, systems architecture, and custom software solutions.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://solianwolves.com">
+    <meta property="og:title" content="The Solian Wolves | Software Company & Web Design Agency Nairobi">
+    <meta property="og:description" content="The Solian Wolves is a premier technical agency in Nairobi specializing in high-performance web development, systems architecture, and custom software solutions.">
+    <meta property="og:image" content="assets/logo.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://solianwolves.com">
+    <meta property="twitter:title" content="The Solian Wolves | Software Company & Web Design Agency Nairobi">
+    <meta property="twitter:description" content="The Solian Wolves is a premier technical agency in Nairobi specializing in high-performance web development, systems architecture, and custom software solutions.">
+    <meta property="twitter:image" content="assets/logo.jpg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link rel="preload" href="https://fonts.gstatic.com/s/spacegrotesk/v15/V8mQoQDjQSkFtoMM3T6rjS3F9XRaMDvDVGL2.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Critical CSS -->
+    <style>
+        :root { --bg-color: #050505; --text-primary: #ffffff; --text-secondary: #a1a1aa; --font-heading: 'Space Grotesk', system-ui, sans-serif; --font-body: 'Inter', system-ui, sans-serif; --spacing-sm: 1rem; --spacing-md: 2rem; --radius-sm: 4px; }
+        body { background-color: var(--bg-color); color: var(--text-primary); font-family: var(--font-body); margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+        .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #050505 70%); text-align: center; }
+        .hero-content { max-width: 800px; padding: 0 20px; }
+        .hero h1 { font-size: clamp(3rem, 8vw, 6rem); margin-bottom: var(--spacing-sm); font-family: var(--font-heading); line-height: 1; }
+        .hero p { font-size: clamp(1.1rem, 2vw, 1.5rem); color: var(--text-secondary); margin-bottom: var(--spacing-md); }
+        .hero-logo { width: 140px; height: 140px; margin: 0 auto 1.5rem; border-radius: 50%; border: 2px solid rgba(255,255,255,0.1); overflow: hidden; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 1rem 2rem; font-family: var(--font-heading); font-weight: 600; border-radius: var(--radius-sm); border: 1px solid transparent; text-decoration: none; }
+        .btn-blue { background: linear-gradient(135deg, #4169E1 0%, #5B7FE8 100%); color: #fff; }
+    </style>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/main.css">
+
+    <!-- LCP Optimizations -->
+    <link rel="preload" as="image" href="assets/logo.jpg" fetchpriority="high">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "The Solian Wolves",
+      "image": "https://solianwolves.com/assets/logo.jpg",
+      "@id": "https://solianwolves.com",
+      "url": "https://solianwolves.com",
+      "telephone": "+254714729996",
+      "priceRange": "$$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Nairobi",
+        "addressRegion": "Nairobi City",
+        "addressCountry": "KE"
+      },
+      "areaServed": [
+        "Nairobi",
+        "Westlands",
+        "Kilimani",
+        "Upper Hill",
+        "Industrial Area"
+      ],
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -1.2921,
+        "longitude": 36.8219
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/the-solian-wolves",
+        "https://github.com/solianwolves"
+      ]
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header role="banner">
+        <nav class="main-nav" role="navigation" aria-label="Main Navigation" style="position: fixed; top: 0; width: 100%; padding: 1.5rem 2rem; z-index: 100; mix-blend-mode: difference;">
+            <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+                <a href="/" class="logo" style="text-decoration: none; color: inherit;" aria-label="The Solian Wolves Home">
+                    <div style="font-weight: 700; font-size: 1.2rem; letter-spacing: -0.02em;">THE SOLIAN WOLVES</div>
+                </a>
+                <div class="nav-links" style="display: flex; align-items: center;">
+                    <div class="nav-dropdown" style="margin-left: 2rem; position: relative; display: inline-block;">
+                        <a href="#services" style="font-size: 0.9rem; text-transform: uppercase; padding: 0.5rem;" aria-label="Our Services">Services ▾</a>
+                        <div class="dropdown-content" style="display: none; position: absolute; background-color: #000; min-width: 200px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1; border: 1px solid #333; border-radius: 4px; padding: 0.5rem 0;">
+                            <a href="#services" style="color: #fff; padding: 12px 16px; text-decoration: none; display: block; font-size: 0.85rem;">Web Architecture</a>
+                            <a href="#services" style="color: #fff; padding: 12px 16px; text-decoration: none; display: block; font-size: 0.85rem;">Local SEO</a>
+                            <a href="#services" style="color: #fff; padding: 12px 16px; text-decoration: none; display: block; font-size: 0.85rem;">CRO & Growth</a>
+                            <a href="#services" style="color: #fff; padding: 12px 16px; text-decoration: none; display: block; font-size: 0.85rem;">Custom Apps</a>
+                            <a href="#services" style="color: #fff; padding: 12px 16px; text-decoration: none; display: block; font-size: 0.85rem;">Technical Audits</a>
+                        </div>
+                    </div>
+                    
+                    <style>
+                        .nav-dropdown:hover .dropdown-content { display: block; }
+                        .dropdown-content a:hover { background-color: #111; color: #3b82f6 !important; }
+                    </style>
+
+                    <a href="#pricing" style="margin-left: 2rem; font-size: 0.9rem; text-transform: uppercase; padding: 0.5rem;" aria-label="View Pricing">Pricing</a>
+                    <a href="#work" style="margin-left: 2rem; font-size: 0.9rem; text-transform: uppercase; padding: 0.5rem;" aria-label="Our Work">Work</a>
+                    <a href="#contact" class="btn btn-outline" style="padding: 0.6rem 1.8rem; margin-left: 2rem;" aria-label="Book a Free Mini Audit">MINI AUDIT</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="MainContent" role="main" tabindex="-1">
+        <!-- Hero Section -->
+        <section class="hero bg-scanning" aria-labelledby="hero-title">
+            <div class="hero-content">
+                <div class="hero-logo">
+                    <img src="assets/logo.jpg" alt="The Solian Wolves Logo"
+                        width="140" height="140"
+                        style="width: 100%; height: 100%; object-fit: cover; display: block;" fetchpriority="high">
+                </div>
+
+                <div class="hero-badge">
+                    <span style="background: rgba(92, 110, 88, 0.1); border: 1px solid rgba(92, 110, 88, 0.3); padding: 0.4rem 1rem; border-radius: 100px; font-size: 0.75rem; color: #95bf47; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 1rem; display: inline-block;">
+                        ✅ Verified Shopify Partner
+                    </span>
+                    <br>
+                    <span style="background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.2); padding: 0.4rem 1rem; border-radius: 100px; font-size: 0.75rem; color: #3b82f6; font-weight: 600; letter-spacing: 0.05em;">
+                        ⚡ 2026 PERFORMANCE ENGINE ACTIVE
+                    </span>
+                </div>
+                <h1 id="hero-title" style="margin-top: 1rem;">
+                    Stop Leaving <span style="color: #3b82f6;">Revenue</span> on the Table.
+                </h1>
+                <p style="max-width: 600px; margin: 1rem auto 2rem;">We turn tech-debt into growth. Our audits and fixes aim to recover over $10M for high-growth digital brands.</p>
+                
+                <div class="hero-actions" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;">
+                    <a href="#contact" class="btn btn-blue pricing-trigger" data-service="free-mini-audit" style="border-radius: 100px; padding: 1.2rem 2.5rem; min-width: 200px;">Secure My Free Mini Audit</a>
+                    <a href="#services" class="btn btn-outline" style="border-radius: 100px; padding: 1.2rem 2.5rem; min-width: 200px;">View Solutions</a>
+                </div>
+
+                <!-- Trusted By Section -->
+                <div style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 2.5rem; width: 100%; max-width: 900px; margin: 0 auto;">
+                    <p style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--text-secondary); margin-bottom: 2rem;">Powering Excellence for Industry Leaders</p>
+                    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; opacity: 0.4; filter: contrast(0.5) brightness(1.5);">
+                        <div style="font-weight: 800; font-size: 1.2rem; letter-spacing: -0.05em;">SHOPIFY</div>
+                        <div style="font-weight: 800; font-size: 1.2rem; letter-spacing: -0.05em;">STRIPE</div>
+                        <div style="font-weight: 800; font-size: 1.2rem; letter-spacing: -0.05em;">VERCEL</div>
+                        <div style="font-weight: 800; font-size: 1.2rem; letter-spacing: -0.05em;">NEXT.JS</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section-padding" style="content-visibility: auto; contain-intrinsic-size: 100vh;">
+            <div class="container">
+                <h2 class="text-center animate-on-scroll" style="font-size: 3rem; margin-bottom: var(--spacing-lg);">Our Expertise</h2>
+                <div class="services-grid">
+                    <a href="#contact" class="service-card animate-on-scroll" style="border: 2px solid #9333ea; box-shadow: 0 0 20px rgba(147, 51, 234, 0.2);">
+                        <div class="service-icon" style="color: #9333ea;">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 2rem; height: 2rem;"><path stroke-linecap="round" stroke-linejoin="round" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" /></svg>
+                        </div>
+                        <h3>High-Velocity Web Architecture</h3>
+                        <p style="color: var(--text-secondary); margin-top: 0.5rem; margin-bottom: 1rem;">We don't use templates. We build sub-second, mobile-first digital infrastructure designed to rank #1 on Google and convert traffic instantly.</p>
+                        <span class="learn-more" style="color: #3b82f6; font-size: 0.9rem; font-weight: 600;">Learn More &rarr;</span>
+                    </a>
+
+                    <a href="#contact" class="service-card animate-on-scroll">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 2rem; height: 2rem;"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" /><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" /></svg>
+                        </div>
+                        <h3>Local Search Dominance</h3>
+                        <p style="color: var(--text-secondary); margin-top: 0.5rem; margin-bottom: 1rem;">Own your area code. We optimize your Google Maps, Schema data, and local citations so you appear before competitors when customers are ready to buy.</p>
+                        <span class="learn-more" style="color: #3b82f6; font-size: 0.9rem; font-weight: 600;">Learn More &rarr;</span>
+                    </a>
+
+                    <a href="#contact" class="service-card animate-on-scroll">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 2rem; height: 2rem;"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18 9 11.25l4.306 4.307a11.95 11.95 0 0 1 5.814-5.519l2.74-1.22m0 0-5.94-2.28m5.94 2.28-2.28 5.941" /></svg>
+                        </div>
+                        <h3>Conversion Engineering</h3>
+                        <p style="color: var(--text-secondary); margin-top: 0.5rem; margin-bottom: 1rem;">Traffic is useless if it doesn't buy. We re-engineer your user flows to turn passive visitors into paying clients using data-driven psychology.</p>
+                        <span class="learn-more" style="color: #3b82f6; font-size: 0.9rem; font-weight: 600;">Learn More &rarr;</span>
+                    </a>
+
+                    <a href="#contact" class="service-card animate-on-scroll">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 2rem; height: 2rem;"><path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" /></svg>
+                        </div>
+                        <h3>Custom Business Systems</h3>
+                        <p style="color: var(--text-secondary); margin-top: 0.5rem; margin-bottom: 1rem;">Outgrow Excel. We build custom inventory, logistics, and CRM software tailored to automate your specific operational bottlenecks.</p>
+                        <span class="learn-more" style="color: #3b82f6; font-size: 0.9rem; font-weight: 600;">Learn More &rarr;</span>
+                    </a>
+
+                    <a href="#contact" class="service-card animate-on-scroll">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 2rem; height: 2rem;"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" /></svg>
+                        </div>
+                        <h3>Technical Rescue & Stabilization</h3>
+                        <p style="color: var(--text-secondary); margin-top: 0.5rem; margin-bottom: 1rem;">Is your current site broken or slow? We perform deep-code surgery to fix critical vulnerabilities, improve security, and restore stability.</p>
+                        <span class="learn-more" style="color: #3b82f6; font-size: 0.9rem; font-weight: 600;">Get Started &rarr;</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section id="stats" class="section-padding" style="background: #000; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; text-align: center;">
+                    <div class="stat-item animate-on-scroll">
+                        <div style="font-size: 3.5rem; font-weight: 800; color: #fff; line-height: 1;">$10M+</div>
+                        <div style="color: #3b82f6; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.5rem;">Target Recovery</div>
+                    </div>
+                    <div class="stat-item animate-on-scroll">
+                        <div style="font-size: 3.5rem; font-weight: 800; color: #fff; line-height: 1;">3-5X</div>
+                        <div style="color: #3b82f6; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.5rem;">ROI Target</div>
+                    </div>
+                    <div class="stat-item animate-on-scroll">
+                        <div style="font-size: 3.5rem; font-weight: 800; color: #fff; line-height: 1;">24/7</div>
+                        <div style="color: #3b82f6; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.5rem;">Active Support</div>
+                    </div>
+                    <div class="stat-item animate-on-scroll">
+                        <div style="font-size: 3.5rem; font-weight: 800; color: #fff; line-height: 1;">&lt; 1s</div>
+                        <div style="color: #3b82f6; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.5rem;">Speed Standard</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="section-padding" aria-labelledby="pricing-title"
+            style="background: linear-gradient(to bottom, #0a0a0a, #050505); content-visibility: auto; contain-intrinsic-size: 100vh;">
+            <div class="container">
+                <h2 id="pricing-title" class="text-center animate-on-scroll" style="font-size: 3rem; margin-bottom: 0.5rem;">Investment Plans</h2>
+                <div class="text-center animate-on-scroll"
+                    style="margin-bottom: var(--spacing-lg); color: var(--text-secondary); font-size: 0.9rem;">
+                    <div style="margin-bottom: 0.5rem;">
+                        <span style="display: inline-block; border: 1px solid #3b82f6; padding: 0.2rem 0.8rem; border-radius: 20px; color: #3b82f6; margin-right: 0.5rem;">🛡️ No-Risk Guarantee</span>
+                        <span style="display: inline-block; border: 1px solid #22c55e; padding: 0.2rem 0.8rem; border-radius: 20px; color: #22c55e;">🔒 SSL Secure</span>
+                    </div>
+                    30-Day Money-Back Guarantee on all audits.
+                </div>
+
+                <div class="pricing-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; align-items: start;">
+                    <!-- Growth Partner -->
+                    <div class="pricing-card" style="border: 1px solid #3b82f6; padding: 2rem; border-radius: var(--radius-md); background: linear-gradient(145deg, rgba(59,130,246,0.1), transparent); position: relative; transform: scale(1.05);">
+                        <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #3b82f6; color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600;">MOST POPULAR</div>
+                        <h3 style="margin-bottom: 0.5rem;">Growth Partner</h3>
+                        <div style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem;">$4,500<span style="font-size: 1rem; color: var(--text-secondary); font-weight: 400;">/month</span></div>
+                        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Continuous optimization and development to scale your store.</p>
+                        <ul style="list-style: none; color: #fff; margin-bottom: 2rem; line-height: 2;">
+                            <li>✓ <strong>Everything in Audit</strong></li>
+                            <li>✓ Weekly Heatmap Analysis</li>
+                            <li>✓ Unlimited A/B Testing</li>
+                            <li>✓ Dedicated Project Manager</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-purple" style="width: 100%;">Start Scaling</a>
+                    </div>
+
+                    <!-- Enterprise -->
+                    <div class="pricing-card" style="border: 1px solid var(--border-color); padding: 2rem; border-radius: var(--radius-md); background: rgba(255,255,255,0.03);">
+                        <h3 style="margin-bottom: 0.5rem;">Total Dominance</h3>
+                        <div style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem;">Custom<span style="font-size: 1rem; color: var(--text-secondary); font-weight: 400;">/project</span></div>
+                        <p style="color: var(--text-secondary); margin-bottom: 2rem;">For brands doing $5M+ looking for a dedicated technical team.</p>
+                        <ul style="list-style: none; color: var(--text-secondary); margin-bottom: 2rem; line-height: 2;">
+                            <li>✓ Infrastructure Tuning</li>
+                            <li>✓ Unlimited UI/UX Requests</li>
+                            <li>✓ White-label Analytics</li>
+                            <li>✓ 24/7 Slack & Support</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-blue" style="width: 100%;">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section id="work" class="section-padding" style="background: linear-gradient(to bottom, #050505, #0a0a0a); content-visibility: auto; contain-intrinsic-size: 80vh;">
+            <div class="container">
+                <div style="display: flex; justify-content: space-between; align-items: end; margin-bottom: var(--spacing-lg);">
+                    <h2 class="animate-on-scroll" style="font-size: 3rem;">Engineered with <span style="color: #3b82f6;">Precision</span></h2>
+                    <p class="animate-on-scroll" style="color: var(--text-secondary); max-width: 300px;">We build on the world's most powerful commerce and development stacks.</p>
+                </div>
+
+                <div class="tech-stack-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+                    <div class="tech-card animate-on-scroll" style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); padding: 2rem; border-radius: var(--radius-md); text-align: center;">
+                        <div style="font-weight: 800; font-size: 1.5rem; color: #fff;">SHOPIFY</div>
+                        <div style="font-size: 0.7rem; color: #3b82f6; text-transform: uppercase; margin-top: 0.5rem;">Commerce Engine</div>
+                    </div>
+                    <div class="tech-card animate-on-scroll" style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); padding: 2rem; border-radius: var(--radius-md); text-align: center;">
+                        <div style="font-weight: 800; font-size: 1.5rem; color: #fff;">NEXT.JS</div>
+                        <div style="font-size: 0.7rem; color: #3b82f6; text-transform: uppercase; margin-top: 0.5rem;">Frontend Framework</div>
+                    </div>
+                    <div class="tech-card animate-on-scroll" style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); padding: 2rem; border-radius: var(--radius-md); text-align: center;">
+                        <div style="font-weight: 800; font-size: 1.5rem; color: #fff;">STRIPE</div>
+                        <div style="font-size: 0.7rem; color: #3b82f6; text-transform: uppercase; margin-top: 0.5rem;">Global Payments</div>
+                    </div>
+                    <div class="tech-card animate-on-scroll" style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); padding: 2rem; border-radius: var(--radius-md); text-align: center;">
+                        <div style="font-weight: 800; font-size: 1.5rem; color: #fff;">VERCEL</div>
+                        <div style="font-size: 0.7rem; color: #3b82f6; text-transform: uppercase; margin-top: 0.5rem;">Edge Deployment</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="team" class="section-padding" style="content-visibility: auto; contain-intrinsic-size: 150vh;">
+            <div class="container">
+                <h2 class="text-center animate-on-scroll" style="font-size: 3rem; margin-bottom: var(--spacing-lg);">The Alpha Pack</h2>
+                <div class="team-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2rem;">
+                    <div class="team-card animate-on-scroll"><div class="initial-avatar">I</div><div class="team-info"><h3>Ian</h3><div class="team-role">CEO & Co-founder</div></div></div>
+                    <div class="team-card animate-on-scroll"><div class="initial-avatar">S</div><div class="team-info"><h3>Solomon</h3><div class="team-role">COO & Co-founder</div></div></div>
+                    <div class="team-card animate-on-scroll"><div class="initial-avatar">A</div><div class="team-info"><h3>Alfred</h3><div class="team-role">CTO</div></div></div>
+                    <div class="team-card animate-on-scroll"><div class="initial-avatar">M</div><div class="team-info"><h3>Melchizedek</h3><div class="team-role">CSO</div></div></div>
+                    <div class="team-card animate-on-scroll"><div class="initial-avatar">N</div><div class="team-info"><h3>Noella</h3><div class="team-role">CGO</div></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-padding">
+            <div class="container text-center">
+                <div id="contact-container" style="max-width: 600px; margin: 0 auto; padding: 4rem; border: 1px solid var(--border-color); border-radius: 2rem; background: radial-gradient(circle at center, #111, #050505); transition: all 0.5s ease;">
+                    <div id="form-step-1">
+                        <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Ready to scale?</h2>
+                        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Stop losing sales to bad UX and slow code. Let's build something powerful.</p>
+                        <form id="contact-form" action="https://formspree.io/f/mqakvjvg" method="POST">
+                            <input type="email" id="contact-email" name="email" placeholder="Your Work Email" required
+                                style="padding: 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-color); background: #000; color: #fff; font-family: inherit; width: 100%; margin-bottom: 1rem;">
+                            <div id="contact-additional-fields" style="display: none; flex-direction: column; gap: 1rem; opacity: 0; transform: translateY(10px); transition: all 0.4s ease;">
+                                <input type="url" name="website" placeholder="Your Website URL" required
+                                    style="padding: 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-color); background: #000; color: #fff; font-family: inherit; width: 100%; margin-bottom: 1rem;">
+                                <textarea name="message" placeholder="How can we help you dominate?"
+                                    style="padding: 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-color); background: #000; color: #fff; font-family: inherit; min-height: 100px; resize: vertical; width: 100%; margin-bottom: 1rem;"></textarea>
+                            </div>
+                            <button type="submit" id="contact-submit" class="btn btn-blue" style="width: 100%;">Get Your Audit</button>
+                        </form>
+                        <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 1rem;">No spam. Just value.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer role="contentinfo" style="padding: 4rem 0 2rem; background: rgba(0,0,0,0.3); border-top: 1px solid var(--border-color);">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col footer-brand">
+                    <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; letter-spacing: -0.02em;">THE SOLIAN WOLVES LLC</h3>
+                    <p>Building high-velocity digital infrastructure for visionary founders. We don't just write code; we engineer revenue.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <div class="contact-item"><span>Nairobi, Kenya</span></div>
+                    <div class="contact-item"><a href="tel:+254714729996">+254 714 729 996</a></div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 The Solian Wolves. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript -->
+    <script src="assets/main.js" defer></script>
+</body>
+</html>
