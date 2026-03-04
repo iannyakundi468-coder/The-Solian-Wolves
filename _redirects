@@ -1,1 +1,3 @@
-https://www.solianwolves.com/* https://solianwolves.com/:splat 301
+# Cloudflare Pages Redirects
+# Redirect Rules must be relative. 
+# For www -> apex redirection, use Cloudflare Dashboard "Redirect Rules".
