@@ -65,6 +65,7 @@
         .text-gradient {
             background: linear-gradient(135deg, #fff 0%, #3b82f6 100%);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
     </style>
@@ -79,9 +80,9 @@
                 <a href="#services"
                     style="margin-left: 2rem; font-size: 0.9rem; text-transform: uppercase;">Services</a>
                 <a href="#pricing" style="margin-left: 2rem; font-size: 0.9rem; text-transform: uppercase;">Pricing</a>
-                <a href="#work" style="margin-left: 2rem; font-size: 0.9rem; text-transform: uppercase;">Work</a>
-                <a href="#contact" class="btn btn-outline" style="padding: 0.5rem 1.5rem; margin-left: 2rem;">Audit
-                    Me</a>
+                <a href="#team" style="margin-left: 2rem; font-size: 0.9rem; text-transform: uppercase;">Team</a>
+                <a href="#contact" class="btn btn-outline" style="padding: 0.6rem 1.8rem; margin-left: 2rem;">SECURE
+                    AUDIT</a>
             </div>
         </div>
     </nav>
@@ -94,12 +95,21 @@
                 <img src="assets/logo.jpg" alt="The Solian Wolves Logo"
                     style="width: 100%; height: 100%; object-fit: cover;" fetchpriority="high">
             </div>
-            <h1>
-                <span style="color: #3b82f6;">Stop Leaving Revenue</span> on the Table.
+            <div class="hero-badge animate-on-scroll"
+                style="display: inline-block; padding: 0.5rem 1.2rem; background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: 100px; margin-bottom: 1.5rem;">
+                <span
+                    style="color: #3b82f6; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase;">
+                    Top-Tier Software Systems Engineering
+                </span>
+            </div>
+            <h1 style="margin-top: 1rem;">
+                Building the <span style="color: #3b82f6;">Future</span> of Digital Systems.
             </h1>
-            <p style="max-width: 600px; margin: 1rem auto 2rem;">We turn tech-debt into growth. Our audits and fixes aim
-                to recover over $10M for high-growth digital brands.</p>
-            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;">
+            <p style="max-width: 600px; margin: 1rem auto 2rem;">We engineer high-performance software, scalable
+                architectures, and mission-critical systems for ambitious global brands.</p>
+
+            <div class="hero-actions"
+                style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;">
                 <a href="#contact" class="btn btn-blue pricing-trigger" data-service="free-mini-audit"
                     style="border-radius: 100px; padding: 1.2rem 2.5rem; min-width: 200px;">Secure My Free Mini
                     Audit</a>
@@ -109,7 +119,6 @@
                 <a href="#services" class="btn btn-outline"
                     style="border-radius: 100px; padding: 1.2rem 2.5rem; min-width: 200px;">View Solutions</a>
             </div>
-
             <!-- Trusted By Section -->
             <div style="margin-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem;">
                 <p
@@ -133,33 +142,33 @@
                 Our Expertise</h2>
             <div class="services-grid"
                 style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                <!-- Box 1: High-Velocity Web Architecture -->
-                <a href="/pages/web-architecture" class="service-card animate-on-scroll"
-                    style="border: 2px solid #9333ea; background: #0f0f0f; padding: 2rem; border-radius: 12px; text-decoration: none; display: block; color: inherit;">
-                    <div class="service-icon" style="color: #9333ea; font-size: 2rem; margin-bottom: 1rem;">⚡</div>
-                    <h3>High-Velocity Web Architecture</h3>
-                    <p style="color: #a1a1aa; margin-top: 0.5rem; margin-bottom: 1rem;">We don't use templates. We build
-                        sub-second, mobile-first digital infrastructure designed to rank #1 on Google.</p>
+                <!-- Box 1: Custom Software Engineering -->
+                <a href="/pages/software-engineering" class="service-card animate-on-scroll"
+                    style="border: 2px solid #3b82f6; background: #0f0f0f; padding: 2rem; border-radius: 12px; text-decoration: none; display: block; color: inherit;">
+                    <div class="service-icon" style="color: #3b82f6; font-size: 2rem; margin-bottom: 1rem;">💻</div>
+                    <h3>Custom Software Engineering</h3>
+                    <p style="color: #a1a1aa; margin-top: 0.5rem; margin-bottom: 1rem;">Robust, scalable applications
+                        tailored to your business, from enterprise SaaS to high-performance mobile apps.</p>
                     <span style="color: #3b82f6; font-size: 0.9rem; font-weight: 600;">Learn More &rarr;</span>
                 </a>
 
-                <!-- Box 2: Local Search Dominance -->
-                <a href="/pages/local-seo" class="service-card animate-on-scroll"
+                <!-- Box 2: Systems Architecture -->
+                <a href="/pages/systems-architecture" class="service-card animate-on-scroll"
                     style="background: #0f0f0f; border: 1px solid #27272a; padding: 2rem; border-radius: 12px; text-decoration: none; display: block; color: inherit;">
-                    <div class="service-icon" style="font-size: 2rem; margin-bottom: 1rem;">📍</div>
-                    <h3>Local Search Dominance</h3>
-                    <p style="color: #a1a1aa; margin-top: 0.5rem; margin-bottom: 1rem;">Own your area code. We optimize
-                        your Google Maps and Schema data so you appear before competitors.</p>
+                    <div class="service-icon" style="font-size: 2rem; margin-bottom: 1rem;">🏗️</div>
+                    <h3>Cloud & Systems Architecture</h3>
+                    <p style="color: #a1a1aa; margin-top: 0.5rem; margin-bottom: 1rem;">Architecting distributed systems
+                        and cloud infrastructure that scale seamlessly with your growth.</p>
                     <span style="color: #3b82f6; font-size: 0.9rem; font-weight: 600;">Learn More &rarr;</span>
                 </a>
 
-                <!-- Box 3: Conversion Engineering -->
-                <a href="/pages/conversion-engineering" class="service-card animate-on-scroll"
+                <!-- Box 3: Legacy Modernization -->
+                <a href="/pages/modernization" class="service-card animate-on-scroll"
                     style="background: #0f0f0f; border: 1px solid #27272a; padding: 2rem; border-radius: 12px; text-decoration: none; display: block; color: inherit;">
-                    <div class="service-icon" style="font-size: 2rem; margin-bottom: 1rem;">📈</div>
-                    <h3>Conversion Engineering</h3>
-                    <p style="color: #a1a1aa; margin-top: 0.5rem; margin-bottom: 1rem;">Traffic is useless if it doesn't
-                        buy. We re-engineer your user flows to turn visitors into paying clients.</p>
+                    <div class="service-icon" style="font-size: 2rem; margin-bottom: 1rem;">🔄</div>
+                    <h3>Technical Rescue & Modernization</h3>
+                    <p style="color: #a1a1aa; margin-top: 0.5rem; margin-bottom: 1rem;">Transform tech debt into
+                        advantage. We refactor old codebases and migrate legacy systems to modern stacks.</p>
                     <span style="color: #3b82f6; font-size: 0.9rem; font-weight: 600;">Learn More &rarr;</span>
                 </a>
             </div>
@@ -179,31 +188,26 @@
                 <div class="detail-block animate-on-scroll"
                     style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
                     <div class="detail-content">
-                        <h3>Website Audits & Fixes</h3>
-                        <p style="color: #a1a1aa;">A surgical analysis of your platform to uncover tech debt and
-                            performance bottlenecks.</p>
+                        <h3>Critical Systems Infrastructure</h3>
+                        <p style="color: #a1a1aa;">Engineering the foundation of your digital ecosystem for reliability
+                            and lightning speed.</p>
                         <ul style="list-style: none; padding: 0; margin: 2rem 0; color: #a1a1aa; line-height: 2;">
-                            <li>✓ Core Web Vitals & Speed Audit</li>
-                            <li>✓ Mobile UX Friction Analysis</li>
-                            <li>✓ Security & Tech Debt Review</li>
-                            <li>✓ 6-Month Modernization Roadmap</li>
+                            <li>✓ Cloud-Native Distributed Architecture</li>
+                            <li>✓ Zero-Downtime Deployment Pipelines</li>
+                            <li>✓ Advanced Security & Penetration Testing</li>
+                            <li>✓ Real-time Monitoring & Self-Healing</li>
                         </ul>
-                        <div style="margin-bottom: 2rem;">
-                            <span
-                                style="text-decoration: line-through; color: #a1a1aa; margin-right: 0.5rem;">$1,500</span>
-                            <span style="font-size: 1.5rem; font-weight: 700; color: #fff;">$997</span>
-                        </div>
                         <a href="#contact" class="btn btn-purple"
-                            style="background: #7851A9; color: #fff; padding: 1rem 2rem; border-radius: 4px; text-decoration: none; font-weight: 600;">Book
-                            Audit Now</a>
+                            style="background: #3b82f6; color: #fff; padding: 1rem 2rem; border-radius: 4px; text-decoration: none; font-weight: 600;">Consult
+                            an Engineer</a>
                     </div>
                     <div class="detail-visual"
                         style="background: #0f0f0f; padding: 3rem; border-radius: 24px; border: 1px solid #27272a;">
                         <div style="text-align: center;">
-                            <div style="font-size: 3rem; font-weight: 700; color: #fff;">99/100</div>
+                            <div style="font-size: 3rem; font-weight: 700; color: #fff;">99.99%</div>
                             <div
                                 style="color: #3b82f6; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em;">
-                                Lighthouse Target</div>
+                                Uptime Standard</div>
                         </div>
                     </div>
                 </div>
@@ -247,17 +251,46 @@
         <div class="container">
             <h2 class="text-center animate-on-scroll" style="font-size: 3rem; margin-bottom: 4rem; text-align: center;">
                 The Alpha Pack</h2>
-            <div class="team-grid"
-                style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2rem;">
-                <div class="team-card animate-on-scroll"
-                    style="background: #0f0f0f; border: 1px solid #27272a; border-radius: 12px; overflow: hidden; text-align: center; padding: 2rem;">
-                    <div class="initial-avatar"
-                        style="font-size: 4rem; font-weight: 800; color: #3b82f6; margin-bottom: 1rem;">I</div>
-                    <h3>Ian</h3>
-                    <div class="team-role" style="color: #a1a1aa; text-transform: uppercase; font-size: 0.8rem;">CEO &
-                        Founder</div>
+            <div class="team-grid">
+                <div class="team-card animate-on-scroll">
+                    <div class="initial-avatar">I</div>
+                    <div class="team-info">
+                        <h3>Ian</h3>
+                        <div class="team-role">CEO & Co-founder</div>
+                    </div>
                 </div>
-                <!-- ... other team members ... -->
+
+                <div class="team-card animate-on-scroll">
+                    <div class="initial-avatar">S</div>
+                    <div class="team-info">
+                        <h3>Solomon</h3>
+                        <div class="team-role">Chief Operations Officer & Co-founder</div>
+                    </div>
+                </div>
+
+                <div class="team-card animate-on-scroll">
+                    <div class="initial-avatar">A</div>
+                    <div class="team-info">
+                        <h3>Alfred</h3>
+                        <div class="team-role">Chief Technology Officer</div>
+                    </div>
+                </div>
+
+                <div class="team-card animate-on-scroll">
+                    <div class="initial-avatar">M</div>
+                    <div class="team-info">
+                        <h3>Melchizedek</h3>
+                        <div class="team-role">Chief Strategy Officer</div>
+                    </div>
+                </div>
+
+                <div class="team-card animate-on-scroll">
+                    <div class="initial-avatar">N</div>
+                    <div class="team-info">
+                        <h3>Noella</h3>
+                        <div class="team-role">Chief Growth Officer</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -267,16 +300,17 @@
         <div class="container">
             <div id="contact-container"
                 style="max-width: 600px; margin: 0 auto; padding: 4rem; border: 1px solid #27272a; border-radius: 2rem; background: radial-gradient(circle at center, #111, #050505); text-align: center;">
-                <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Ready to scale?</h2>
+                <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Ready to Build?</h2>
+                <p style="color: #a1a1aa; margin-bottom: 2rem;">Let's discuss your next mission-critical system.</p>
                 <form id="contact-form" action="https://formspree.io/f/mqakvjvg" method="POST"
                     style="display: flex; flex-direction: column; gap: 1rem;">
                     <input type="email" name="email" placeholder="Your Work Email" required
                         style="padding: 1rem; background: #000; border: 1px solid #27272a; color: #fff; border-radius: 4px;">
-                    <textarea name="message" placeholder="How can we help?" required
+                    <textarea name="message" placeholder="Describe your software requirements..." required
                         style="padding: 1rem; background: #000; border: 1px solid #27272a; color: #fff; border-radius: 4px; min-height: 100px;"></textarea>
-                    <button type="submit" class="btn btn-gold"
-                        style="background: #D4AF37; color: #000; padding: 1rem; border: none; border-radius: 4px; font-weight: 700; cursor: pointer;">Get
-                        Your Audit</button>
+                    <button type="submit" class="btn btn-blue"
+                        style="background: #3b82f6; color: #fff; padding: 1rem; border: none; border-radius: 4px; font-weight: 700; cursor: pointer;">Secure
+                        Your Consultation</button>
                 </form>
             </div>
         </div>
@@ -285,12 +319,35 @@
     <!-- Footer -->
     <footer
         style="padding: 4rem 0; background: #000; border-top: 1px solid #27272a; color: #a1a1aa; font-size: 0.9rem;">
-        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
-            <div>&copy; 2026 The Solian Wolves. All rights reserved.</div>
-            <div style="display: flex; gap: 2rem;">
-                <a href="#services" style="color: #a1a1aa; text-decoration: none;">Services</a>
-                <a href="#pricing" style="color: #a1a1aa; text-decoration: none;">Pricing</a>
-                <a href="#contact" style="color: #a1a1aa; text-decoration: none;">Contact</a>
+        <div class="container">
+            <div
+                style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 2rem; margin-bottom: 4rem;">
+                <div style="max-width: 400px;">
+                    <h3 style="color: #fff; margin-bottom: 1rem;">THE SOLIAN WOLVES</h3>
+                    <p>Engineering mission-critical software and scalable systems for visionary founders. We build the
+                        architecture that powers digital growth.</p>
+                </div>
+                <div style="display: flex; gap: 4rem;">
+                    <div>
+                        <h4 style="color: #fff; margin-bottom: 1rem;">Expertise</h4>
+                        <ul style="list-style: none; padding: 0; line-height: 2;">
+                            <li>Custom Engineering</li>
+                            <li>Systems Architecture</li>
+                            <li>Legacy Modernization</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="color: #fff; margin-bottom: 1rem;">Company</h4>
+                        <ul style="list-style: none; padding: 0; line-height: 2;">
+                            <li><a href="#services" style="color: #a1a1aa; text-decoration: none;">Services</a></li>
+                            <li><a href="#team" style="color: #a1a1aa; text-decoration: none;">Team</a></li>
+                            <li><a href="#contact" style="color: #a1a1aa; text-decoration: none;">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 2rem; text-align: center;">
+                &copy; 2026 The Solian Wolves. All rights reserved.
             </div>
         </div>
     </footer>

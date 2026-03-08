@@ -618,12 +618,21 @@ section {
 }
 
 /* Team Styles */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: var(--spacing-lg);
+}
+
 .team-card {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
     overflow: hidden;
     transition: transform 0.3s ease;
+    text-align: center;
+    padding: 0;
 }
 
 .team-card:hover {

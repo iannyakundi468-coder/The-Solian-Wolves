@@ -17,19 +17,38 @@ function readLiquidFile(filePath) {
 }
 
 function processLiquid(content) {
-    // 1. Replace {% section 'name' %} with the content of sections/name.liquid
-    content = content.replace(/{%\s*section\s*['"]([^'"]+)['"]\s*%}/g, (match, sectionName) => {
-        const sectionPath = path.join(SECTIONS_DIR, `${sectionName}.liquid`);
-        let sectionContent = readLiquidFile(sectionPath);
-        // Remove schema blocks from sections
-        sectionContent = sectionContent.replace(/{%\s*schema\s*%}.*?{%\s*endschema\s*%}/gs, '');
-        return sectionContent;
-    });
+    let changed = true;
+    let passes = 0;
+    const maxPasses = 5;
 
-    // 2. Replace {{ 'filename' | asset_url }} with assets/filename
+    while (changed && passes < maxPasses) {
+        const oldContent = content;
+
+        // 1. Replace {% section 'name' %} or {% section "name" %}
+        content = content.replace(/{%\s*section\s*['"]([^'"]+)['"]\s*%}/g, (match, sectionName) => {
+            console.log(`  - Injecting section: ${sectionName}`);
+            const sectionPath = path.join(SECTIONS_DIR, `${sectionName}.liquid`);
+            let sectionContent = readLiquidFile(sectionPath);
+            // Remove schema blocks from sections
+            sectionContent = sectionContent.replace(/{%\s*schema\s*%}.*?{%\s*endschema\s*%}/gs, '');
+            return `\n<!-- Section: ${sectionName} -->\n${sectionContent}\n<!-- End Section: ${sectionName} -->\n`;
+        });
+
+        // 2. Replace {% render 'name' %}
+        content = content.replace(/{%\s*render\s*['"]([^'"]+)['"]\s*%}/g, (match, snippetName) => {
+            console.log(`  - Rendering snippet: ${snippetName}`);
+            const snippetPath = path.join(BASE_DIR, 'snippets', `${snippetName}.liquid`);
+            return readLiquidFile(snippetPath);
+        });
+
+        changed = oldContent !== content;
+        passes++;
+    }
+
+    // 3. Replace {{ 'filename' | asset_url }} with assets/filename
     content = content.replace(/{{\s*['"]([^'"]+)['"]\s*\|\s*asset_url\s*}}/g, 'assets/$1');
 
-    // 3. Replace other liquid tags with empty or placeholders as needed for a static site
+    // 4. Handle other Liquid tags
     content = content.replace(/{%.*?%}/g, '');
     content = content.replace(/{{.*?}}/g, '');
 
