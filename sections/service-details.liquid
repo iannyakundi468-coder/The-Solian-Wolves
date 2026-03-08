@@ -1,176 +1,70 @@
-<section id="service-details" class="section-padding"
-    style="border-top: 1px solid var(--border-color); content-visibility: auto; contain-intrinsic-size: 200vh;">
+<section id="service-details" class="section-padding" style="border-top: 1px solid rgba(255,255,255,0.05);">
     <div class="container">
-        <div class="text-center animate-on-scroll" style="margin-bottom: var(--spacing-lg);">
-            <h2 style="font-size: 3rem;">Deep Dive into Excellence</h2>
-            <p style="color: var(--text-secondary);">Everything you need to know about our specialized services.</p>
-        </div>
-
-        <div class="details-grid">
-            <!-- Web Architecture Detail -->
-            <div id="detail-web-dev" class="detail-block animate-on-scroll">
+        <div class="details-grid" style="display: grid; gap: 8rem;">
+            <!-- Infrastructure Detail -->
+            <div class="detail-block animate-on-scroll" style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 6rem; align-items: center;">
                 <div class="detail-content">
-                    <h3>High-Velocity Web Architecture</h3>
-                    <p><strong>For Founders:</strong> We build digital assets that load instantly and rank efficiently. Speed converts. Slow sites are a liability.</p>
-                    <p style="margin-top: 1rem;"><strong>For CTOs:</strong> No bloatware. We use Next.js or Liquid for server-side rendering, implement edge caching, and optimize the critical rendering path to achieve sub-100ms TFB and 90+ Lighthouse scores.</p>
-                    <ul class="detail-features">
-                        <li>Sub-Second Load Times (Core Web Vitals Optimized)</li>
-                        <li>Mobile-First Responsive Design</li>
-                        <li>SEO-Native Architecture (SSR/SSG)</li>
-                        <li>Global CDN & Edge Caching</li>
-                        <li>Headless Integration Capabilities</li>
+                    <div class="hero-badge" style="display: inline-block; margin-bottom: 1.5rem; background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: 100px; padding: 0.4rem 1rem; color: #3b82f6; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">Infrastructure Excellence</div>
+                    <h3 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Mission-Critical Infrastructure</h3>
+                    <p style="color: #a1a1aa; font-size: 1.1rem; line-height: 1.7;">Engineering the foundation of your digital ecosystem for absolute reliability and lightning-fast global delivery.</p>
+                    <ul style="list-style: none; padding: 0; margin: 2.5rem 0; color: #a1a1aa; line-height: 2.2;">
+                        <li style="display: flex; align-items: center; gap: 0.75rem;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Cloud-Native Distributed Architecture</li>
+                        <li style="display: flex; align-items: center; gap: 0.75rem;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Zero-Downtime CI/CD Pipelines</li>
+                        <li style="display: flex; align-items: center; gap: 0.75rem;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Advanced Security Compliance & Pentesting</li>
+                        <li style="display: flex; align-items: center; gap: 0.75rem;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Real-time Observability & Self-Healing</li>
                     </ul>
-                    <a href="#contact" class="btn btn-blue pricing-trigger" data-service="web-dev">Get Blueprint</a>
+                    <a href="#contact" class="btn btn-blue" style="padding: 1rem 2.5rem; border-radius: 100px; text-decoration: none; font-weight: 600;">Consult an Infrastructure Lead</a>
                 </div>
-                <div class="detail-visual">
-                    <div style="background: rgba(147, 51, 234, 0.05); padding: 1.5rem; border-radius: 8px; border: 1px solid rgba(147, 51, 234, 0.2);">
-                        <h4 style="color: #fff; margin-bottom: 1rem;">The Speed Advantage</h4>
-                        <div class="process-step">
-                            <div class="step-number" style="background: #9333ea;">1</div>
-                            <p style="font-size: 0.85rem; margin-bottom: 0;">Code Splitting & Minification</p>
-                        </div>
-                        <div class="process-step">
-                            <div class="step-number" style="background: #9333ea;">2</div>
-                            <p style="font-size: 0.85rem; margin-bottom: 0;">Image Optimization (AVIF/WebP)</p>
-                        </div>
-                        <div class="process-step">
-                            <div class="step-number" style="background: #9333ea;">3</div>
-                            <p style="font-size: 0.85rem; margin-bottom: 0;">Instant Interaction</p>
-                        </div>
-                    </div>
+                <div class="detail-visual" style="background: linear-gradient(145deg, #0f0f0f, #050505); padding: 5rem; border-radius: 40px; border: 1px solid rgba(255,255,255,0.05); box-shadow: 0 30px 60px rgba(0,0,0,0.5); text-align: center;">
+                    <div style="font-size: 4rem; font-weight: 800; color: #fff; letter-spacing: -0.05em; margin-bottom: 0.5rem;">99.99<span style="color: #3b82f6;">%</span></div>
+                    <div style="color: #3b82f6; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700;">SLA Guarantee</div>
                 </div>
             </div>
 
-            <!-- Local Search Detail -->
-            <div id="detail-seo" class="detail-block animate-on-scroll">
-                <div class="detail-content">
-                    <h3>Local Search Dominance</h3>
-                    <p><strong>For Founders:</strong> Be the first name your customers see. We ensure you own your neighborhood, city, and region on Google Maps and Search.</p>
-                    <p style="margin-top: 1rem;"><strong>For CTOs:</strong> We implement structured data (JSON-LD) for LocalBusiness, coordinate geo-coordinates across directories, and manage NAP consistency to trigger Google's local algorithm authority.</p>
-                    <ul class="detail-features">
-                        <li>Google Business Profile Optimization</li>
-                        <li>JSON-LD Local Schema Injection</li>
-                        <li>Citation Consistency Audit</li>
-                        <li>Geo-Targeted Content Strategy</li>
-                        <li>Review Velocity Management</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-gold pricing-trigger" data-service="seo">Dominate Local</a>
+            <!-- Deep Dive Audits -->
+            <div id="detail-audit" class="detail-block animate-on-scroll">
+                <div style="text-align: center; max-width: 800px; margin: 0 auto 5rem;">
+                    <div class="hero-badge" style="display: inline-block; margin-bottom: 1.5rem; background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: 100px; padding: 0.4rem 1rem; color: #3b82f6; font-size: 0.8rem; font-weight: 600; text-transform: uppercase;">Performance Engineering</div>
+                    <h3 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Technical Audits & Fixes</h3>
+                    <p style="color: #a1a1aa; font-size: 1.1rem;">Stop guessing. We identify the exact technical bottlenecks slowing down your growth and fix them permanently.</p>
                 </div>
-                <div class="detail-visual">
-                    <div style="background: rgba(255, 215, 0, 0.05); padding: 1.5rem; border-radius: 8px; border: 1px solid rgba(255, 215, 0, 0.2);">
-                        <h4 style="color: #fff; margin-bottom: 1rem;">Map Pack Strategy</h4>
-                        <p style="font-size: 0.85rem; color: var(--text-secondary);">Top 3 positions on the Local Pack receive 70% of click-throughs. We engineer your profile to rank there.</p>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Conversion Detail -->
-            <div id="detail-cro" class="detail-block animate-on-scroll">
-                <div class="detail-content">
-                    <h3>Conversion Engineering</h3>
-                    <p><strong>For Founders:</strong> Stop leaking revenue. We smooth out the friction in your checkout process to turn more visitors into paying customers.</p>
-                    <p style="margin-top: 1rem;"><strong>For CTOs:</strong> We use event tracking, heatmap analysis, and A/B testing frameworks to mathematically prove which UI patterns yield higher conversion rates (CR) and average order value (AOV).</p>
-                    <ul class="detail-features">
-                        <li>Data-Driven A/B Testing</li>
-                        <li>User Journey Flowcharts</li>
-                        <li>Checkout Friction Removal</li>
-                        <li>Value Proposition Clarity</li>
-                        <li>Trust Signal Optimization</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-blue pricing-trigger" data-service="cro">Optimize Now</a>
-                </div>
-                <div class="detail-visual">
-                    <div style="text-align: center; border: 1px dashed #3b82f6; padding: 2rem; border-radius: 8px;">
-                        <div style="font-size: 0.8rem; color: #3b82f6; text-transform: uppercase; margin-bottom: 1rem;">Target Metric</div>
-                        <div style="font-size: 3rem; font-weight: 700; color: #fff;">ROAS</div>
-                        <div style="color: var(--text-secondary);">Return On Ad Spend</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Systems Detail -->
-            <div id="detail-apps" class="detail-block animate-on-scroll">
-                <div class="detail-content">
-                    <h3>Custom Business Systems</h3>
-                    <p><strong>For Founders:</strong> Your business is unique; your software should be too. We build exact-fit systems for inventory, logistics, and customer management.</p>
-                    <p style="margin-top: 1rem;"><strong>For CTOs:</strong> Scalable microservices architecture. We build using standard stacks (Node, Python, SQL/NoSQL) with robust API layers, ensuring your internal tools talk perfectly to your ERP and CRM.</p>
-                    <ul class="detail-features">
-                        <li>Custom Inventory Management Systems (IMS)</li>
-                        <li>Logistics & Route Planning Tools</li>
-                        <li>Bespoke CRMs & Dashboarding</li>
-                        <li>Legacy System API Integrations</li>
-                        <li>Automated Workflow Scripts</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-purple pricing-trigger" data-service="apps">Build System</a>
-                </div>
-                <div class="detail-visual">
-                    <code style="background: #000; padding: 1rem; border-radius: 4px; font-size: 0.75rem; color: #3b82f6; border: 1px solid #222; display: block;">
-                        class InventorySystem {<br>
-                        &nbsp;&nbsp;optimizeStock() {<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;this.analyzeVelocity();<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;return "Capital Freed";<br>
-                        &nbsp;&nbsp;}<br>
-                        }
-                    </code>
-                </div>
-            </div>
-
-            <!-- Technical Audits & Fixes Detail -->
-            <div id="detail-audit" class="detail-block animate-on-scroll" style="display: block;">
-                <div class="detail-content" style="width: 100%; max-width: 100%;">
-                    <div style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">
-                        <h3>Technical Audits & Fixes</h3>
-                        <p><strong>For Founders:</strong> Stop guessing. We identify the exact technical bottlenecks slowing down your growth and fix them.</p>
-                        <p style="margin-top: 1rem;"><strong>For CTOs:</strong> Comprehensive analysis of your codebase, performance metrics, and security posture with clear, actionable remediation paths.</p>
+                <div class="audit-pricing-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3rem;">
+                    <!-- Tier 1 -->
+                    <div class="pricing-tier" style="border: 1px solid rgba(255,255,255,0.05); padding: 3rem; border-radius: 24px; background: rgba(255,255,255,0.01); display: flex; flex-direction: column; backdrop-filter: blur(10px);">
+                        <h4 style="margin-bottom: 0.5rem; color: #fff; font-size: 1.25rem;">Free Mini Audit</h4>
+                        <div style="font-size: 2.5rem; font-weight: 800; margin: 1rem 0; color: #3b82f6;">Free<span style="font-size: 1rem; color: var(--text-secondary); font-weight: 400;">/one-time</span></div>
+                        <ul style="list-style: none; color: var(--text-secondary); margin-bottom: 3rem; line-height: 2; font-size: 0.95rem; flex-grow: 1;">
+                            <li style="display: flex; align-items: center; gap: 0.5rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Core Web Vitals Snapshot</li>
+                            <li style="display: flex; align-items: center; gap: 0.5rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Basic SEO Health Check</li>
+                            <li style="display: flex; align-items: center; gap: 0.5rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> 3 Critical Action Items</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline" style="width: 100%; border-radius: 100px; padding: 1rem; text-align: center;">Get Free Audit</a>
                     </div>
 
-                    <div class="audit-pricing-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
-                        
+                    <!-- Tier 2 -->
+                    <div class="pricing-tier" style="border: 1px solid #3b82f6; padding: 3.5rem 3rem; border-radius: 24px; background: rgba(59,130,246,0.05); position: relative; display: flex; flex-direction: column; backdrop-filter: blur(10px);">
+                        <div style="position: absolute; top: 1.5rem; right: 1.5rem; background: #3b82f6; color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 0.7rem; font-weight: 700;">RECOMMENDED</div>
+                        <h4 style="margin-bottom: 0.5rem; color: #fff; font-size: 1.25rem;">Deep Dive Audit</h4>
+                        <div style="font-size: 2.5rem; font-weight: 800; margin: 1rem 0; color: #3b82f6;">$997<span style="font-size: 1rem; color: var(--text-secondary); font-weight: 400;">/one-time</span></div>
+                        <ul style="list-style: none; color: #fff; margin-bottom: 3rem; line-height: 2; font-size: 0.95rem; flex-grow: 1;">
+                            <li style="display: flex; align-items: center; gap: 0.5rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Full Codebase Analysis</li>
+                            <li style="display: flex; align-items: center; gap: 0.5rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Immediate Hands-on Fixes</li>
+                            <li style="display: flex; align-items: center; gap: 0.5rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Video Handover & Support</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-blue" style="width: 100%; border-radius: 100px; padding: 1.2rem; text-align: center; font-weight: 700;">Start Deep Dive</a>
+                    </div>
 
-                        <!-- Tier 1 -->
-                        <div class="pricing-tier" style="border: 1px solid var(--border-color); padding: 2rem; border-radius: var(--radius-md); background: rgba(255,255,255,0.03); display: flex; flex-direction: column;">
-                            <h4 style="margin-bottom: 0.5rem; color: #fff;">Free Mini Audit</h4>
-                            <div style="font-size: 2rem; font-weight: 700; margin-bottom: 1rem; color: #3b82f6;">Free<span style="font-size: 0.9rem; color: var(--text-secondary); font-weight: 400;">/one-time</span></div>
-                            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem; flex-grow: 1;">Quickly identify low-hanging fruit and immediate performance wins.</p>
-                            <ul style="list-style: none; color: var(--text-secondary); margin-bottom: 2rem; line-height: 1.6; font-size: 0.9rem;">
-                                <li>✓ Core Web Vitals Snapshot</li>
-                                <li>✓ Basic SEO Health Check</li>
-                                <li>✓ 3 Critical Action Items</li>
-                                <li>✓ PDF Report</li>
-                            </ul>
-                            <a href="#contact" class="btn btn-outline pricing-trigger" data-service="free-mini-audit" style="width: 100%; justify-content: center;">Get Free Audit</a>
-                        </div>
-
-                        <!-- Tier 2 -->
-                        <div class="pricing-tier" style="border: 1px solid #3b82f6; padding: 2rem; border-radius: var(--radius-md); background: rgba(59,130,246,0.1); position: relative; display: flex; flex-direction: column;">
-                            <div style="position: absolute; top: -10px; right: 20px; background: #3b82f6; color: #fff; padding: 2px 10px; border-radius: 4px; font-size: 0.7rem; font-weight: 700;">RECOMMENDED</div>
-                            <h4 style="margin-bottom: 0.5rem; color: #fff;">Deep Dive Audit</h4>
-                            <div style="font-size: 2rem; font-weight: 700; margin-bottom: 1rem; color: #3b82f6;">$997<span style="font-size: 0.9rem; color: var(--text-secondary); font-weight: 400;">/one-time</span></div>
-                            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem; flex-grow: 1;">Comprehensive audit followed by hands-on fixes and a team walkthrough.</p>
-                            <ul style="list-style: none; color: #fff; margin-bottom: 2rem; line-height: 1.6; font-size: 0.9rem;">
-                                <li>✓ <strong>Everything in Free Audit</strong></li>
-                                <li>✓ Full Codebase Analysis</li>
-                                <li>✓ Implementation of Fixes</li>
-                                <li>✓ Video Walkthrough & Handover</li>
-                                <li>✓ 30-Day Support Warranty</li>
-                            </ul>
-                            <a href="#contact" class="btn btn-blue pricing-trigger" data-service="audit" style="width: 100%; justify-content: center;">Start Deep Dive</a>
-                        </div>
-
-                        <!-- Tier 3 -->
-                        <div class="pricing-tier" style="border: 1px solid var(--border-color); padding: 2rem; border-radius: var(--radius-md); background: rgba(255,255,255,0.03); display: flex; flex-direction: column;">
-                            <h4 style="margin-bottom: 0.5rem; color: #fff;">Growth Retainer</h4>
-                            <div style="font-size: 2rem; font-weight: 700; margin-bottom: 1rem; color: #3b82f6;">$1,200<span style="font-size: 0.9rem; color: var(--text-secondary); font-weight: 400;">/month</span></div>
-                            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem; flex-grow: 1;">Your dedicated technical partner for ongoing optimization and peace of mind.</p>
-                            <ul style="list-style: none; color: var(--text-secondary); margin-bottom: 2rem; line-height: 1.6; font-size: 0.9rem;">
-                                <li>✓ Ongoing Performance Monitoring</li>
-                                <li>✓ Monthly SEO Updates</li>
-                                <li>✓ Unlimited Small Fixes</li>
-                                <li>✓ Priority Support Channel</li>
-                            </ul>
-                            <a href="#contact" class="btn btn-purple pricing-trigger" data-service="retainer" style="width: 100%; justify-content: center;">Join Retainer</a>
-                        </div>
-
+                    <!-- Tier 3 -->
+                    <div class="pricing-tier" style="border: 1px solid rgba(255,255,255,0.05); padding: 3rem; border-radius: 24px; background: rgba(255,255,255,0.01); display: flex; flex-direction: column; backdrop-filter: blur(10px);">
+                        <h4 style="margin-bottom: 0.5rem; color: #fff; font-size: 1.25rem;">Engineering Retainer</h4>
+                        <div style="font-size: 2.5rem; font-weight: 800; margin: 1rem 0; color: #3b82f6;">$1,500<span style="font-size: 1rem; color: var(--text-secondary); font-weight: 400;">/month</span></div>
+                        <ul style="list-style: none; color: var(--text-secondary); margin-bottom: 3rem; line-height: 2; font-size: 0.95rem; flex-grow: 1;">
+                            <li style="display: flex; align-items: center; gap: 0.5rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Ongoing Performance Tuning</li>
+                            <li style="display: flex; align-items: center; gap: 0.5rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Unlimited Small Technical Fixes</li>
+                            <li style="display: flex; align-items: center; gap: 0.5rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Priority Engineering Channel</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline" style="width: 100%; border-radius: 100px; padding: 1rem; text-align: center;">Join Retainer</a>
                     </div>
                 </div>
             </div>

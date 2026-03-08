@@ -1,64 +1,14 @@
 <header role="banner">
-    <nav class="main-nav" role="navigation" aria-label="Main Navigation" style="position: fixed; top: 0; width: 100%; padding: 1.5rem 2rem; z-index: 100; mix-blend-mode: difference;">
-        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
-        {% if page.template_suffix == 'landing-kenya' %}
-            <a href="{{ page.url }}" class="logo" style="text-decoration: none; color: inherit;" aria-label="The Solian Wolves Kenya">
-                <div style="font-weight: 700; font-size: 1.2rem; letter-spacing: -0.02em;">THE SOLIAN WOLVES</div>
-            </a>
-            <div class="nav-links" style="display: flex; align-items: center;">
-                <div class="nav-dropdown" style="margin-left: 2rem; position: relative; display: inline-block;">
-                    <a href="/#services" style="font-size: 0.9rem; text-transform: uppercase; padding: 0.5rem;" aria-label="Our Services">Services ▾</a>
-                    <div class="dropdown-content" style="display: none; position: absolute; background-color: #000; min-width: 200px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1; border: 1px solid #333; border-radius: 4px; padding: 0.5rem 0;">
-                        <a href="/pages/web-architecture" style="color: #fff; padding: 12px 16px; text-decoration: none; display: block; font-size: 0.85rem;">Web Architecture</a>
-                        <a href="/pages/local-seo" style="color: #fff; padding: 12px 16px; text-decoration: none; display: block; font-size: 0.85rem;">Local SEO</a>
-                        <a href="/pages/conversion-engineering" style="color: #fff; padding: 12px 16px; text-decoration: none; display: block; font-size: 0.85rem;">CRO & Growth</a>
-                        <a href="/pages/custom-systems" style="color: #fff; padding: 12px 16px; text-decoration: none; display: block; font-size: 0.85rem;">Custom Apps</a>
-                        <a href="/pages/technical-audits" style="color: #fff; padding: 12px 16px; text-decoration: none; display: block; font-size: 0.85rem;">Technical Audits</a>
-                        <div style="height: 1px; background: #333; margin: 0.5rem 0;"></div>
-                        <a href="/pages/for-agencies" style="color: #fff; padding: 12px 16px; text-decoration: none; display: block; font-size: 0.85rem;">For Agencies</a>
-                    </div>
-                </div>
-                
-                <style>
-                    .nav-dropdown:hover .dropdown-content { display: block; }
-                    .dropdown-content a:hover { background-color: #111; color: #3b82f6 !important; }
-                </style>
-
-                <a href="#pricing-kenya" style="margin-left: 2rem; font-size: 0.9rem; text-transform: uppercase; padding: 0.5rem;" aria-label="View Pricing">Pricing</a>
-                <a href="#work" style="margin-left: 2rem; font-size: 0.9rem; text-transform: uppercase; padding: 0.5rem;" aria-label="Our Work">Work</a>
-                <a href="#contact" class="btn btn-outline" style="padding: 0.6rem 1.8rem; margin-left: 2rem;" aria-label="Book a Free Mini Audit">SECURE AUDIT</a>
-            </div>
-        {% else %}
-            <a href="/" class="logo" style="text-decoration: none; color: inherit;" aria-label="{{ shop.name }} Home">
-                <div style="font-weight: 700; font-size: 1.2rem; letter-spacing: -0.02em;">THE SOLIAN WOLVES</div>
-            </a>
-            <div class="nav-links" style="display: flex; align-items: center;">
-                <div class="nav-dropdown" style="margin-left: 2rem; position: relative; display: inline-block;">
-                    <a href="/#services" style="font-size: 0.9rem; text-transform: uppercase; padding: 0.5rem;" aria-label="Our Services">Services ▾</a>
-                    <div class="dropdown-content" style="display: none; position: absolute; background-color: #000; min-width: 200px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1; border: 1px solid #333; border-radius: 4px; padding: 0.5rem 0;">
-                        <a href="/pages/web-architecture" style="color: #fff; padding: 12px 16px; text-decoration: none; display: block; font-size: 0.85rem;">Web Architecture</a>
-                        <a href="/pages/local-seo" style="color: #fff; padding: 12px 16px; text-decoration: none; display: block; font-size: 0.85rem;">Local SEO</a>
-                        <a href="/pages/conversion-engineering" style="color: #fff; padding: 12px 16px; text-decoration: none; display: block; font-size: 0.85rem;">CRO & Growth</a>
-                        <a href="/pages/custom-systems" style="color: #fff; padding: 12px 16px; text-decoration: none; display: block; font-size: 0.85rem;">Custom Apps</a>
-                        <a href="/pages/technical-audits" style="color: #fff; padding: 12px 16px; text-decoration: none; display: block; font-size: 0.85rem;">Technical Audits</a>
-                        <div style="height: 1px; background: #333; margin: 0.5rem 0;"></div>
-                        <a href="/pages/for-agencies" style="color: #fff; padding: 12px 16px; text-decoration: none; display: block; font-size: 0.85rem;">For Agencies</a>
-                    </div>
-                </div>
-                
-                <style>
-                    .nav-dropdown:hover .dropdown-content { display: block; }
-                    .dropdown-content a:hover { background-color: #111; color: #3b82f6 !important; }
-                </style>
-
-                <a href="/pages/case-studies"
-                    style="margin-left: 2rem; font-size: 0.9rem; text-transform: uppercase; color: #3b82f6; padding: 0.5rem;" aria-label="View Case Studies">Case Studies</a>
-                <a href="/pages/landing-kenya" style="margin-left: 2rem; font-size: 0.9rem; text-transform: uppercase; padding: 0.5rem;" aria-label="Kenya Site">🇰🇪 Kenya</a>
-                <a href="/#pricing" style="margin-left: 2rem; font-size: 0.9rem; text-transform: uppercase; padding: 0.5rem;" aria-label="View Pricing">Pricing</a>
-                <a href="/#work" style="margin-left: 2rem; font-size: 0.9rem; text-transform: uppercase; padding: 0.5rem;" aria-label="Our Work">Work</a>
-                <a href="/#contact" class="btn btn-outline" style="padding: 0.6rem 1.8rem; margin-left: 2rem;" aria-label="Book a Free Mini Audit">MINI AUDIT</a>
-            </div>
-        {% endif %}
+    <nav class="main-nav" role="navigation" aria-label="Main Navigation" style="position: fixed; top: 0; width: 100%; padding: 2rem 4rem; z-index: 1000; background: rgba(0, 0, 0, 0.8); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); display: flex; justify-content: space-between; align-items: center;">
+        <a href="/" class="logo" style="text-decoration: none; color: #fff;" aria-label="The Solian Wolves Home">
+            <div style="font-weight: 800; font-size: 1.1rem; letter-spacing: 0.1em; text-transform: uppercase;">The Solian Wolves</div>
+        </a>
+        
+        <div class="nav-links" style="display: flex; align-items: center; gap: 3rem;">
+            <a href="/#services" style="color: #a1a1aa; text-decoration: none; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;">Solutions</a>
+            <a href="/pages/case-studies" style="color: #3b82f6; text-decoration: none; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;">Case Studies</a>
+            <a href="/#pricing" style="color: #a1a1aa; text-decoration: none; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;">Investment</a>
+            <a href="/#contact" class="btn btn-blue" style="padding: 0.8rem 2rem; border-radius: 100px; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.05em;">Secure Audit</a>
         </div>
     </nav>
 </header>

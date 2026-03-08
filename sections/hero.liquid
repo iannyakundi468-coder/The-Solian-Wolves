@@ -1,37 +1,37 @@
-<section class="hero bg-scanning" aria-labelledby="hero-title">
-    <div class="hero-content">
-        <div class="hero-logo">
-            <img src="{{ 'logo.jpg' | asset_url }}" alt="The Solian Wolves Logo"
-                width="140" height="140"
-                style="width: 100%; height: 100%; object-fit: cover; display: block;" fetchpriority="high">
+<header class="hero" style="min-height: 90vh; display: flex; align-items: center; padding: 10rem 0 6rem;">
+    <div class="container">
+        <div class="hero-content" style="max-width: 1000px; margin: 0 auto; text-align: center;">
+            <div class="hero-logo"
+                style="width: 120px; height: 120px; margin: 0 auto 2.5rem; border-radius: 50%; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 0 80px rgba(59, 130, 246, 0.15); animation: float 6s ease-in-out infinite;">
+                <img src="{{ 'logo.jpg' | asset_url }}" alt="The Solian Wolves Logo"
+                    style="width: 100%; height: 100%; object-fit: cover;" fetchpriority="high">
+            </div>
+            <div class="hero-badge animate-on-scroll"
+                style="display: inline-block; padding: 0.6rem 1.4rem; background: rgba(59, 130, 246, 0.05); border: 1px solid rgba(59, 130, 246, 0.15); border-radius: 100px; margin-bottom: 2rem;">
+                <span
+                    style="color: #3b82f6; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;">
+                    Premium Systems Engineering
+                </span>
+            </div>
+            <h1 style="font-size: clamp(3rem, 8vw, 5.5rem); line-height: 1; margin-bottom: 2rem; letter-spacing: -0.04em;">
+                Building the <span class="text-gradient" style="background: linear-gradient(135deg, #fff 0%, #3b82f6 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Future</span> of Digital Systems.
+            </h1>
+            <p style="max-width: 700px; margin: 0 auto 3rem; font-size: 1.25rem; color: #a1a1aa; line-height: 1.6;">We engineer high-performance software, scalable
+                architectures, and mission-critical systems for ambitious global brands.</p>
+
+            <div class="hero-actions"
+                style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-bottom: 4rem;">
+                <a href="#contact" class="btn btn-blue pricing-trigger" data-service="free-mini-audit"
+                    style="border-radius: 100px; padding: 1.4rem 3rem; font-weight: 700; letter-spacing: 0.02em;">Secure Your Consultation</a>
+                <a href="#services" class="btn btn-outline"
+                    style="border-radius: 100px; padding: 1.4rem 3rem; border-color: rgba(255,255,255,0.1); font-weight: 600;">Explore Solutions</a>
+            </div>
         </div>
+    </div>
+</header>
 
 
-
-
-
-        <div class="hero-badge">
-            <span style="background: rgba(92, 110, 88, 0.1); border: 1px solid rgba(92, 110, 88, 0.3); padding: 0.4rem 1rem; border-radius: 100px; font-size: 0.75rem; color: #95bf47; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 1rem; display: inline-block;">
-                ✅ Verified Shopify Partner
-            </span>
-            <br>
-            <span style="background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.2); padding: 0.4rem 1rem; border-radius: 100px; font-size: 0.75rem; color: #3b82f6; font-weight: 600; letter-spacing: 0.05em;">
-                ⚡ 2026 PERFORMANCE ENGINE ACTIVE
-            </span>
-        </div>
-        <h1 style="margin-top: 1rem;">
-            Building the <span style="color: #3b82f6;">Future</span> of Digital Systems.
-        </h1>
-        <p style="max-width: 600px; margin: 1rem auto 2rem;">We engineer high-performance software, scalable architectures, and mission-critical systems for ambitious global brands.</p>
-        
-        <div class="hero-actions" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;">
-            <a href="#contact" class="btn btn-blue pricing-trigger" data-service="free-mini-audit" style="border-radius: 100px; padding: 1.2rem 2.5rem; min-width: 200px;">Secure My Free Mini Audit</a>
-            <a href="/pages/for-agencies" class="btn btn-outline" style="border-radius: 100px; padding: 1.2rem 2.5rem; min-width: 200px; border-color: rgba(59,130,246,0.3); color: #3b82f6;">Agency Partners</a>
-            <a href="#services" class="btn btn-outline" style="border-radius: 100px; padding: 1.2rem 2.5rem; min-width: 200px;">View Solutions</a>
-        </div>
-
-
-        <!-- Trusted By Section - High Contrast Ad Style -->
+<!-- Trusted By Section - High Contrast Ad Style -->
         <div style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 2.5rem; width: 100%; max-width: 900px; margin: 0 auto;">
             <p style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--text-secondary); margin-bottom: 2rem;">Powering Excellence for Industry Leaders</p>
             <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; opacity: 0.4; filter: contrast(0.5) brightness(1.5);">
