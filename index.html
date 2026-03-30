@@ -68,6 +68,10 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
     </style>
 </head>
 
@@ -107,7 +111,7 @@
                     style="font-size: clamp(3rem, 8vw, 5.5rem); line-height: 1; margin-bottom: 2rem; letter-spacing: -0.04em;">
                     Building the <span class="text-gradient"
                         style="background: linear-gradient(135deg, #fff 0%, #3b82f6 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Future</span>
-                    of Digital Systems.
+                    of <span id="typing-text">Digital Systems</span><span style="border-right: 4px solid #3b82f6; animation: blink 1s step-end infinite; margin-left: 2px;"></span>.
                 </h1>
                 <p style="max-width: 700px; margin: 0 auto 3rem; font-size: 1.25rem; color: #a1a1aa; line-height: 1.6;">
                     We engineer high-performance software, scalable

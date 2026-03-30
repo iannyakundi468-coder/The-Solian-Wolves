@@ -126,4 +126,52 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 100);
     }
 
+    // --- 5. Typing Animation ---
+    const typingTextElement = document.getElementById('typing-text');
+    if (typingTextElement && !typingTextElement.dataset.initialized) {
+        typingTextElement.dataset.initialized = "true";
+        const words = [
+            "Digital Systems",
+            "Website design",
+            "Mobile App development",
+            "Custom Software",
+            "E-commerce Stores",
+            "UI/UX Design",
+            "SEO and digital marketing",
+            "AI tools and Automation"
+        ];
+
+        let wordIndex = 0;
+        let charIndex = words[0].length; // Start with the first word fully typed
+        let isDeleting = true; // First action will be to delete
+
+        function typeEffect() {
+            const currentWord = words[wordIndex];
+
+            if (isDeleting) {
+                typingTextElement.textContent = currentWord.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingTextElement.textContent = currentWord.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let typeSpeed = isDeleting ? 40 : 80;
+
+            if (!isDeleting && charIndex === currentWord.length) {
+                typeSpeed = 2000; // reading time
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+                typeSpeed = 500; // wait before typing next
+            }
+
+            setTimeout(typeEffect, typeSpeed);
+        }
+
+        // Start effect after 2 seconds
+        setTimeout(typeEffect, 2000);
+    }
+
 });
