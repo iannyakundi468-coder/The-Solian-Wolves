@@ -14,3 +14,9 @@ node_modules/
 # Temp files
 tmp/
 dist/
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example
