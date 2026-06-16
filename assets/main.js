@@ -185,4 +185,19 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(typeEffect, 2000);
     }
 
+    // --- 6. Scroll Listener for Navigation Header ---
+    const mainNav = document.querySelector('.main-nav');
+    if (mainNav) {
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                mainNav.classList.add('scrolled');
+            } else {
+                mainNav.classList.remove('scrolled');
+            }
+        };
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        // Run once on load in case the page is already scrolled
+        handleScroll();
+    }
+
 });

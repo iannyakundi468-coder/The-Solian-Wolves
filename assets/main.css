@@ -120,21 +120,39 @@ img {
     display: block;
 }
 
+/* Navigation */
+.main-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 2rem 0;
+    z-index: 1000;
+    transition: background 0.3s ease, padding 0.3s ease, border-bottom 0.3s ease;
+}
+
+.main-nav.scrolled {
+    padding: 1.2rem 0;
+    background: rgba(5, 5, 5, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
 /* Mobile Navigation */
 @media (max-width: 768px) {
-    nav {
+    .main-nav {
         padding: 1rem !important;
         background: rgba(5, 5, 5, 0.95);
         /* distinct background for legibility */
         backdrop-filter: blur(10px);
     }
 
-    nav .container {
+    .main-nav .container {
         flex-direction: column;
         gap: 1rem;
     }
 
-    nav a {
+    .main-nav a {
         margin-left: 0 !important;
         margin: 0 0.5rem;
         font-size: 0.8rem !important;
