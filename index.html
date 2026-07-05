@@ -44,7 +44,35 @@
     <script async
         src="https://www.paypal.com/sdk/js?client-id=AaIj-jDw0zhnIbcX63U9xOhMKM0_DQoCa8q6zD_3kotNYLIJflIFCxXNyGZj5NMULNvKRSPQSnkBpHfg&currency=USD&vault=true"></script>
 
-    <!-- Removed AI inline styles -->
+    <style>
+        /* Floating animation for logo */
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .hero-logo {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #fff 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+    </style>
 </head>
 
 <body>
@@ -90,20 +118,22 @@
         <div class="container">
             <div class="hero-content" style="max-width: 1000px; margin: 0 auto; text-align: center;">
                 <div class="hero-logo"
-                    style="width: 120px; height: 120px; margin: 0 auto 2.5rem; border-radius: 50%; overflow: hidden; border: 1px solid #333;">
+                    style="width: 120px; height: 120px; margin: 0 auto 2.5rem; border-radius: 50%; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 0 80px rgba(59, 130, 246, 0.15); animation: float 6s ease-in-out infinite;">
                     <img src="assets/logo.jpg" alt="The Solian Wolves Software Company Logo"
                         style="width: 100%; height: 100%; object-fit: cover;" fetchpriority="high">
                 </div>
                 <div class="hero-badge animate-on-scroll"
-                    style="display: inline-block; margin-bottom: 1.5rem;">
+                    style="display: inline-block; padding: 0.6rem 1.4rem; background: rgba(59, 130, 246, 0.05); border: 1px solid rgba(59, 130, 246, 0.15); border-radius: 100px; margin-bottom: 2rem;">
                     <span
-                        style="color: #777; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;">
+                        style="color: #3b82f6; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;">
                         Premium Systems Engineering
                     </span>
                 </div>
                 <h1
-                    style="font-size: clamp(3rem, 8vw, 5.5rem); line-height: 1; margin-bottom: 2rem; letter-spacing: -0.04em; color: #fff;">
-                    Building the Future of Digital Systems.
+                    style="font-size: clamp(3rem, 8vw, 5.5rem); line-height: 1; margin-bottom: 2rem; letter-spacing: -0.04em;">
+                    Building the <span class="text-gradient"
+                        style="background: linear-gradient(135deg, #fff 0%, #3b82f6 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Future</span>
+                    of <span id="typing-text" style="color: #fbbf24; text-shadow: 0 0 20px #fbbf244D;">Digital Systems</span><span id="typing-cursor" style="border-right: 4px solid #fbbf24; animation: blink 1s step-end infinite; margin-left: 2px;"></span>.
                 </h1>
                 <p style="max-width: 700px; margin: 0 auto 3rem; font-size: 1.25rem; color: #a1a1aa; line-height: 1.6;">
                     We engineer high-performance software, custom ERPs, and mission-critical business systems tailored for ambitious SMEs.</p>

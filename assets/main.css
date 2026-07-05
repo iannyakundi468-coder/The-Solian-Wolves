@@ -678,7 +678,7 @@ section {
     align-items: center;
     justify-content: center;
     position: relative;
-    background: #050505;
+    background: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #050505 70%);
     overflow: visible;
     padding: 80px 20px 40px;
 }
@@ -698,7 +698,9 @@ section {
     overflow: hidden;
     position: relative;
     z-index: 5;
-    border: 1px solid #333333;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.05);
+    animation: float 6s ease-in-out infinite;
 }
 
 .hero h1 {
@@ -713,7 +715,17 @@ section {
     margin-bottom: var(--spacing-md);
 }
 
-/* Animation float removed */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
 
 /* Bento Grid Services */
 .services-grid {

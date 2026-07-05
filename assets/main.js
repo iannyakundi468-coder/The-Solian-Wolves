@@ -126,11 +126,63 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 100);
     }
 
-    // --- 5. Typing Animation (Removed for static aesthetic) ---
+    // --- 5. Typing Animation ---
     const typingTextElement = document.getElementById('typing-text');
     if (typingTextElement && !typingTextElement.dataset.initialized) {
         typingTextElement.dataset.initialized = "true";
-        // Static text set directly in HTML now. No animation needed.
+        const cursorElement = document.getElementById('typing-cursor');
+        const words = [
+            { text: "Digital Systems", color: "#fbbf24" }, // Golden
+            { text: "Website design", color: "#3b82f6" }, // Blue
+            { text: "Mobile App development", color: "#10b981" }, // Green
+            { text: "Custom Software", color: "#8b5cf6" }, // Purple
+            { text: "E-commerce Stores", color: "#f43f5e" }, // Rose
+            { text: "UI/UX Design", color: "#06b6d4" }, // Cyan
+            { text: "SEO and digital marketing", color: "#f97316" }, // Orange
+            { text: "AI tools and Automation", color: "#ec4899" }  // Pink
+        ];
+
+        let wordIndex = 0;
+        let charIndex = words[0].text.length; // Start with the first word fully typed
+        let isDeleting = true; // First action will be to delete
+
+        function typeEffect() {
+            const currentItem = words[wordIndex];
+            const currentWord = currentItem.text;
+
+            if (isDeleting) {
+                typingTextElement.textContent = currentWord.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingTextElement.textContent = currentWord.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let typeSpeed = isDeleting ? 40 : 80;
+
+            if (!isDeleting && charIndex === currentWord.length) {
+                typeSpeed = 2000; // reading time
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+                
+                // Update coloring for the new word
+                const nextItem = words[wordIndex];
+                typingTextElement.style.color = nextItem.color;
+                typingTextElement.style.textShadow = `0 0 20px ${nextItem.color}4D`;
+                if (cursorElement) {
+                    cursorElement.style.borderRightColor = nextItem.color;
+                }
+
+                typeSpeed = 500; // wait before typing next
+            }
+
+            setTimeout(typeEffect, typeSpeed);
+        }
+
+        // Start effect after 2 seconds
+        setTimeout(typeEffect, 2000);
     }
 
     // --- 6. Scroll Listener for Navigation Header ---
