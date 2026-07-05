@@ -155,18 +155,40 @@ img {
     }
 
     .main-nav .container {
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+    }
+
+    #mobile-menu-btn {
+        display: block !important;
+    }
+
+    .nav-links {
+        display: none;
         flex-direction: column;
-        gap: 1rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(10, 10, 10, 0.98);
+        backdrop-filter: blur(20px);
+        padding: 2rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.5);
     }
 
-    .main-nav a {
-        margin-left: 0 !important;
-        margin: 0 0.5rem;
-        font-size: 0.8rem !important;
+    .nav-links.active {
+        display: flex;
     }
 
-    /* Hide the 'Audit Me' button text or simplify on very small screens if needed, 
-       but for now just stacking is fine. */
+    .nav-links a {
+        margin: 1rem 0 !important;
+        font-size: 1.1rem !important;
+        width: 100%;
+        text-align: center;
+    }
+
 }
 
 /* Wolf Cursor */

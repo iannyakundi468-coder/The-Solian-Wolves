@@ -90,8 +90,8 @@
             </button>
 
             <div class="nav-links">
-                <a href="index.html" class="active-link" style="margin-left: 2rem; font-size: 0.9rem; text-transform: uppercase;">Home</a>
-                <a href="about.html" style="margin-left: 2rem; font-size: 0.9rem; text-transform: uppercase;">About</a>
+                <a href="index.html" style="margin-left: 2rem; font-size: 0.9rem; text-transform: uppercase;">Home</a>
+                <a href="about.html" class="active-link" style="margin-left: 2rem; font-size: 0.9rem; text-transform: uppercase;">About</a>
                 <a href="services.html" style="margin-left: 2rem; font-size: 0.9rem; text-transform: uppercase;">Services</a>
                 <a href="portfolio.html" style="margin-left: 2rem; font-size: 0.9rem; text-transform: uppercase;">Portfolio</a>
                 <a href="pricing.html" style="margin-left: 2rem; font-size: 0.9rem; text-transform: uppercase;">Pricing</a>
@@ -100,57 +100,70 @@
         </div>
     </nav>
 
-    <!-- Hero -->
-    <header id="home" class="hero" style="min-height: 90vh; display: flex; align-items: center; padding: 10rem 0 6rem;">
+    <!-- About -->
+    <section id="about" class="section-padding" style="padding: 8rem 0;">
         <div class="container">
-            <div class="hero-content" style="max-width: 1000px; margin: 0 auto; text-align: center;">
-                <div class="hero-logo"
-                    style="width: 120px; height: 120px; margin: 0 auto 2.5rem; border-radius: 50%; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 0 80px rgba(59, 130, 246, 0.15); animation: float 6s ease-in-out infinite;">
-                    <img src="assets/logo.jpg" alt="The Solian Wolves Software Company Logo"
-                        style="width: 100%; height: 100%; object-fit: cover;" fetchpriority="high">
+            <div class="animate-on-scroll" style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <div class="hero-badge" style="display: inline-block; margin-bottom: 1.5rem; background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: 100px; padding: 0.4rem 1rem; color: #3b82f6; font-size: 0.8rem; font-weight: 600; text-transform: uppercase;">Who We Are</div>
+                <h2 style="font-size: 3rem; margin-bottom: 2rem;">Architects of the Digital Frontier</h2>
+                <p style="color: #a1a1aa; font-size: 1.25rem; line-height: 1.7; margin-bottom: 2rem;">
+                    At The Solian Wolves Software Company, we don't just build software. We engineer resilient, dynamic systems and custom ERPs that streamline your operations and unlock continuous growth for your SME. Our pack of elite engineers and strategists are driven by an obsession with technical mastery and architectural excellence.
+                </p>
+                <div class="image-wrapper animate-on-scroll" style="height: 400px;">
+                    <img src="/home/thealpha/.gemini/antigravity/brain/a78c7519-5280-43d1-bfc0-c259bac237ec/media__1783255718407.jpg" alt="Executive Boardroom">
                 </div>
-                <div class="hero-badge animate-on-scroll"
-                    style="display: inline-block; padding: 0.6rem 1.4rem; background: rgba(59, 130, 246, 0.05); border: 1px solid rgba(59, 130, 246, 0.15); border-radius: 100px; margin-bottom: 2rem;">
-                    <span
-                        style="color: #3b82f6; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;">
-                        Premium Systems Engineering
-                    </span>
-                </div>
-                <h1
-                    style="font-size: clamp(3rem, 8vw, 5.5rem); line-height: 1; margin-bottom: 2rem; letter-spacing: -0.04em;">
-                    Building the <span class="text-gradient"
-                        style="background: linear-gradient(135deg, #fff 0%, #3b82f6 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Future</span>
-                    of <span id="typing-text" style="color: #fbbf24; text-shadow: 0 0 20px #fbbf244D;">Digital Systems</span><span id="typing-cursor" style="border-right: 4px solid #fbbf24; animation: blink 1s step-end infinite; margin-left: 2px;"></span>.
-                </h1>
-                <p style="max-width: 700px; margin: 0 auto 3rem; font-size: 1.25rem; color: #a1a1aa; line-height: 1.6;">
-                    We engineer high-performance software, custom ERPs, and mission-critical business systems tailored for ambitious SMEs.</p>
+            </div>
+        </div>
+    </section>
 
-                <div class="hero-actions"
-                    style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-bottom: 4rem;">
-                    <a href="#contact" class="btn btn-blue pricing-trigger"
-                        style="border-radius: 100px; padding: 1.4rem 3rem; font-weight: 700; letter-spacing: 0.02em;">Secure
-                        Your Consultation</a>
-                    <a href="#services" class="btn btn-outline"
-                        style="border-radius: 100px; padding: 1.4rem 3rem; border-color: rgba(255,255,255,0.1); font-weight: 600;">Explore
-                        Solutions</a>
+    <!-- Team -->
+    <section id="team" class="section-padding" style="padding: 8rem 0; border-top: 1px solid #27272a;">
+        <div class="container">
+            <h2 class="text-center animate-on-scroll" style="font-size: 3rem; margin-bottom: 4rem; text-align: center;">
+                The Alpha Pack</h2>
+            <div class="team-grid">
+                <div class="team-card animate-on-scroll">
+                    <div class="initial-avatar">I</div>
+                    <div class="team-info">
+                        <h3>Ian</h3>
+                        <div class="team-role">CEO & Co-founder</div>
+                    </div>
                 </div>
 
-                <!-- Trusted By Section -->
-                <div style="padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.05);">
-                    <p
-                        style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.25em; color: #555; margin-bottom: 2rem; font-weight: 700;">
-                        Engineered for Excellence</p>
-                    <div
-                        style="display: flex; justify-content: center; align-items: center; gap: 4rem; flex-wrap: wrap; opacity: 0.3; filter: grayscale(1);">
-                        <span style="font-weight: 800; font-size: 1.25rem; letter-spacing: -0.05em;">SHOPIFY</span>
-                        <span style="font-weight: 800; font-size: 1.25rem; letter-spacing: -0.05em;">AWS</span>
-                        <span style="font-weight: 800; font-size: 1.25rem; letter-spacing: -0.05em;">VERCEL</span>
-                        <span style="font-weight: 800; font-size: 1.25rem; letter-spacing: -0.05em;">STRIPE</span>
+                <div class="team-card animate-on-scroll">
+                    <div class="initial-avatar">S</div>
+                    <div class="team-info">
+                        <h3>Solomon</h3>
+                        <div class="team-role">Chief Operations Officer & Co-founder</div>
+                    </div>
+                </div>
+
+                <div class="team-card animate-on-scroll">
+                    <div class="initial-avatar">A</div>
+                    <div class="team-info">
+                        <h3>Alfred</h3>
+                        <div class="team-role">Chief Technology Officer</div>
+                    </div>
+                </div>
+
+                <div class="team-card animate-on-scroll">
+                    <div class="initial-avatar">M</div>
+                    <div class="team-info">
+                        <h3>Melchizedek</h3>
+                        <div class="team-role">Chief Strategy Officer</div>
+                    </div>
+                </div>
+
+                <div class="team-card animate-on-scroll">
+                    <div class="initial-avatar">N</div>
+                    <div class="team-info">
+                        <h3>Noella</h3>
+                        <div class="team-role">Chief Growth Officer</div>
                     </div>
                 </div>
             </div>
         </div>
-    </header>
+    </section>
 
     <!-- Footer -->
     <footer
