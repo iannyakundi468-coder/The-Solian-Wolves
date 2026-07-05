@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methodology | The Solian Wolves Software Company</title>
+    <meta name="description"
+        content="Our 4-phase engineering process for delivering mission-critical systems and custom ERPs. Discover how The Alpha Pack builds robust software architectures.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/main.css">
+    
+    <style>
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 4rem auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .timeline-step {
+            position: relative;
+            margin-bottom: 6rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .timeline-step:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            width: 45%;
+            padding: 2.5rem;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: var(--radius-md);
+            backdrop-filter: blur(10px);
+            transition: all 0.4s ease;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            border-color: rgba(59, 130, 246, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .timeline-step:nth-child(even) .timeline-content {
+            text-align: right;
+        }
+
+        .timeline-marker {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0);
+            width: 40px;
+            height: 40px;
+            background: #0f0f0f;
+            border: 2px solid #3b82f6;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: #3b82f6;
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+            z-index: 2;
+        }
+
+        .timeline-title {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            font-family: var(--font-heading);
+            color: #fff;
+        }
+
+        .timeline-desc {
+            color: #a1a1aa;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 30px;
+            }
+            .timeline-step {
+                flex-direction: column !important;
+                align-items: flex-start;
+                padding-left: 80px;
+            }
+            .timeline-content {
+                width: 100%;
+                text-align: left !important;
+            }
+            .timeline-marker {
+                left: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="main-nav">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="font-weight: 700; font-size: 1.2rem; letter-spacing: -0.02em;">THE SOLIAN WOLVES SOFTWARE COMPANY</div>
+            
+            <button id="mobile-menu-btn" aria-label="Toggle Menu" style="display: none; background: transparent; border: none; color: white; cursor: pointer;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+
+            <div class="nav-links">
+                <a href="/" style="margin-left: 2rem; font-size: 0.9rem; text-transform: uppercase;">Home</a>
+                <div class="nav-dropdown" style="margin-left: 2rem;">
+                    <button class="nav-dropbtn" style="font-size: 0.9rem; text-transform: uppercase; color: var(--gold);">Company <span>&#9662;</span></button>
+                    <div class="nav-dropdown-content">
+                        <a href="/about">About</a>
+                        <a href="/methodology" class="active-link" style="color: var(--gold);">Methodology</a>
+                        <a href="/careers">Careers</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown" style="margin-left: 2rem;">
+                    <button class="nav-dropbtn" style="font-size: 0.9rem; text-transform: uppercase;">Solutions <span>&#9662;</span></button>
+                    <div class="nav-dropdown-content">
+                        <a href="/services">Services</a>
+                        <a href="/industries">Industries</a>
+                        <a href="/labs">Alpha Labs</a>
+                    </div>
+                </div>
+                <a href="/blog" style="margin-left: 2rem; font-size: 0.9rem; text-transform: uppercase;">Blog</a>
+                <a href="/contact" class="btn btn-outline" style="padding: 0.6rem 1.8rem; margin-left: 2rem;">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Methodology Hero -->
+    <section id="methodology-hero" class="section-padding" style="padding: 10rem 0 4rem;">
+        <div class="container">
+            <div class="animate-on-scroll" style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <div class="hero-badge" style="display: inline-block; margin-bottom: 1.5rem; background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: 100px; padding: 0.4rem 1rem; color: #3b82f6; font-size: 0.8rem; font-weight: 600; text-transform: uppercase;">How We Work</div>
+                <h1 style="font-size: clamp(2.5rem, 6vw, 4.5rem); margin-bottom: 1.5rem; line-height: 1.1;">The Alpha <span class="text-gradient">Process</span></h1>
+                <p style="color: #a1a1aa; font-size: 1.25rem; line-height: 1.7;">
+                    We don't guess. We architect, build, and deploy with precision. Our battle-tested methodology ensures your mission-critical system is delivered on time, secure, and ready to scale.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="section-padding" style="padding: 2rem 0 8rem;">
+        <div class="container">
+            <div class="timeline">
+                
+                <div class="timeline-step animate-on-scroll">
+                    <div class="timeline-marker">1</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Discovery & Blueprinting</h3>
+                        <p class="timeline-desc">Before writing a single line of code, we map out the entire system architecture. We analyze your workflows, bottleneck dependencies, and business objectives to draft a comprehensive engineering blueprint.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-step animate-on-scroll">
+                    <div class="timeline-marker">2</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Systems Architecture</h3>
+                        <p class="timeline-desc">We select the optimal tech stack (AWS, Node.js, Next.js, etc.) and design the database schemas, microservice boundaries, and API integrations. This ensures the foundation can handle exponential growth without fracturing.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-step animate-on-scroll">
+                    <div class="timeline-marker">3</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Agile Engineering</h3>
+                        <p class="timeline-desc">Our engineers execute the blueprint in high-velocity sprints. You receive continuous transparency with staged demonstrations, allowing for rapid iteration and feedback loops throughout the development lifecycle.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-step animate-on-scroll">
+                    <div class="timeline-marker">4</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Stress Testing & Deployment</h3>
+                        <p class="timeline-desc">The system undergoes rigorous automated QA, security penetration testing, and load balancing tests. Once cleared, we execute a zero-downtime deployment protocol to seamlessly launch your new infrastructure.</p>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="text-center animate-on-scroll" style="margin-top: 4rem;">
+                <a href="/contact" class="btn btn-blue" style="border-radius: 100px; padding: 1.2rem 3rem;">Initiate Discovery Phase</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+        style="padding: 8rem 0 4rem; background: #000; border-top: 1px solid rgba(255,255,255,0.05); color: #a1a1aa; font-size: 0.95rem;">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3
+                        style="color: #fff; font-size: 1.25rem; margin-bottom: 1.5rem; letter-spacing: 0.1em; font-weight: 800;">
+                        THE SOLIAN WOLVES SOFTWARE COMPANY</h3>
+                    <p style="max-width: 400px; line-height: 1.7; color: #777;">Engineering mission-critical software
+                        and scalable systems for visionary founders. We build the architecture that powers digital
+                        growth.</p>
+                </div>
+                <div>
+                    <h4
+                        style="color: #fff; margin-bottom: 2rem; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700;">
+                        Solutions</h4>
+                    <ul style="list-style: none; padding: 0; line-height: 2.5;">
+                        <li><a href="/services" style="transition: color 0.3s;">Custom Engineering</a></li>
+                        <li><a href="/industries" style="transition: color 0.3s;">Industries</a></li>
+                        <li><a href="/labs" style="transition: color 0.3s;">Alpha Labs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4
+                        style="color: #fff; margin-bottom: 2rem; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700;">
+                        Company</h4>
+                    <ul style="list-style: none; padding: 0; line-height: 2.5;">
+                        <li><a href="/about" style="transition: color 0.3s;">Alpha Pack</a></li>
+                        <li><a href="/blog" style="transition: color 0.3s;">Blog</a></li>
+                        <li><a href="/contact" style="transition: color 0.3s;">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 3rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem;">
+                <div style="color: #555;">&copy; 2026 The Solian Wolves Software Company. All rights reserved.</div>
+                <div style="display: flex; gap: 3rem;">
+                    <a href="#" style="color: #555; transition: color 0.3s;">Privacy Policy</a>
+                    <a href="#" style="color: #555; transition: color 0.3s;">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/main.js" defer></script>
+</body>
+</html>

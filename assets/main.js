@@ -216,7 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
         handleScroll();
     }
 
-    // --- 7. Mobile Menu Toggle ---
+    // --- 7. Mobile Menu & Dropdowns ---
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
     if (mobileMenuBtn && navLinks) {
@@ -224,10 +224,27 @@ document.addEventListener('DOMContentLoaded', () => {
             navLinks.classList.toggle('active');
         });
 
-        // Close menu when a link is clicked
+        // Close menu when a standard link is clicked (ignore dropdown buttons)
         navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
+            });
+        });
+        
+        // Handle dropdown toggles on mobile
+        navLinks.querySelectorAll('.nav-dropbtn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    // Close other open dropdowns
+                    navLinks.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+                        if (dropdown !== btn.parentElement && dropdown.classList.contains('active')) {
+                            dropdown.classList.remove('active');
+                        }
+                    });
+                    // Toggle current dropdown
+                    btn.parentElement.classList.toggle('active');
+                }
             });
         });
     }
