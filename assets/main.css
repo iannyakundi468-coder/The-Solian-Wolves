@@ -159,38 +159,46 @@ img {
     }
 
     .main-nav .container {
-        flex-direction: row !important;
-        justify-content: space-between !important;
+        flex-direction: column !important;
+        justify-content: center !important;
         align-items: center !important;
+        gap: 0.5rem !important;
     }
 
     #mobile-menu-btn {
-        display: block !important;
+        display: none !important;
     }
 
     .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: rgba(10, 10, 10, 0.98);
-        backdrop-filter: blur(20px);
-        padding: 2rem 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 0.5rem 1rem !important;
+        position: relative !important;
+        top: auto !important;
+        background: transparent !important;
+        padding: 0 !important;
+        border: none !important;
+        box-shadow: none !important;
+        backdrop-filter: none !important;
     }
 
     .nav-links.active {
-        display: flex;
+        display: flex !important;
     }
 
     .nav-links a {
-        margin: 1rem 0 !important;
-        font-size: 1.1rem !important;
-        width: 100%;
+        margin: 0 !important;
+        font-size: 0.75rem !important;
+        width: auto !important;
         text-align: center;
+        letter-spacing: 0.05em;
+    }
+    
+    .nav-links .btn {
+        padding: 0.2rem 0.6rem !important;
     }
 
 }
