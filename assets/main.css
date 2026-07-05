@@ -127,7 +127,7 @@ img {
     width: 100%;
     padding: 2rem 0;
     z-index: 1000;
-    transition: background 0.3s ease, padding 0.3s ease, border-bottom 0.3s ease;
+    transition: transform 0.3s ease, background 0.3s ease, padding 0.3s ease, border-bottom 0.3s ease;
 }
 
 .main-nav.scrolled {
@@ -136,6 +136,10 @@ img {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.main-nav.nav-hidden {
+    transform: translateY(-100%);
 }
 
 .nav-links {
@@ -439,6 +443,31 @@ img {
 
     .hero {
         padding: 8rem 0 4rem !important;
+    }
+
+    /* Mobile Carousel (Horizontal Scrolling Grids) */
+    .mobile-carousel {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        gap: 1.5rem !important;
+        padding-bottom: 2rem !important;
+        margin: 0 -1rem !important;
+        padding-inline: 1rem !important;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none; /* Firefox */
+    }
+    
+    .mobile-carousel::-webkit-scrollbar {
+        display: none; /* Safari and Chrome */
+    }
+
+    .mobile-carousel > * {
+        flex: 0 0 85% !important; /* Items take up 85% of screen width */
+        max-width: 85% !important;
+        scroll-snap-align: center;
     }
 }
 

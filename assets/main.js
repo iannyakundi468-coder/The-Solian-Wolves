@@ -188,12 +188,28 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- 6. Scroll Listener for Navigation Header ---
     const mainNav = document.querySelector('.main-nav');
     if (mainNav) {
+        let lastScrollY = window.scrollY;
+        
         const handleScroll = () => {
-            if (window.scrollY > 50) {
+            const currentScrollY = window.scrollY;
+            
+            // Add background when scrolled down
+            if (currentScrollY > 50) {
                 mainNav.classList.add('scrolled');
             } else {
                 mainNav.classList.remove('scrolled');
             }
+            
+            // Smart hiding logic (only hide if scrolling down and past header)
+            if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                // Scrolling Down
+                mainNav.classList.add('nav-hidden');
+            } else {
+                // Scrolling Up
+                mainNav.classList.remove('nav-hidden');
+            }
+            
+            lastScrollY = currentScrollY;
         };
         window.addEventListener('scroll', handleScroll, { passive: true });
         // Run once on load in case the page is already scrolled
