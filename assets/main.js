@@ -133,12 +133,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const cursorElement = document.getElementById('typing-cursor');
         const words = [
             { text: "Digital Systems", color: "#fbbf24" }, // Golden
-            { text: "Website design", color: "#3b82f6" }, // Blue
             { text: "Mobile App development", color: "#10b981" }, // Green
             { text: "Custom Software", color: "#8b5cf6" }, // Purple
             { text: "E-commerce Stores", color: "#f43f5e" }, // Rose
             { text: "UI/UX Design", color: "#06b6d4" }, // Cyan
-            { text: "SEO and digital marketing", color: "#f97316" }, // Orange
             { text: "AI tools and Automation", color: "#ec4899" }  // Pink
         ];
 
