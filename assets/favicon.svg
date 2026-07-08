@@ -1,0 +1,17 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="removeBlack" color-interpolation-filters="sRGB">
+      <!-- Convert RGB to Alpha. If it's black (0,0,0), alpha becomes 0. If it's white (1,1,1), alpha becomes >1 -->
+      <feColorMatrix type="matrix" values="
+        1 0 0 0 0
+        0 1 0 0 0
+        0 0 1 0 0
+        1 1 1 0 0" />
+      <!-- Boost the alpha to ensure non-black colors are fully opaque -->
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="10" />
+      </feComponentTransfer>
+    </filter>
+  </defs>
+  <image href="logo.jpg" width="512" height="512" filter="url(#removeBlack)" />
+</svg>
