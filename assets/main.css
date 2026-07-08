@@ -455,9 +455,6 @@ img {
     border-radius: var(--radius-md);
 }
 
-.text-glow {
-    /* Removed glow */
-}
 
 .bg-scanning {
     position: relative;
