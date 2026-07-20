@@ -20,7 +20,7 @@ For most businesses, a website is a digital brochure. For us, it is a high-frequ
 We don't just "fix" sites—we build them from the ground up for global dominance. Our full-cycle development process includes:
 - **Conceptual Architecture**: Mapping user journeys that convert before a single line of code is written.
 - **Premium Design Systems**: Visual identities that exude authority and trust.
-- **High-Performance Engineering**: Building on modern stacks (Shopify, Next.js, Headless) for sub-second speed.
+- **High-Performance Engineering**: Building on modern stacks (Next.js, Headless) for sub-second speed.
 - **Global Scaling**: Optimizing for multi-currency, multi-language, and international CDN performance.
 
 By joining us, you aren't just hiring developers; you are partnering with growth engineers who care about your bottom line as much as you do.
@@ -72,7 +72,7 @@ We don't copy-paste from StackOverflow. Every line of code in a Solian Wolves pr
 
 ### 3.2 Headless & Composable Architectures
 For our enterprise clients, we recommend **Headless Commerce**. By decoupling your storefront from your backend, we achieve:
-- **Infinite Flexibility**: Use any frontend tech (Next.js, Remix, Vue) with any backend (Shopify, BigCommerce, Custom).
+- **Infinite Flexibility**: Use any frontend tech (Next.js, Remix, Vue) with any backend (BigCommerce, Custom).
 - **Sub-Second Page Loads**: Since the storefront is a static site served via CDN, it is inherently faster than any traditional CMS.
 - **Security**: Your backend is no longer exposed directly to the public web, significantly reducing the attack surface.
 
@@ -126,7 +126,7 @@ We believe an educated client is a successful client.
 - **Bounce Rate**: The percentage of visitors who leave the site after viewing only one page.
 - **Conversion Rate (CR)**: The percentage of visitors who complete a desired action (like buying a product).
 - **Lighthouse Score**: A tool from Google that audits performance, accessibility, and more.
-- **Liquid**: The templating language used by Shopify (which we are masters of).
+
 - **SSR (Server-Side Rendering)**: A technique where the server generates the full HTML for a page before sending it to the browser.
 
 ### 6.2 Frequently Asked Questions
