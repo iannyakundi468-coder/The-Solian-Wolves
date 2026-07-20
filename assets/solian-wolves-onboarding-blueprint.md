@@ -61,68 +61,22 @@ By the end of this phase, you receive a **Prioritized Growth Roadmap**. This isn
 
 ---
 
-## 3. PHASE 2: CRO & REVENUE PSYCHOLOGY
-If Phase 1 was about fixing the plumbing, Phase 2 is about maximizing the flow. Conversion Rate Optimization (CRO) is often misunderstood as "changing button colors." At **The Solian Wolves**, we view CRO as the scientific application of user psychology to technical environments.
-
-### 3.1 The Hierarchical Testing Framework
-We don't test random ideas. We follow a strict hierarchy of optimization:
-1. **Functional (Is it broken?)**: Before testing a new layout, we ensure the existing one works on every device/browser combination.
-2. **Accessible (Can everyone use it?)**: We ensure the site is usable for people with disabilities, which inherently improves the experience for everyone.
-3. **Usable (Is it easy?)**: We simplify the "Critical Path" (the shortest route to checkout).
-4. **Intuitive (Is it obvious?)**: We use design patterns that users already recognize.
-5. **Persuasive (Does it sell?)**: Only here do we begin testing copy, social proof, and scarcity triggers.
-
-### 3.2 The Psychology of the "Buy"
-We implement and test specific psychological triggers across your site:
-- **Heuristic Evaluation**: We audit for "Decision Fatigue." If you give a user 5 choices, they choose nothing. If you give them 1 clear path, they take it.
-- **The Zeigarnik Effect**: We use progress bars in checkouts. Humans have an innate desire to finish what they've started.
-- **Loss Aversion & Scarcity**: We don't use fake countdown timers. We use real-time inventory tracking and "High Demand" indicators that are backed by actual server data.
-- **Authority & Trust Signals**: We don't just "put logos on a page." We place trust badges at the "Point of Highest Friction"—usually right next to the "Pay Now" button.
-
-### 3.3 Continuous A/B Testing Regime
-We utilize professional-grade testing suites (Evolv, Kameleoon, or custom-built engines) to run split tests. Our process:
-- **Hypothesis Foundation**: "By changing X, we expect Y to happen, because of Z."
-- **Statistical Significance**: We never call a winner early. We require 95%+ confidence levels and a minimum sample size before implementation.
-- **The Winner's Loop**: Once a test wins, it becomes the new baseline, and we start the next experiment immediately.
-
----
-
-## 4. PHASE 3: SEO AUTHORITY & CLIMBING THE RANKS
-Most SEO plans focus on "writing blogs." Our SEO strategy is built on **Technical Authority**. Google is an algorithm; we speak its language.
-
-### 4.1 The Semantic Web & Entities
-Google no longer just matches keywords; it understands "Entities."
-- **Schema Markup Optimization**: We go beyond basic "Product" schema. We implement "Organization", "Breadcrumb", "VideoObject", and "FAQ" schemas to own as much real estate on the Search Engine Results Page (SERP) as possible.
-- **Internal Linking Mojo**: We build "Topic Clusters." We link your high-authority pages to your high-conversion pages using an automated internal linking engine that ensures no page is "orphaned."
-
-### 4.2 Technical SEO Infrastructure
-- **Dynamic Sitemap Generation**: We ensure your sitemaps are always up-to-date and prioritized by your most profitable categories.
-- **Edge SEO Implementation**: Using Cloudflare Workers or similar Tech, we can implement SEO fixes (like meta-tag updates) at the CDN level, bypassing sluggish CMS deployment cycles.
-- **Crawl Budget Optimization**: We tell Google exactly what to ignore (filters, search results, admin pages) so it spends its limited "Crawl Time" indexing your most important content.
-
-### 4.3 Content Velocity
-SEO is a momentum game.
-- **The Authority Blueprint**: We provide search intent analysis. We don't just tell you what keywords to target; we tell you exactly what *type* of content will rank for those keywords (is it a listicle? a calculator? a deep-dive guide?).
-- **User Intent Mapping**: We separate traffic into "Informational" (Learning), "Navigational" (Searching for you), and "Transactional" (Ready to buy). We optimize different landing pages for each.
-
----
-
-## 5. PHASE 4: CUSTOM DEVELOPMENT & ARCHITECTURAL SCALING
+## 3. PHASE 2: CUSTOM DEVELOPMENT & ARCHITECTURAL SCALING
 When off-the-shelf solutions hit their ceiling, we build the ladder. **The Solian Wolves** specialize in bespoke software that doesn't just "work"—it dominates.
 
-### 5.1 The "Clean Code" Standard
+### 3.1 The "Clean Code" Standard
 We don't copy-paste from StackOverflow. Every line of code in a Solian Wolves project is:
 - **Modular**: Built so it can be updated or replaced without breaking the rest of the system.
 - **Documented**: Every function has a reason for existing.
 - **Performant**: We audit for memory leaks, infinite loops, and expensive DOM operations.
 
-### 5.2 Headless & Composable Architectures
+### 3.2 Headless & Composable Architectures
 For our enterprise clients, we recommend **Headless Commerce**. By decoupling your storefront from your backend, we achieve:
 - **Infinite Flexibility**: Use any frontend tech (Next.js, Remix, Vue) with any backend (Shopify, BigCommerce, Custom).
 - **Sub-Second Page Loads**: Since the storefront is a static site served via CDN, it is inherently faster than any traditional CMS.
 - **Security**: Your backend is no longer exposed directly to the public web, significantly reducing the attack surface.
 
-### 5.3 Custom App & API Development
+### 3.3 Custom App & API Development
 We build tools that solve specific business problems:
 - **Custom Fulfillment Dashboards**: Direct links between your sales engine and your warehouse.
 - **Personalized Logic Engines**: Offer different prices, products, or layouts based on complex user data.
@@ -130,16 +84,16 @@ We build tools that solve specific business problems:
 
 ---
 
-## 6. PHASE 5: THE WHITE COLLAR PARTNER SERVICE
+## 4. PHASE 3: THE WHITE COLLAR PARTNER SERVICE
 For elite clients who require more than just technical execution, we offer the **White Collar Partner** model. This is C-suite level strategic advisory that embeds our senior leadership directly into your business growth engine.
 
-### 6.1 Strategic Fractional CTO/CMO Support
+### 4.1 Strategic Fractional CTO/CMO Support
 We act as your technical and growth advisors in boardrooms and strategy sessions.
 - **Tech Stack Consolidation**: Saving you thousands by eliminating redundant SaaS subscriptions.
 - **Hiring & Vetting**: We help you hire and manage internal technical teams to ensure they meet the Wolfpack standard.
 - **Investment & Scaling Advisory**: Preparing your technical infrastructure for acquisition or massive capital rounds.
 
-### 6.2 The Partnership Advantage
+### 4.2 The Partnership Advantage
 Unlike a standard vendor, a White Collar Partner is incentivized by your long-term success.
 - **Quarterly Goal Alignment**: We don't just hit deadlines; we hit revenue targets.
 - **Direct VIP Access**: 24/7 dedicated line to our senior specialists for crisis management and rapid pivoting.
@@ -147,35 +101,35 @@ Unlike a standard vendor, a White Collar Partner is incentivized by your long-te
 
 ---
 
-## 7. THE COLLABORATION ENGINE: How We Work Together
+## 5. THE COLLABORATION ENGINE: How We Work Together
 A project is only as good as its communication. We operate on a **"Zero Mystery"** policy.
 
-### 6.1 Tools of the Trade
+### 5.1 Tools of the Trade
 We don't live in email. We live in:
 - **Slack/Discord**: Real-time communication for quick wins and tactical updates.
 - **Jira/Linear**: The source of truth for every task. You can see what we're coding, who's coding it, and when it's due.
 - **Figma**: Collaborative design. You see the pixels before we write the code.
 - **Loom**: We send video walkthroughs of every major feature deployment so you know exactly how it works.
 
-### 6.2 Feedback Loops & Reporting
+### 5.2 Feedback Loops & Reporting
 - **Weekly Tactical Syncs**: 15-30 minutes to review the past week's wins and the upcoming week's "Big Rocks."
 - **Monthly Strategy Audits**: A deep dive into the data. Are we meeting our KPIs? If not, we pivot.
 - **Post-Launch Reviews**: Every deployment is followed by a "Retrospective" where we analyze the impact on performance and conversion.
 
 ---
 
-## 8. THE KNOWLEDGE VAULT: Glossary & FAQ
+## 6. THE KNOWLEDGE VAULT: Glossary & FAQ
 We believe an educated client is a successful client.
 
-### 7.1 Key Industry Terms
+### 6.1 Key Industry Terms
 - **A/B Testing**: Comparing two versions of a webpage to see which performs better.
 - **Bounce Rate**: The percentage of visitors who leave the site after viewing only one page.
 - **Conversion Rate (CR)**: The percentage of visitors who complete a desired action (like buying a product).
-- **Lighthouse Score**: A tool from Google that audits performance, accessibility, SEO, and more.
+- **Lighthouse Score**: A tool from Google that audits performance, accessibility, and more.
 - **Liquid**: The templating language used by Shopify (which we are masters of).
 - **SSR (Server-Side Rendering)**: A technique where the server generates the full HTML for a page before sending it to the browser.
 
-### 7.2 Frequently Asked Questions
+### 6.2 Frequently Asked Questions
 **Q: How long does an audit take?**
 A: Typically 5-10 business days for the full surgical analysis.
 
