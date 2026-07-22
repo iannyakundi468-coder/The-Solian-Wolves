@@ -85,123 +85,82 @@
         </div>
     </nav>
 
-    <!-- Services -->
-    <section id="services" class="section-padding"
-        style="content-visibility: auto; contain-intrinsic-size: 100vh; padding: 8rem 0; border-top: 1px solid #27272a;">
-        <div class="container">
-            <h2 class="text-center animate-on-scroll" style="font-size: 3rem; margin-bottom: 4rem; text-align: center;">
-                Our Expertise</h2>
-            <div class="services-grid mobile-carousel"
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                <!-- Box 1: Full-Cycle Development -->
-                <a href="/pages/development" class="service-card animate-on-scroll"
-                    style="border: 2px solid #3b82f6; background: #0f0f0f; padding: 2rem; border-radius: 12px; text-decoration: none; display: block; color: inherit;">
-                    <div class="service-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="16 18 22 12 16 6"></polyline>
-                            <polyline points="8 6 2 12 8 18"></polyline>
-                        </svg>
-                    </div>
-                    <h3 style="font-size: 1.5rem; margin: 1rem 0;">Full-Cycle Development</h3>
-                    <p style="color: #a1a1aa; line-height: 1.6; margin-bottom: 1.5rem;">Build high-performance, globally scalable websites blending conceptual architecture with premium design systems and sub-second speed.</p>
-                    <span class="service-link" style="color: #3b82f6; font-size: 0.9rem; font-weight: 600;">View Development Flow &rarr;</span>
-                </a>
-
-                <!-- Box 2: Surgical Audit -->
-                <a href="/pages/audit" class="service-card animate-on-scroll"
-                    style="background: #0f0f0f; border: 1px solid #27272a; padding: 2rem; border-radius: 12px; text-decoration: none; display: block; color: inherit;">
-                    <div class="service-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                        </svg>
-                    </div>
-                    <h3 style="font-size: 1.5rem; margin: 1rem 0;">The Surgical Audit</h3>
-                    <p style="color: #a1a1aa; line-height: 1.6; margin-bottom: 1.5rem;">Deep-dive performance and UX analysis. We fix Core Web Vitals, eliminate technical debt, and remove conversion friction before building.</p>
-                    <span class="service-link" style="color: #3b82f6; font-size: 0.9rem; font-weight: 600;">Explore Audit Methodology &rarr;</span>
-                </a>
-
-
-
-                <!-- Box 5: Architectural Scaling & Apps -->
-                <a href="/pages/architecture" class="service-card animate-on-scroll"
-                    style="background: #0f0f0f; border: 1px solid #27272a; padding: 2rem; border-radius: 12px; text-decoration: none; display: block; color: inherit;">
-                    <div class="service-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                            <polyline points="2 12 12 17 22 12"></polyline>
-                            <polyline points="2 17 12 22 22 17"></polyline>
-                        </svg>
-                    </div>
-                    <h3 style="font-size: 1.5rem; margin: 1rem 0;">Architectural Scaling</h3>
-                    <p style="color: #a1a1aa; line-height: 1.6; margin-bottom: 1.5rem;">Bespoke headless and composable architectures. We engineer modular, performant custom apps and APIs designed for infinite flexibility and scale.</p>
-                    <span class="service-link" style="color: #3b82f6; font-size: 0.9rem; font-weight: 600;">View Engineering Scope &rarr;</span>
-                </a>
-
-                <!-- Box 6: White Collar Partner Service -->
-                <a href="/pages/partner" class="service-card animate-on-scroll"
-                    style="background: #0f0f0f; border: 1px solid #27272a; padding: 2rem; border-radius: 12px; text-decoration: none; display: block; color: inherit;">
-                    <div class="service-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="9" cy="7" r="4"></circle>
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                        </svg>
-                    </div>
-                    <h3 style="font-size: 1.5rem; margin: 1rem 0;">White Collar Partner</h3>
-                    <p style="color: #a1a1aa; line-height: 1.6; margin-bottom: 1.5rem;">C-suite level strategic advisory. Fractional CTO/CMO support embedding our senior leadership into your business to drive long-term revenue.</p>
-                    <span class="service-link" style="color: #3b82f6; font-size: 0.9rem; font-weight: 600;">Explore Partnership &rarr;</span>
-                </a>
-            </div>
+    <!-- Services Hero -->
+    <header class="hero" style="min-height: 60vh; display: flex; align-items: center; padding: 10rem 0 4rem; background: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #050505 70%);">
+        <div class="container text-center">
+            <span class="section-badge animate-on-scroll">Premium Digital Engineering</span>
+            <h1 class="animate-on-scroll" style="font-size: clamp(3rem, 6vw, 4.5rem); margin-bottom: 1.5rem; letter-spacing: -0.03em;">Our <span class="text-gradient">Solutions</span></h1>
+            <p class="animate-on-scroll" style="color: var(--text-secondary); max-width: 700px; margin: 0 auto; font-size: 1.2rem; line-height: 1.6;">
+                We transform underperforming digital platforms into high-octane revenue engines through four core pillars of engineering excellence.
+            </p>
         </div>
-    </section>
+    </header>
 
     <!-- Detailed Service Blocks (Deep Dive) -->
-    <section id="service-details" class="section-padding" style="border-top: 1px solid #27272a; padding: 8rem 0;">
+    <section id="service-details" class="section-padding" style="background: #050505; border-top: 1px solid #27272a;">
         <div class="container">
-            <div class="text-center animate-on-scroll" style="margin-bottom: 4rem; text-align: center;">
-                <h2 style="font-size: 3rem;">Deep Dive into Excellence</h2>
-                <p style="color: #a1a1aa;">Specialized solutions for ambitious digital brands.</p>
-            </div>
+            <div class="details-grid" style="display: grid; gap: 8rem; max-width: 1000px; margin: 0 auto;">
+                
+                <!-- Pillar 1 -->
+                <div id="development" class="detail-block animate-on-scroll" style="display: block; text-align: left; background: #0a0a0a; padding: 4rem; border-radius: 24px; border: 1px solid rgba(59,130,246,0.2);">
+                    <div class="hero-badge" style="display: inline-block; margin-bottom: 1.5rem; color: #3b82f6; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; background: rgba(59,130,246,0.1); padding: 0.5rem 1rem; border-radius: 100px;">
+                        Pillar 01</div>
+                    <h3 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Full-Cycle Development</h3>
+                    <p style="color: #a1a1aa; font-size: 1.1rem; line-height: 1.7;">We don't just "build websites." We engineer high-performance, globally scalable digital platforms blending conceptual architecture with premium design systems and sub-second speed.</p>
+                    <ul style="list-style: none; padding: 0; margin: 2.5rem 0; color: #a1a1aa; line-height: 2.2;">
+                        <li style="display: flex; align-items: center; gap: 0.75rem;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Conceptual Architecture & Journey Mapping</li>
+                        <li style="display: flex; align-items: center; gap: 0.75rem;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Premium Brand Design Systems</li>
+                        <li style="display: flex; align-items: center; gap: 0.75rem;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> High-Performance Modern Stacks (Next.js, Headless)</li>
+                        <li style="display: flex; align-items: center; gap: 0.75rem;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Global Scaling & Multi-currency Optimization</li>
+                    </ul>
+                    <a href="/contact" class="btn btn-blue" style="padding: 1rem 2.5rem; border-radius: 100px; text-decoration: none; font-weight: 600;">Consult an Engineering Lead</a>
+                </div>
 
-            <div class="details-grid" style="display: grid; gap: 4rem;">
-                <!-- Audit Detail -->
-                <div class="detail-block animate-on-scroll">
-                    <div class="detail-content">
-                        <div class="hero-badge"
-                            style="display: inline-block; margin-bottom: 1.5rem; color: #777; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em;">
-                            Infrastructure Excellence</div>
-                        <h3 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Mission-Critical Business Systems</h3>
-                        <p style="color: #a1a1aa; font-size: 1.1rem; line-height: 1.7;">Engineering the foundation of
-                            your business operations for absolute reliability, data centralization, and efficiency.</p>
-                        <ul style="list-style: none; padding: 0; margin: 2.5rem 0; color: #a1a1aa; line-height: 2.2;">
-                            <li style="display: flex; align-items: center; gap: 0.75rem;"><svg width="20" height="20"
-                                    viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2">
-                                    <polyline points="20 6 9 17 4 12"></polyline>
-                                </svg> Custom ERP Development & Integration</li>
-                            <li style="display: flex; align-items: center; gap: 0.75rem;"><svg width="20" height="20"
-                                    viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2">
-                                    <polyline points="20 6 9 17 4 12"></polyline>
-                                </svg> Automated Operational Workflows</li>
-                            <li style="display: flex; align-items: center; gap: 0.75rem;"><svg width="20" height="20"
-                                    viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2">
-                                    <polyline points="20 6 9 17 4 12"></polyline>
-                                </svg> Legacy Process Digitization & Modernization</li>
-                            <li style="display: flex; align-items: center; gap: 0.75rem;"><svg width="20" height="20"
-                                    viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2">
-                                    <polyline points="20 6 9 17 4 12"></polyline>
-                                </svg> Centralized Data Architectures</li>
-                        </ul>
-                        <a href="#contact" class="btn btn-blue"
-                            style="padding: 1rem 2.5rem; border-radius: 100px; text-decoration: none; font-weight: 600;">Consult
-                            an Infrastructure Lead</a>
-                    </div>
-</div>
+                <!-- Pillar 2 -->
+                <div id="audit" class="detail-block animate-on-scroll" style="display: block; text-align: left; background: #0a0a0a; padding: 4rem; border-radius: 24px; border: 1px solid rgba(59,130,246,0.2);">
+                    <div class="hero-badge" style="display: inline-block; margin-bottom: 1.5rem; color: #3b82f6; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; background: rgba(59,130,246,0.1); padding: 0.5rem 1rem; border-radius: 100px;">
+                        Pillar 02</div>
+                    <h3 style="font-size: 2.5rem; margin-bottom: 1.5rem;">The Surgical Audit</h3>
+                    <p style="color: #a1a1aa; font-size: 1.1rem; line-height: 1.7;">A deep-dive performance and UX analysis. We perform a surgical analysis of your digital platform to uncover hidden technical debt, bottlenecks, and vulnerabilities that are silently killing your conversion rates.</p>
+                    <ul style="list-style: none; padding: 0; margin: 2.5rem 0; color: #a1a1aa; line-height: 2.2;">
+                        <li style="display: flex; align-items: center; gap: 0.75rem;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Core Web Vitals & Speed Audit</li>
+                        <li style="display: flex; align-items: center; gap: 0.75rem;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Mobile UX Friction Analysis</li>
+                        <li style="display: flex; align-items: center; gap: 0.75rem;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Security & Tech Debt Review</li>
+                        <li style="display: flex; align-items: center; gap: 0.75rem;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> 6-Month Tech Modernization Roadmap</li>
+                    </ul>
+                    <a href="/contact" class="btn btn-blue" style="padding: 1rem 2.5rem; border-radius: 100px; text-decoration: none; font-weight: 600;">Request an Audit</a>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div id="architecture" class="detail-block animate-on-scroll" style="display: block; text-align: left; background: #0a0a0a; padding: 4rem; border-radius: 24px; border: 1px solid rgba(59,130,246,0.2);">
+                    <div class="hero-badge" style="display: inline-block; margin-bottom: 1.5rem; color: #3b82f6; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; background: rgba(59,130,246,0.1); padding: 0.5rem 1rem; border-radius: 100px;">
+                        Pillar 03</div>
+                    <h3 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Architectural Scaling</h3>
+                    <p style="color: #a1a1aa; font-size: 1.1rem; line-height: 1.7;">Bespoke headless and composable architectures designed for maximum scale. When off-the-shelf solutions fail, we engineer modular, performant custom apps and APIs tailored specifically to your business logic.</p>
+                    <ul style="list-style: none; padding: 0; margin: 2.5rem 0; color: #a1a1aa; line-height: 2.2;">
+                        <li style="display: flex; align-items: center; gap: 0.75rem;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Enterprise App Architecture</li>
+                        <li style="display: flex; align-items: center; gap: 0.75rem;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Microservices & API integrations</li>
+                        <li style="display: flex; align-items: center; gap: 0.75rem;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Server-side Performance Tuning</li>
+                        <li style="display: flex; align-items: center; gap: 0.75rem;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Custom CRM/ERP Links</li>
+                    </ul>
+                    <a href="/contact" class="btn btn-blue" style="padding: 1rem 2.5rem; border-radius: 100px; text-decoration: none; font-weight: 600;">View Engineering Scope</a>
+                </div>
+
+                <!-- Pillar 4 -->
+                <div id="partner" class="detail-block animate-on-scroll" style="display: block; text-align: left; background: #0a0a0a; padding: 4rem; border-radius: 24px; border: 1px solid rgba(59,130,246,0.2);">
+                    <div class="hero-badge" style="display: inline-block; margin-bottom: 1.5rem; color: #3b82f6; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; background: rgba(59,130,246,0.1); padding: 0.5rem 1rem; border-radius: 100px;">
+                        Pillar 04</div>
+                    <h3 style="font-size: 2.5rem; margin-bottom: 1.5rem;">White Collar Partner Service</h3>
+                    <p style="color: #a1a1aa; font-size: 1.1rem; line-height: 1.7;">C-suite level strategic advisory. We embed our senior leadership into your business as fractional CTOs to oversee technological growth, strategy, and vendor management, ensuring long-term revenue drive.</p>
+                    <ul style="list-style: none; padding: 0; margin: 2.5rem 0; color: #a1a1aa; line-height: 2.2;">
+                        <li style="display: flex; align-items: center; gap: 0.75rem;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Dedicated Fractional CTO Support</li>
+                        <li style="display: flex; align-items: center; gap: 0.75rem;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> High-Level Growth Strategy</li>
+                        <li style="display: flex; align-items: center; gap: 0.75rem;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Vendor & Tech Stack Management</li>
+                        <li style="display: flex; align-items: center; gap: 0.75rem;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Exclusive Alpha Labs Access</li>
+                    </ul>
+                    <a href="/contact" class="btn btn-blue" style="padding: 1rem 2.5rem; border-radius: 100px; text-decoration: none; font-weight: 600;">Discuss Partnership</a>
+                </div>
+
             </div>
         </div>
     </section>
