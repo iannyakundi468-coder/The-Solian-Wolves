@@ -4,57 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Solian Wolves Software Company</title>
+    <title>Services & Solutions | The Solian Wolves Software Company</title>
     <meta name="description"
-        content="Transform your business operations with custom systems. Expert ERP development, automation, and scalable software solutions for ambitious SMEs.">
+        content="Comprehensive systems engineering solutions: Full-Cycle Development, Custom ERP engines, Surgical Tech Audits, AI Automation, and Fractional CTO Leadership.">
 
-    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://solianwolves.com/">
-    <meta property="og:title" content="The Solian Wolves Software Company | Software Company">
-    <meta property="og:description"
-        content="Transform your business operations with custom systems. Expert ERP development, automation, and scalable software solutions.">
-    <meta property="og:image" content="assets/logo.jpg">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://solianwolves.com/">
-    <meta property="twitter:title" content="The Solian Wolves Software Company | Software Company">
-    <meta property="twitter:description"
-        content="Transform your business operations with custom systems. Expert ERP development, automation, and scalable software solutions.">
-    <meta property="twitter:image" content="assets/logo.jpg">
-
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap"
-        rel="stylesheet">
-
-    <!-- LCP Optimizations -->
-    <link rel="preload" as="image" href="assets/logo.jpg" fetchpriority="high">
-
-    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/main.css">
-
-    <!-- PayPal SDK -->
-    <script async
-        src="https://www.paypal.com/sdk/js?client-id=AaIj-jDw0zhnIbcX63U9xOhMKM0_DQoCa8q6zD_3kotNYLIJflIFCxXNyGZj5NMULNvKRSPQSnkBpHfg&currency=USD&vault=true"></script>
-
-    <!-- Removed AI inline styles -->
 </head>
 
 <body>
-        <nav class="main-nav">
-        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
-            <div style="font-weight: 700; font-size: 1.2rem; letter-spacing: -0.02em;">THE SOLIAN WOLVES SOFTWARE COMPANY</div>
-            
-            <!-- Mobile Menu Toggle -->
-            <button id="mobile-menu-btn" aria-label="Toggle Menu" style="display: none; background: transparent; border: none; color: white; cursor: pointer;">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <!-- Navigation Header -->
+    <nav class="main-nav">
+        <div class="container d-flex justify-between align-center">
+            <a href="index.html" class="nav-brand">
+                <img src="assets/logo.jpg" alt="Solian Wolves Logo" class="nav-brand-logo">
+                <span>THE SOLIAN WOLVES</span>
+            </a>
+
+            <button id="mobile-menu-btn" aria-label="Toggle Navigation Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <line x1="3" y1="12" x2="21" y2="12"></line>
                     <line x1="3" y1="6" x2="21" y2="6"></line>
                     <line x1="3" y1="18" x2="21" y2="18"></line>
@@ -62,155 +35,195 @@
             </button>
 
             <div class="nav-links">
+                <div class="nav-dropdown">
+                    <button class="nav-dropbtn">Company <span>&#9662;</span></button>
+                    <div class="nav-dropdown-content">
+                        <a href="about.html">About Pack</a>
+                        <a href="methodology.html">Engineering Methodology</a>
+                        <a href="careers.html">Careers</a>
+                    </div>
+                </div>
 
-                <div class="nav-dropdown" style="margin-left: 2rem;">
-                    <button class="nav-dropbtn" style="font-size: 0.9rem; text-transform: uppercase;">Company <span>&#9662;</span></button>
+                <div class="nav-dropdown">
+                    <button class="nav-dropbtn text-gold">Solutions <span>&#9662;</span></button>
                     <div class="nav-dropdown-content">
-                        <a href="/about">About</a>
-                        <a href="/methodology">Methodology</a>
-                        <a href="/careers">Careers</a>
+                        <a href="services.html" class="active">Services & Pricing</a>
+                        <a href="industries.html">Target Industries</a>
+                        <a href="labs.html">Alpha R&D Labs</a>
                     </div>
                 </div>
-                <div class="nav-dropdown" style="margin-left: 2rem;">
-                    <button class="nav-dropbtn" style="font-size: 0.9rem; text-transform: uppercase; color: var(--gold);">Solutions <span>&#9662;</span></button>
-                    <div class="nav-dropdown-content">
-                        <a href="/services" class="active-link" style="color: var(--gold);">Services</a>
-                        <a href="/industries">Industries</a>
-                        <a href="/labs">Alpha Labs</a>
-                    </div>
-                </div>
-                <a href="/blog" style="margin-left: 2rem; font-size: 0.9rem; text-transform: uppercase;">Blog</a>
-                <a href="/contact" class="btn btn-outline" style="padding: 0.6rem 1.8rem; margin-left: 2rem;">Contact</a>
+
+                <a href="blog.html">Technical Blog</a>
+                <a href="contact.html" class="btn btn-outline">Contact Us</a>
             </div>
         </div>
     </nav>
 
-    <!-- Services Hero -->
-    <header class="hero" style="min-height: 60vh; display: flex; align-items: center; padding: 10rem 0 4rem; background: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #050505 70%);">
-        <div class="container text-center">
-            <span class="section-badge animate-on-scroll">Premium Digital Engineering</span>
-            <h1 class="animate-on-scroll" style="font-size: clamp(3rem, 6vw, 4.5rem); margin-bottom: 1.5rem; letter-spacing: -0.03em;">Our <span class="text-gradient">Solutions</span></h1>
-            <p class="animate-on-scroll" style="color: var(--text-secondary); max-width: 700px; margin: 0 auto; font-size: 1.2rem; line-height: 1.6;">
-                We transform underperforming digital platforms into high-octane revenue engines through four core pillars of engineering excellence.
-            </p>
-        </div>
-    </header>
-
-    <!-- Detailed Service Blocks (Deep Dive) -->
-    <section id="service-details" class="section-padding" style="background: #050505; border-top: 1px solid #27272a;">
-        <div class="container">
-            <div class="details-grid" style="display: grid; gap: 8rem; max-width: 1000px; margin: 0 auto;">
-                
-                <!-- Pillar 1 -->
-                <div id="development" class="detail-block animate-on-scroll" style="display: block; text-align: left; background: #0a0a0a; padding: 4rem; border-radius: 24px; border: 1px solid rgba(59,130,246,0.2);">
-                    <div class="hero-badge" style="display: inline-block; margin-bottom: 1.5rem; color: #3b82f6; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; background: rgba(59,130,246,0.1); padding: 0.5rem 1rem; border-radius: 100px;">
-                        Pillar 01</div>
-                    <h3 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Full-Cycle Development</h3>
-                    <p style="color: #a1a1aa; font-size: 1.1rem; line-height: 1.7;">We don't just "build websites." We engineer high-performance, globally scalable digital platforms blending conceptual architecture with premium design systems and sub-second speed.</p>
-                    <ul style="list-style: none; padding: 0; margin: 2.5rem 0; color: #a1a1aa; line-height: 2.2;">
-                        <li style="display: flex; align-items: center; gap: 0.75rem;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Conceptual Architecture & Journey Mapping</li>
-                        <li style="display: flex; align-items: center; gap: 0.75rem;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Premium Brand Design Systems</li>
-                        <li style="display: flex; align-items: center; gap: 0.75rem;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> High-Performance Modern Stacks (Next.js, Headless)</li>
-                        <li style="display: flex; align-items: center; gap: 0.75rem;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Global Scaling & Multi-currency Optimization</li>
-                    </ul>
-                    <a href="/contact" class="btn btn-blue" style="padding: 1rem 2.5rem; border-radius: 100px; text-decoration: none; font-weight: 600;">Consult an Engineering Lead</a>
-                </div>
-
-                <!-- Pillar 2 -->
-                <div id="audit" class="detail-block animate-on-scroll" style="display: block; text-align: left; background: #0a0a0a; padding: 4rem; border-radius: 24px; border: 1px solid rgba(59,130,246,0.2);">
-                    <div class="hero-badge" style="display: inline-block; margin-bottom: 1.5rem; color: #3b82f6; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; background: rgba(59,130,246,0.1); padding: 0.5rem 1rem; border-radius: 100px;">
-                        Pillar 02</div>
-                    <h3 style="font-size: 2.5rem; margin-bottom: 1.5rem;">The Surgical Audit</h3>
-                    <p style="color: #a1a1aa; font-size: 1.1rem; line-height: 1.7;">A deep-dive performance and UX analysis. We perform a surgical analysis of your digital platform to uncover hidden technical debt, bottlenecks, and vulnerabilities that are silently killing your conversion rates.</p>
-                    <ul style="list-style: none; padding: 0; margin: 2.5rem 0; color: #a1a1aa; line-height: 2.2;">
-                        <li style="display: flex; align-items: center; gap: 0.75rem;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Core Web Vitals & Speed Audit</li>
-                        <li style="display: flex; align-items: center; gap: 0.75rem;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Mobile UX Friction Analysis</li>
-                        <li style="display: flex; align-items: center; gap: 0.75rem;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Security & Tech Debt Review</li>
-                        <li style="display: flex; align-items: center; gap: 0.75rem;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> 6-Month Tech Modernization Roadmap</li>
-                    </ul>
-                    <a href="/contact" class="btn btn-blue" style="padding: 1rem 2.5rem; border-radius: 100px; text-decoration: none; font-weight: 600;">Request an Audit</a>
-                </div>
-
-                <!-- Pillar 3 -->
-                <div id="architecture" class="detail-block animate-on-scroll" style="display: block; text-align: left; background: #0a0a0a; padding: 4rem; border-radius: 24px; border: 1px solid rgba(59,130,246,0.2);">
-                    <div class="hero-badge" style="display: inline-block; margin-bottom: 1.5rem; color: #3b82f6; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; background: rgba(59,130,246,0.1); padding: 0.5rem 1rem; border-radius: 100px;">
-                        Pillar 03</div>
-                    <h3 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Architectural Scaling</h3>
-                    <p style="color: #a1a1aa; font-size: 1.1rem; line-height: 1.7;">Bespoke headless and composable architectures designed for maximum scale. When off-the-shelf solutions fail, we engineer modular, performant custom apps and APIs tailored specifically to your business logic.</p>
-                    <ul style="list-style: none; padding: 0; margin: 2.5rem 0; color: #a1a1aa; line-height: 2.2;">
-                        <li style="display: flex; align-items: center; gap: 0.75rem;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Enterprise App Architecture</li>
-                        <li style="display: flex; align-items: center; gap: 0.75rem;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Microservices & API integrations</li>
-                        <li style="display: flex; align-items: center; gap: 0.75rem;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Server-side Performance Tuning</li>
-                        <li style="display: flex; align-items: center; gap: 0.75rem;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Custom CRM/ERP Links</li>
-                    </ul>
-                    <a href="/contact" class="btn btn-blue" style="padding: 1rem 2.5rem; border-radius: 100px; text-decoration: none; font-weight: 600;">View Engineering Scope</a>
-                </div>
-
-                <!-- Pillar 4 -->
-                <div id="partner" class="detail-block animate-on-scroll" style="display: block; text-align: left; background: #0a0a0a; padding: 4rem; border-radius: 24px; border: 1px solid rgba(59,130,246,0.2);">
-                    <div class="hero-badge" style="display: inline-block; margin-bottom: 1.5rem; color: #3b82f6; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; background: rgba(59,130,246,0.1); padding: 0.5rem 1rem; border-radius: 100px;">
-                        Pillar 04</div>
-                    <h3 style="font-size: 2.5rem; margin-bottom: 1.5rem;">White Collar Partner Service</h3>
-                    <p style="color: #a1a1aa; font-size: 1.1rem; line-height: 1.7;">C-suite level strategic advisory. We embed our senior leadership into your business as fractional CTOs to oversee technological growth, strategy, and vendor management, ensuring long-term revenue drive.</p>
-                    <ul style="list-style: none; padding: 0; margin: 2.5rem 0; color: #a1a1aa; line-height: 2.2;">
-                        <li style="display: flex; align-items: center; gap: 0.75rem;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Dedicated Fractional CTO Support</li>
-                        <li style="display: flex; align-items: center; gap: 0.75rem;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> High-Level Growth Strategy</li>
-                        <li style="display: flex; align-items: center; gap: 0.75rem;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Vendor & Tech Stack Management</li>
-                        <li style="display: flex; align-items: center; gap: 0.75rem;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Exclusive Alpha Labs Access</li>
-                    </ul>
-                    <a href="/contact" class="btn btn-blue" style="padding: 1rem 2.5rem; border-radius: 100px; text-decoration: none; font-weight: 600;">Discuss Partnership</a>
-                </div>
-
+    <main id="main-content">
+        <!-- Header Banner -->
+        <header class="hero" style="min-height: 50vh; padding-top: 8rem;">
+            <div class="hero-glow"></div>
+            <div class="container text-center">
+                <div class="badge mb-3 animate-on-scroll">Engineering Spectrum</div>
+                <h1 class="animate-on-scroll">Mission-Critical <span class="text-gradient">Solutions</span></h1>
+                <p class="text-secondary animate-on-scroll" style="max-width: 720px; margin: 0 auto;">
+                    We transform bottlenecks into high-octane growth engines across four foundational pillars of systems engineering.
+                </p>
             </div>
-        </div>
-    </section>
+        </header>
 
-    <!-- Footer -->
-    <footer
-        style="padding: 8rem 0 4rem; background: #000; border-top: 1px solid rgba(255,255,255,0.05); color: #a1a1aa; font-size: 0.95rem;">
+        <!-- Service Pillars -->
+        <section class="py-lg">
+            <div class="container" style="max-width: 1050px;">
+                <div class="d-flex flex-column gap-4">
+                    
+                    <!-- Pillar 1: Full-Cycle Development -->
+                    <div id="development" class="bento-card animate-on-scroll">
+                        <div class="badge mb-2">Pillar 01</div>
+                        <h2 class="mb-3" style="font-size: 2.2rem;">Full-Cycle Systems Development</h2>
+                        <p class="text-secondary mb-4">
+                            We architect high-performance, globally scalable digital platforms blending conceptual architecture with modern headless stacks (Next.js, Node.js, Go) and sub-second page speed.
+                        </p>
+                        <div class="grid-2 gap-2 mb-4">
+                            <div class="calc-display-box text-left">
+                                <h4 class="mb-1 text-blue">Conceptual Architecture</h4>
+                                <p class="text-secondary" style="font-size: 0.9rem;">Schema design, user journey mapping, and API routing specs.</p>
+                            </div>
+                            <div class="calc-display-box text-left">
+                                <h4 class="mb-1 text-blue">Headless & Serverless</h4>
+                                <p class="text-secondary" style="font-size: 0.9rem;">Zero-lag frontend rendering backed by distributed microservices.</p>
+                            </div>
+                        </div>
+                        <button class="btn btn-blue pricing-trigger" data-service="Full-Cycle Development">Consult an Engineering Lead &rarr;</button>
+                    </div>
+
+                    <!-- Pillar 2: Custom ERP Engines -->
+                    <div id="erp" class="bento-card animate-on-scroll">
+                        <div class="badge badge-gold mb-2">Pillar 02</div>
+                        <h2 class="mb-3" style="font-size: 2.2rem;">Custom ERP & Enterprise Engines</h2>
+                        <p class="text-secondary mb-4">
+                            Eliminate generic off-the-shelf software limitations. We design custom ERP engines for inventory management, real-time logistics telemetry, and automated financial accounting tailored precisely to your operational workflow.
+                        </p>
+                        <div class="grid-2 gap-2 mb-4">
+                            <div class="calc-display-box text-left">
+                                <h4 class="mb-1 text-gold">Real-Time Telemetry</h4>
+                                <p class="text-secondary" style="font-size: 0.9rem;">Live tracking of operational metrics, sales queues, and inventory levels.</p>
+                            </div>
+                            <div class="calc-display-box text-left">
+                                <h4 class="mb-1 text-gold">Multi-Role Access Control</h4>
+                                <p class="text-secondary" style="font-size: 0.9rem;">Granular RBAC permissions with complete audit log tracing.</p>
+                            </div>
+                        </div>
+                        <button class="btn btn-gold pricing-trigger" data-service="Custom ERP Systems">Explore ERP Architecture &rarr;</button>
+                    </div>
+
+                    <!-- Pillar 3: Surgical Technical Audit -->
+                    <div id="audit" class="bento-card animate-on-scroll">
+                        <div class="badge mb-2">Pillar 03</div>
+                        <h2 class="mb-3" style="font-size: 2.2rem;">Surgical Architecture & Tech Debt Audit</h2>
+                        <p class="text-secondary mb-4">
+                            A deep-dive technical diagnosis. We analyze your codebase, database indexing, and server response times to eliminate hidden technical debt, patch security vulnerabilities, and resolve conversion friction.
+                        </p>
+                        <div class="grid-2 gap-2 mb-4">
+                            <div class="calc-display-box text-left">
+                                <h4 class="mb-1 text-emerald">Core Web Vitals Boost</h4>
+                                <p class="text-secondary" style="font-size: 0.9rem;">Achieve sub-second response times and 95+ Lighthouse performance scores.</p>
+                            </div>
+                            <div class="calc-display-box text-left">
+                                <h4 class="mb-1 text-emerald">Security Hardening</h4>
+                                <p class="text-secondary" style="font-size: 0.9rem;">Vulnerability scanning, dependency audit, and API authentication review.</p>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline pricing-trigger" data-service="Surgical Audit">Request Surgical Audit &rarr;</button>
+                    </div>
+
+                    <!-- Pillar 4: Fractional CTO Leadership -->
+                    <div id="partner" class="bento-card animate-on-scroll">
+                        <div class="badge mb-2">Pillar 04</div>
+                        <h2 class="mb-3" style="font-size: 2.2rem;">Fractional CTO & Strategic Advisory</h2>
+                        <p class="text-secondary mb-4">
+                            C-suite level technical leadership embedded into your company. We guide architecture choices, vendor negotiations, team recruitment, and scaling roadmaps without full-time executive overhead.
+                        </p>
+                        <button class="btn btn-blue pricing-trigger" data-service="Fractional CTO Partnership">Discuss Fractional Leadership &rarr;</button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Consultation Modal -->
+    <div id="consultation-modal" class="modal-overlay">
+        <div class="modal-container">
+            <button id="modal-close-btn" class="modal-close" aria-label="Close Modal">&times;</button>
+            <div class="badge mb-2">Technical Consultation</div>
+            <h3 class="mb-2" style="font-size: 2rem;">Initiate System Consultation</h3>
+            <p class="text-secondary mb-4">Connect directly with our lead solutions architect.</p>
+
+            <form id="main-contact-form">
+                <input type="hidden" id="modal-service-input" name="service" value="Services Inquiry">
+                <div class="form-group">
+                    <label for="contact-name">Full Name or Organization</label>
+                    <input type="text" id="contact-name" class="form-control" required placeholder="Alex Mercer">
+                </div>
+                <div class="form-group">
+                    <label for="contact-email">Corporate Email</label>
+                    <input type="email" id="contact-email" class="form-control" required placeholder="alex@company.com">
+                </div>
+                <div class="form-group">
+                    <label for="contact-details">System Requirements</label>
+                    <textarea id="contact-details" class="form-control" placeholder="Describe the solution you need engineered..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-blue" style="width: 100%; margin-top: 1rem;">Submit Request &rarr;</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Production Footer -->
+    <footer class="main-footer">
         <div class="container">
             <div class="footer-grid">
-                <div>
-                    <h3
-                        style="color: #fff; font-size: 1.25rem; margin-bottom: 1.5rem; letter-spacing: 0.1em; font-weight: 800;">
-                        THE SOLIAN WOLVES SOFTWARE COMPANY</h3>
-                    <p style="max-width: 400px; line-height: 1.7; color: #777;">Engineering mission-critical software
-                        and scalable systems for visionary founders. We build the architecture that powers digital
-                        growth.</p>
+                <div class="footer-brand">
+                    <div class="nav-brand mb-2">
+                        <img src="assets/logo.jpg" alt="Solian Wolves Logo" class="nav-brand-logo">
+                        <span>THE SOLIAN WOLVES</span>
+                    </div>
+                    <p>Architecting mission-critical software, custom ERP engines, and autonomous systems.</p>
                 </div>
-                <div>
-                    <h4
-                        style="color: #fff; margin-bottom: 2rem; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700;">
-                        Solutions</h4>
-                    <ul style="list-style: none; padding: 0; line-height: 2.5;">
-                        <li><a href="#services" style="transition: color 0.3s;">Custom Engineering</a></li>
-                        <li><a href="#services" style="transition: color 0.3s;">Cloud Architecture</a></li>
-                        <li><a href="#services" style="transition: color 0.3s;">Technical Rescue</a></li>
+
+                <div class="footer-column">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="services.html#development">Full-Cycle Engineering</a></li>
+                        <li><a href="services.html#erp">Custom ERP Systems</a></li>
+                        <li><a href="services.html#audit">Surgical Audit</a></li>
                     </ul>
                 </div>
-                <div>
-                    <h4
-                        style="color: #fff; margin-bottom: 2rem; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700;">
-                        Company</h4>
-                    <ul style="list-style: none; padding: 0; line-height: 2.5;">
-                        <li><a href="#team" style="transition: color 0.3s;">Alpha Pack</a></li>
-                        <li><a href="#contact" style="transition: color 0.3s;">Contact</a></li>
-                        <li><a href="/blog" style="transition: color 0.3s;">Blog</a></li>
+
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About The Pack</a></li>
+                        <li><a href="methodology.html">Engineering Process</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="blog.html">Technical Blog</a></li>
                     </ul>
                 </div>
             </div>
-            <div
-                style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 3rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem;">
-                <div style="color: #555;">&copy; 2026 The Solian Wolves Software Company. All rights reserved.</div>
-                <div style="display: flex; gap: 3rem;">
-                    <a href="#" style="color: #555; transition: color 0.3s;">Privacy Policy</a>
-                    <a href="#" style="color: #555; transition: color 0.3s;">Terms of Service</a>
-                </div>
+
+            <div class="footer-bottom">
+                <div>&copy; 2026 The Solian Wolves Software Company. All rights reserved.</div>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="assets/main.js" defer></script>
 </body>
 

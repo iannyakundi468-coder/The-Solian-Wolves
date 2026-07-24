@@ -4,31 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Industries | The Solian Wolves Software Company</title>
+    <title>Target Industries | The Solian Wolves Software Company</title>
     <meta name="description"
-        content="Mission-critical engineering for high-stakes industries. We build secure, scalable solutions for Finance, Logistics, and Healthcare.">
+        content="Mission-critical systems engineering for high-stakes sectors: Fintech & Banking, Logistics & Supply Chain, Healthcare, and E-Commerce.">
 
-    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap"
-        rel="stylesheet">
-
-    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/main.css">
 </head>
 
 <body>
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <!-- Navigation Header -->
     <nav class="main-nav">
-        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
-            <div style="font-weight: 700; font-size: 1.2rem; letter-spacing: -0.02em;">THE SOLIAN WOLVES SOFTWARE COMPANY</div>
-            
-            <button id="mobile-menu-btn" aria-label="Toggle Menu" style="display: none; background: transparent; border: none; color: white; cursor: pointer;">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <div class="container d-flex justify-between align-center">
+            <a href="index.html" class="nav-brand">
+                <img src="assets/logo.jpg" alt="Solian Wolves Logo" class="nav-brand-logo">
+                <span>THE SOLIAN WOLVES</span>
+            </a>
+
+            <button id="mobile-menu-btn" aria-label="Toggle Navigation Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <line x1="3" y1="12" x2="21" y2="12"></line>
                     <line x1="3" y1="6" x2="21" y2="6"></line>
                     <line x1="3" y1="18" x2="21" y2="18"></line>
@@ -36,134 +35,152 @@
             </button>
 
             <div class="nav-links">
+                <div class="nav-dropdown">
+                    <button class="nav-dropbtn">Company <span>&#9662;</span></button>
+                    <div class="nav-dropdown-content">
+                        <a href="about.html">About Pack</a>
+                        <a href="methodology.html">Engineering Methodology</a>
+                        <a href="careers.html">Careers</a>
+                    </div>
+                </div>
 
-                <div class="nav-dropdown" style="margin-left: 2rem;">
-                    <button class="nav-dropbtn" style="font-size: 0.9rem; text-transform: uppercase;">Company <span>&#9662;</span></button>
+                <div class="nav-dropdown">
+                    <button class="nav-dropbtn text-gold">Solutions <span>&#9662;</span></button>
                     <div class="nav-dropdown-content">
-                        <a href="/about">About</a>
-                        <a href="/methodology">Methodology</a>
-                        <a href="/careers">Careers</a>
+                        <a href="services.html">Services & Pricing</a>
+                        <a href="industries.html" class="active">Target Industries</a>
+                        <a href="labs.html">Alpha R&D Labs</a>
                     </div>
                 </div>
-                <div class="nav-dropdown" style="margin-left: 2rem;">
-                    <button class="nav-dropbtn" style="font-size: 0.9rem; text-transform: uppercase; color: var(--gold);">Solutions <span>&#9662;</span></button>
-                    <div class="nav-dropdown-content">
-                        <a href="/services">Services</a>
-                        <a href="/industries" class="active-link" style="color: var(--gold);">Industries</a>
-                        <a href="/labs">Alpha Labs</a>
-                    </div>
-                </div>
-                <a href="/blog" style="margin-left: 2rem; font-size: 0.9rem; text-transform: uppercase;">Blog</a>
-                <a href="/contact" class="btn btn-outline" style="padding: 0.6rem 1.8rem; margin-left: 2rem;">Contact</a>
+
+                <a href="blog.html">Technical Blog</a>
+                <a href="contact.html" class="btn btn-outline">Contact Us</a>
             </div>
         </div>
     </nav>
 
-    <!-- Industries Hero -->
-    <section class="section-padding" style="padding: 10rem 0 4rem;">
-        <div class="container">
-            <div class="animate-on-scroll" style="max-width: 800px; margin: 0 auto; text-align: center;">
-                <div class="hero-badge" style="display: inline-block; margin-bottom: 1.5rem; color: #777; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;">Expertise by Sector</div>
-                <h1 style="font-size: clamp(2.5rem, 6vw, 4.5rem); margin-bottom: 1.5rem; line-height: 1.1;">Mission-Critical <span class="text-gradient">Engineering</span></h1>
-                <p style="color: #a1a1aa; font-size: 1.25rem; line-height: 1.7;">
-                    Generic software fractures under pressure. We engineer robust, compliant, and highly scalable systems specifically tailored for high-stakes industries.
+    <main id="main-content">
+        <!-- Hero Header -->
+        <header class="hero" style="min-height: 45vh; padding-top: 8rem;">
+            <div class="hero-glow"></div>
+            <div class="container text-center">
+                <div class="badge mb-3 animate-on-scroll">Expertise by Sector</div>
+                <h1 class="animate-on-scroll">High-Stakes <span class="text-gradient">Industry Solutions</span></h1>
+                <p class="text-secondary animate-on-scroll" style="max-width: 720px; margin: 0 auto;">
+                    Off-the-shelf software fractures under heavy load. We engineer resilient, compliant, and scale-tested architectures tailored for high-concurrency industries.
                 </p>
             </div>
-        </div>
-    </section>
+        </header>
 
-<!-- Industries Grid -->
-    <section class="section-padding" style="padding: 2rem 0 8rem;">
-        <div class="container">
-            <div class="services-grid mobile-carousel">
-                <div class="service-card animate-on-scroll">
-                    <div class="service-icon" style="color: #3b82f6; margin-bottom: 1.5rem;">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+        <!-- Industries Grid -->
+        <section class="py-lg">
+            <div class="container">
+                <div class="grid-3 gap-3">
+                    
+                    <!-- Sector 1: Fintech -->
+                    <div class="bento-card animate-on-scroll">
+                        <div class="bento-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="16" y1="21" x2="16" y2="7"></line>
+                            </svg>
+                        </div>
+                        <h3 class="mb-2" style="font-size: 1.6rem;">Finance & Fintech</h3>
+                        <p class="text-secondary mb-3">
+                            Zero-trust transaction engines, automated reconciliation pipelines, and bank-grade encryption infrastructure.
+                        </p>
+                        <ul class="text-secondary" style="font-size: 0.85rem; list-style: circle; padding-left: 1rem;">
+                            <li>Payment Gateway Integrations</li>
+                            <li>Real-Time Ledger Audit Logging</li>
+                            <li>Fraud Detection Signals</li>
+                        </ul>
                     </div>
-                    <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">Finance & Fintech</h3>
-                    <p style="color: #a1a1aa; margin-bottom: 1.5rem; line-height: 1.6;">Secure transaction engines, high-frequency data processing pipelines, and compliant banking integrations built with zero-trust architecture.</p>
-                    <ul style="list-style: none; padding: 0; color: #777; font-size: 0.9rem; line-height: 2;">
-                        <li>→ Payment Gateway Integration</li>
-                        <li>→ Automated Reconciliation</li>
-                        <li>→ Fraud Detection Systems</li>
-                    </ul>
-                </div>
 
-                <div class="service-card animate-on-scroll" style="transition-delay: 0.1s;">
-                    <div class="service-icon" style="color: #3b82f6; margin-bottom: 1.5rem;">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                    <!-- Sector 2: Supply Chain & Logistics -->
+                    <div class="bento-card animate-on-scroll">
+                        <div class="bento-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                            </svg>
+                        </div>
+                        <h3 class="mb-2" style="font-size: 1.6rem;">Logistics & Fleet Telemetry</h3>
+                        <p class="text-secondary mb-3">
+                            Real-time tracking dashboards, automated warehouse management (WMS), and route dispatching APIs.
+                        </p>
+                        <ul class="text-secondary" style="font-size: 0.85rem; list-style: circle; padding-left: 1rem;">
+                            <li>Fleet GPS Telematics</li>
+                            <li>Automated Stock Sync</li>
+                            <li>Dynamic Dispatch Algorithms</li>
+                        </ul>
                     </div>
-                    <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">Logistics & Supply Chain</h3>
-                    <p style="color: #a1a1aa; margin-bottom: 1.5rem; line-height: 1.6;">Real-time tracking dashboards, automated dispatching algorithms, and warehouse management systems (WMS) that optimize fleet efficiency.</p>
-                    <ul style="list-style: none; padding: 0; color: #777; font-size: 0.9rem; line-height: 2;">
-                        <li>→ Route Optimization APIs</li>
-                        <li>→ Inventory Synchronization</li>
-                        <li>→ Fleet Telematics</li>
-                    </ul>
-                </div>
 
-                <div class="service-card animate-on-scroll" style="transition-delay: 0.2s;">
-                    <div class="service-icon" style="color: #3b82f6; margin-bottom: 1.5rem;">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                    <!-- Sector 3: Healthcare -->
+                    <div class="bento-card animate-on-scroll">
+                        <div class="bento-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                            </svg>
+                        </div>
+                        <h3 class="mb-2" style="font-size: 1.6rem;">Healthcare Infrastructure</h3>
+                        <p class="text-secondary mb-3">
+                            HIPAA-compliant medical portals, EMR data pipelines, and telehealth video engines built for 99.99% uptime.
+                        </p>
+                        <ul class="text-secondary" style="font-size: 0.85rem; list-style: circle; padding-left: 1rem;">
+                            <li>EMR / EHR Data Bridges</li>
+                            <li>Encrypted Telehealth Streams</li>
+                            <li>Strict Audit Trail Compliance</li>
+                        </ul>
                     </div>
-                    <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">Healthcare Infrastructure</h3>
-                    <p style="color: #a1a1aa; margin-bottom: 1.5rem; line-height: 1.6;">HIPAA-compliant patient portals, EMR integrations, and telemedicine platforms engineered for 99.99% uptime and strict data sovereignty.</p>
-                    <ul style="list-style: none; padding: 0; color: #777; font-size: 0.9rem; line-height: 2;">
-                        <li>→ EMR/EHR Customization</li>
-                        <li>→ Telehealth Video Pipelines</li>
-                        <li>→ Secure Patient Data Lakes</li>
-                    </ul>
+
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer
-        style="padding: 8rem 0 4rem; background: #000; border-top: 1px solid rgba(255,255,255,0.05); color: #a1a1aa; font-size: 0.95rem;">
+    <footer class="main-footer">
         <div class="container">
             <div class="footer-grid">
-                <div>
-                    <h3
-                        style="color: #fff; font-size: 1.25rem; margin-bottom: 1.5rem; letter-spacing: 0.1em; font-weight: 800;">
-                        THE SOLIAN WOLVES SOFTWARE COMPANY</h3>
-                    <p style="max-width: 400px; line-height: 1.7; color: #777;">Engineering mission-critical software
-                        and scalable systems for visionary founders. We build the architecture that powers digital
-                        growth.</p>
+                <div class="footer-brand">
+                    <div class="nav-brand mb-2">
+                        <img src="assets/logo.jpg" alt="Solian Wolves Logo" class="nav-brand-logo">
+                        <span>THE SOLIAN WOLVES</span>
+                    </div>
+                    <p>Engineering mission-critical software, custom ERP engines, and autonomous systems.</p>
                 </div>
-                <div>
-                    <h4
-                        style="color: #fff; margin-bottom: 2rem; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700;">
-                        Solutions</h4>
-                    <ul style="list-style: none; padding: 0; line-height: 2.5;">
-                        <li><a href="/services" style="transition: color 0.3s;">Custom Engineering</a></li>
-                        <li><a href="/industries" style="transition: color 0.3s;">Industries</a></li>
-                        <li><a href="/labs" style="transition: color 0.3s;">Alpha Labs</a></li>
+
+                <div class="footer-column">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="services.html">Full-Cycle Engineering</a></li>
+                        <li><a href="services.html#erp">Custom ERP Systems</a></li>
                     </ul>
                 </div>
-                <div>
-                    <h4
-                        style="color: #fff; margin-bottom: 2rem; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700;">
-                        Company</h4>
-                    <ul style="list-style: none; padding: 0; line-height: 2.5;">
-                        <li><a href="/about" style="transition: color 0.3s;">Alpha Pack</a></li>
-                        <li><a href="/blog" style="transition: color 0.3s;">Blog</a></li>
-                        <li><a href="/contact" style="transition: color 0.3s;">Contact</a></li>
+
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About The Pack</a></li>
+                        <li><a href="methodology.html">Engineering Process</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
-            <div
-                style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 3rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem;">
-                <div style="color: #555;">&copy; 2026 The Solian Wolves Software Company. All rights reserved.</div>
-                <div style="display: flex; gap: 3rem;">
-                    <a href="#" style="color: #555; transition: color 0.3s;">Privacy Policy</a>
-                    <a href="#" style="color: #555; transition: color 0.3s;">Terms of Service</a>
-                </div>
+
+            <div class="footer-bottom">
+                <div>&copy; 2026 The Solian Wolves Software Company. All rights reserved.</div>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="assets/main.js" defer></script>
 </body>
+
 </html>

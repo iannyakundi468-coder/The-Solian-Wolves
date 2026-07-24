@@ -1,148 +1,71 @@
+/* ==========================================================================
+   THE SOLIAN WOLVES SOFTWARE COMPANY - MASTER PRODUCTION JAVASCRIPT
+   ========================================================================== */
+
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- 1. Global/Shared Variables ---
-    // Contact Form Logic
-    const contactEmail = document.getElementById('contact-email');
-    const additionalFields = document.getElementById('contact-additional-fields');
-    const contactSubmit = document.getElementById('contact-submit');
+    // --- 1. Sticky Navigation & Scroll Handler ---
+    const nav = document.querySelector('.main-nav');
+    if (nav) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        }, { passive: true });
+    }
 
-    // --- 2. Contact Form Handler (Multi-step) ---
-    if (contactEmail && additionalFields) {
-        contactEmail.addEventListener('focus', () => {
-            if (additionalFields.style.display === 'none') {
-                additionalFields.style.display = 'flex';
-                // Small timeout to allow display:flex to apply before transition
-                setTimeout(() => {
-                    additionalFields.style.opacity = '1';
-                    additionalFields.style.transform = 'translateY(0)';
-                }, 10);
-                if (contactSubmit) contactSubmit.innerText = 'Submit Request';
+    // --- 2. Mobile Nav Menu Drawer ---
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (mobileMenuBtn && navLinks) {
+        mobileMenuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            navLinks.classList.toggle('active');
+            const isActive = navLinks.classList.contains('active');
+            mobileMenuBtn.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+            mobileMenuBtn.innerHTML = isActive ? `
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>` : `
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>`;
+        });
+
+        // Close mobile nav when clicking outside or clicking a nav link
+        document.addEventListener('click', (e) => {
+            if (navLinks.classList.contains('active') && !navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                navLinks.classList.remove('active');
             }
         });
 
-        // Also reveal on input just in case
-        contactEmail.addEventListener('input', () => {
-            if (additionalFields.style.display === 'none' && contactEmail.value.includes('@')) {
-                additionalFields.style.display = 'flex';
-                setTimeout(() => {
-                    additionalFields.style.opacity = '1';
-                    additionalFields.style.transform = 'translateY(0)';
-                }, 10);
-                if (contactSubmit) contactSubmit.innerText = 'Submit Request';
-            }
-        });
-    }
-
-    // --- 3. Navigation Helpers ---
-
-    function smoothScrollTo(targetId) {
-        const target = document.querySelector(targetId);
-        if (target) {
-            const headerOffset = 100; // Offset for fixed nav
-            const elementPosition = target.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-            });
-        }
-    }
-
-    // Handle initial hash on load
-    if (window.location.hash) {
-        // Delay slightly to ensure layout is stable
-        setTimeout(() => {
-            smoothScrollTo(window.location.hash);
-        }, 300);
-    }
-
-    // Smooth scroll for anchors
-    document.querySelectorAll('a[href^="#"], a[href^="/#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            const href = this.getAttribute('href');
-            const targetId = href.startsWith('/#') ? href.substring(1) : href;
-
-            if (targetId === '#' || targetId === '') return;
-
-            // If on home page and clicking a home anchor, scroll smooth
-            if (window.location.pathname === '/' || window.location.pathname === '/index' || window.location.pathname === '') {
-                const target = document.querySelector(targetId);
-                if (target) {
-                    e.preventDefault();
-                    smoothScrollTo(targetId);
-                }
-            }
-            // Otherwise follow the link naturally to the home page where the hash logic will take over
-        }, { passive: false });
-    });
-
-    // Handle Pricing Triggers (Legacy support for "Contact Us" buttons)
-    document.querySelectorAll('.pricing-trigger').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            const serviceKey = btn.getAttribute('data-service');
-            // If it's a direct link to #contact, let smooth scroll handle it
-            if (btn.getAttribute('href') === '#contact') {
-                // smooth scroll listener above catches it
-                return;
-            }
-
-            // Otherwise, if it's supposed to do something else, we redirect to contact
-            // but currently most are set to href="#contact"
-        });
-    });
-
-
-    // --- 4. Page Animations & Observers (INP Optimized) ---
-
-    // Observer Logic - Optimized for INP (yield to main thread)
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '50px' // Start slightly before entering viewport
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        // Process entries in smaller batches to avoid long tasks
-        requestAnimationFrame(() => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                    observer.unobserve(entry.target); // Stop observing once visible to save CPU
-                }
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
             });
         });
-    }, observerOptions);
-
-    // Initialize observer in a background task (Idle)
-    if ('requestIdleCallback' in window) {
-        requestIdleCallback(() => {
-            const animateElements = document.querySelectorAll('.animate-on-scroll');
-            animateElements.forEach(el => observer.observe(el));
-        });
-    } else {
-        setTimeout(() => {
-            const animateElements = document.querySelectorAll('.animate-on-scroll');
-            animateElements.forEach(el => observer.observe(el));
-        }, 100);
     }
 
-    // --- 5. Typing Animation ---
+    // --- 3. Dynamic Typing Animation in Hero ---
     const typingTextElement = document.getElementById('typing-text');
-    if (typingTextElement && !typingTextElement.dataset.initialized) {
-        typingTextElement.dataset.initialized = "true";
-        const cursorElement = document.getElementById('typing-cursor');
+    if (typingTextElement) {
         const words = [
-            { text: "Digital Systems", color: "#fbbf24" }, // Golden
-            { text: "Mobile App development", color: "#10b981" }, // Green
-            { text: "Custom Software", color: "#8b5cf6" }, // Purple
-            { text: "E-commerce Stores", color: "#f43f5e" }, // Rose
-            { text: "UI/UX Design", color: "#06b6d4" }, // Cyan
-            { text: "AI tools and Automation", color: "#ec4899" }  // Pink
+            { text: "Digital Systems", color: "#fbbf24" },
+            { text: "Custom ERP & SaaS", color: "#3b82f6" },
+            { text: "Mobile Applications", color: "#10b981" },
+            { text: "AI Automation Pipelines", color: "#8b5cf6" },
+            { text: "High-Volume Platforms", color: "#ec4899" }
         ];
 
         let wordIndex = 0;
-        let charIndex = words[0].text.length; // Start with the first word fully typed
-        let isDeleting = true; // First action will be to delete
+        let charIndex = words[0].text.length;
+        let isDeleting = true;
 
         function typeEffect() {
             const currentItem = words[wordIndex];
@@ -156,95 +79,158 @@ document.addEventListener('DOMContentLoaded', () => {
                 charIndex++;
             }
 
+            typingTextElement.style.color = currentItem.color;
+
             let typeSpeed = isDeleting ? 40 : 80;
 
             if (!isDeleting && charIndex === currentWord.length) {
-                typeSpeed = 2000; // reading time
+                typeSpeed = 2200; // Pause at end of word
                 isDeleting = true;
             } else if (isDeleting && charIndex === 0) {
                 isDeleting = false;
                 wordIndex = (wordIndex + 1) % words.length;
-                
-                // Update coloring for the new word
-                const nextItem = words[wordIndex];
-                typingTextElement.style.color = nextItem.color;
-                typingTextElement.style.textShadow = `0 0 20px ${nextItem.color}4D`;
-                if (cursorElement) {
-                    cursorElement.style.borderRightColor = nextItem.color;
-                }
-
-                typeSpeed = 500; // wait before typing next
+                typeSpeed = 400; // Pause before typing new word
             }
 
             setTimeout(typeEffect, typeSpeed);
         }
 
-        // Start effect after 2 seconds
-        setTimeout(typeEffect, 2000);
+        setTimeout(typeEffect, 1000);
     }
 
-    // --- 6. Scroll Listener for Navigation Header ---
-    const mainNav = document.querySelector('.main-nav');
-    if (mainNav) {
-        let lastScrollY = window.scrollY;
-        
-        const handleScroll = () => {
-            const currentScrollY = window.scrollY;
-            
-            // Add background when scrolled down
-            if (currentScrollY > 50) {
-                mainNav.classList.add('scrolled');
-            } else {
-                mainNav.classList.remove('scrolled');
+    // --- 4. Interactive Project Scope & ROI Calculator Widget ---
+    const scopeUsersSlider = document.getElementById('calc-users');
+    const scopeComplexitySelect = document.getElementById('calc-complexity');
+
+    const outEstTimeline = document.getElementById('out-timeline');
+    const outEstHoursSaved = document.getElementById('out-hours-saved');
+    const outEstBudget = document.getElementById('out-budget');
+
+    function calculateROI() {
+        if (!scopeUsersSlider || !scopeComplexitySelect || !outEstTimeline || !outEstHoursSaved || !outEstBudget) return;
+
+        const users = parseInt(scopeUsersSlider.value, 10) || 10;
+        const multiplier = parseFloat(scopeComplexitySelect.value) || 1.0;
+
+        const valUsersDisplay = document.getElementById('val-users-display');
+        if (valUsersDisplay) valUsersDisplay.textContent = `${users} Users`;
+
+        // Mathematical modeling
+        const baseHoursSavedPerUser = 14; // hours/month
+        const totalHoursSavedMonthly = Math.round(users * baseHoursSavedPerUser * (multiplier * 0.8));
+
+        let weeks = Math.round(4 + (users * 0.15) * multiplier);
+        if (weeks > 24) weeks = 24;
+
+        let baseCost = Math.round((2500 + (users * 150) * multiplier) / 500) * 500;
+        if (baseCost < 3000) baseCost = 3000;
+
+        outEstTimeline.textContent = `${weeks} Weeks`;
+        outEstHoursSaved.textContent = `${totalHoursSavedMonthly.toLocaleString()} hrs/mo`;
+        outEstBudget.textContent = `$${baseCost.toLocaleString()}`;
+    }
+
+    if (scopeUsersSlider && scopeComplexitySelect) {
+        scopeUsersSlider.addEventListener('input', calculateROI);
+        scopeComplexitySelect.addEventListener('change', calculateROI);
+        calculateROI(); // Initial run
+    }
+
+    // --- 5. Modal Consultation System ---
+    const modalOverlay = document.getElementById('consultation-modal');
+    const modalCloseBtn = document.getElementById('modal-close-btn');
+    const modalTriggers = document.querySelectorAll('.pricing-trigger, .open-modal');
+
+    function openModal(serviceName = '') {
+        if (!modalOverlay) return;
+        modalOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+
+        const serviceInput = document.getElementById('modal-service-input');
+        if (serviceInput && serviceName) {
+            serviceInput.value = serviceName;
+        }
+    }
+
+    function closeModal() {
+        if (!modalOverlay) return;
+        modalOverlay.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+
+    modalTriggers.forEach(trigger => {
+        trigger.addEventListener('click', (e) => {
+            const href = trigger.getAttribute('href');
+            if (href === '#contact' || trigger.classList.contains('open-modal')) {
+                const service = trigger.getAttribute('data-service') || '';
+                openModal(service);
             }
-            
-            // Smart hiding logic (only hide if scrolling down and past header)
-            if (currentScrollY > lastScrollY && currentScrollY > 100) {
-                // Scrolling Down
-                mainNav.classList.add('nav-hidden');
-            } else {
-                // Scrolling Up
-                mainNav.classList.remove('nav-hidden');
+        });
+    });
+
+    if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeModal);
+    if (modalOverlay) {
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) closeModal();
+        });
+    }
+
+    // --- 6. Scroll Reveal Observer ---
+    const observerOptions = {
+        threshold: 0.12,
+        rootMargin: '0px 0px -40px 0px'
+    };
+
+    const scrollObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                scrollObserver.unobserve(entry.target);
             }
-            
-            lastScrollY = currentScrollY;
-        };
-        window.addEventListener('scroll', handleScroll, { passive: true });
-        // Run once on load in case the page is already scrolled
-        handleScroll();
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.animate-on-scroll').forEach(el => scrollObserver.observe(el));
+
+    // --- 7. Smooth Scroll for Anchor Links ---
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const targetId = this.getAttribute('href');
+            if (targetId === '#' || targetId.startsWith('#modal')) return;
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                e.preventDefault();
+                const navHeight = nav ? nav.offsetHeight : 80;
+                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight;
+
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // --- 8. Contact Form Handler ---
+    const contactForm = document.getElementById('main-contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            if (submitBtn) {
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = 'Engineering Request Transmitted...';
+                submitBtn.disabled = true;
+
+                setTimeout(() => {
+                    alert('Thank you! Your project consultation request has been received. Our solutions architect will respond within 12 hours.');
+                    contactForm.reset();
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                    closeModal();
+                }, 1000);
+            }
+        });
     }
-
-    // --- 7. Mobile Menu & Dropdowns ---
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const navLinks = document.querySelector('.nav-links');
-    if (mobileMenuBtn && navLinks) {
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-
-        // Close menu when a standard link is clicked (ignore dropdown buttons)
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
-        
-        // Handle dropdown toggles on mobile
-        navLinks.querySelectorAll('.nav-dropbtn').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                if (window.innerWidth <= 768) {
-                    e.preventDefault();
-                    // Close other open dropdowns
-                    navLinks.querySelectorAll('.nav-dropdown').forEach(dropdown => {
-                        if (dropdown !== btn.parentElement && dropdown.classList.contains('active')) {
-                            dropdown.classList.remove('active');
-                        }
-                    });
-                    // Toggle current dropdown
-                    btn.parentElement.classList.toggle('active');
-                }
-            });
-        });
-    }
-
 });

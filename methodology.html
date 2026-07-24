@@ -4,129 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Methodology | The Solian Wolves Software Company</title>
+    <title>Engineering Methodology | The Solian Wolves Software Company</title>
     <meta name="description"
-        content="Our 4-phase engineering process for delivering mission-critical systems and custom ERPs. Discover how The Alpha Pack builds robust software architectures.">
+        content="Our 4-phase agile engineering workflow for constructing enterprise software, custom ERP engines, and scalable digital platforms.">
 
-    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap"
-        rel="stylesheet">
-
-    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/main.css">
-    
-    <style>
-        .timeline {
-            position: relative;
-            max-width: 900px;
-            margin: 4rem auto;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        .timeline-step {
-            position: relative;
-            margin-bottom: 6rem;
-            display: flex;
-            align-items: center;
-        }
-
-        .timeline-step:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-
-        .timeline-content {
-            width: 45%;
-            padding: 2.5rem;
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: var(--radius-md);
-            backdrop-filter: blur(10px);
-            transition: all 0.4s ease;
-        }
-
-        .timeline-content:hover {
-            transform: translateY(-5px);
-            border-color: rgba(59, 130, 246, 0.3);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        }
-
-        .timeline-step:nth-child(even) .timeline-content {
-            text-align: right;
-        }
-
-        .timeline-marker {
-            position: absolute;
-            left: 50%;
-            transform: translate(-50%, 0);
-            width: 40px;
-            height: 40px;
-            background: #0f0f0f;
-            border: 2px solid #3b82f6;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            color: #3b82f6;
-            box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
-            z-index: 2;
-        }
-
-        .timeline-title {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            font-family: var(--font-heading);
-            color: #fff;
-        }
-
-        .timeline-desc {
-            color: #a1a1aa;
-            line-height: 1.6;
-        }
-
-        @media (max-width: 768px) {
-            .timeline::before {
-                left: 30px;
-            }
-            .timeline-step {
-                flex-direction: column !important;
-                align-items: flex-start;
-                padding-left: 80px;
-            }
-            .timeline-content {
-                width: 100%;
-                text-align: left !important;
-            }
-            .timeline-marker {
-                left: 30px;
-            }
-        }
-    </style>
 </head>
 
 <body>
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <!-- Navigation Header -->
     <nav class="main-nav">
-        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
-            <div style="font-weight: 700; font-size: 1.2rem; letter-spacing: -0.02em;">THE SOLIAN WOLVES SOFTWARE COMPANY</div>
-            
-            <button id="mobile-menu-btn" aria-label="Toggle Menu" style="display: none; background: transparent; border: none; color: white; cursor: pointer;">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <div class="container d-flex justify-between align-center">
+            <a href="index.html" class="nav-brand">
+                <img src="assets/logo.jpg" alt="Solian Wolves Logo" class="nav-brand-logo">
+                <span>THE SOLIAN WOLVES</span>
+            </a>
+
+            <button id="mobile-menu-btn" aria-label="Toggle Navigation Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <line x1="3" y1="12" x2="21" y2="12"></line>
                     <line x1="3" y1="6" x2="21" y2="6"></line>
                     <line x1="3" y1="18" x2="21" y2="18"></line>
@@ -134,133 +35,152 @@
             </button>
 
             <div class="nav-links">
+                <div class="nav-dropdown">
+                    <button class="nav-dropbtn text-gold">Company <span>&#9662;</span></button>
+                    <div class="nav-dropdown-content">
+                        <a href="about.html">About Pack</a>
+                        <a href="methodology.html" class="active">Engineering Methodology</a>
+                        <a href="careers.html">Careers</a>
+                    </div>
+                </div>
 
-                <div class="nav-dropdown" style="margin-left: 2rem;">
-                    <button class="nav-dropbtn" style="font-size: 0.9rem; text-transform: uppercase; color: var(--gold);">Company <span>&#9662;</span></button>
+                <div class="nav-dropdown">
+                    <button class="nav-dropbtn">Solutions <span>&#9662;</span></button>
                     <div class="nav-dropdown-content">
-                        <a href="/about">About</a>
-                        <a href="/methodology" class="active-link" style="color: var(--gold);">Methodology</a>
-                        <a href="/careers">Careers</a>
+                        <a href="services.html">Services & Pricing</a>
+                        <a href="industries.html">Target Industries</a>
+                        <a href="labs.html">Alpha R&D Labs</a>
                     </div>
                 </div>
-                <div class="nav-dropdown" style="margin-left: 2rem;">
-                    <button class="nav-dropbtn" style="font-size: 0.9rem; text-transform: uppercase;">Solutions <span>&#9662;</span></button>
-                    <div class="nav-dropdown-content">
-                        <a href="/services">Services</a>
-                        <a href="/industries">Industries</a>
-                        <a href="/labs">Alpha Labs</a>
-                    </div>
-                </div>
-                <a href="/blog" style="margin-left: 2rem; font-size: 0.9rem; text-transform: uppercase;">Blog</a>
-                <a href="/contact" class="btn btn-outline" style="padding: 0.6rem 1.8rem; margin-left: 2rem;">Contact</a>
+
+                <a href="blog.html">Technical Blog</a>
+                <a href="contact.html" class="btn btn-outline">Contact Us</a>
             </div>
         </div>
     </nav>
 
-    <!-- Methodology Hero -->
-    <section id="methodology-hero" class="section-padding" style="padding: 10rem 0 4rem;">
-        <div class="container">
-            <div class="animate-on-scroll" style="max-width: 800px; margin: 0 auto; text-align: center;">
-                <div class="hero-badge" style="display: inline-block; margin-bottom: 1.5rem; color: #777; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;">How We Work</div>
-                <h1 style="font-size: clamp(2.5rem, 6vw, 4.5rem); margin-bottom: 1.5rem; line-height: 1.1;">The Alpha <span class="text-gradient">Process</span></h1>
-                <p style="color: #a1a1aa; font-size: 1.25rem; line-height: 1.7;">
-                    We don't guess. We architect, build, and deploy with precision. Our battle-tested methodology ensures your mission-critical system is delivered on time, secure, and ready to scale.
+    <main id="main-content">
+        <!-- Hero Header -->
+        <header class="hero" style="min-height: 45vh; padding-top: 8rem;">
+            <div class="hero-glow"></div>
+            <div class="container text-center">
+                <div class="badge mb-3 animate-on-scroll">System Architecture Workflow</div>
+                <h1 class="animate-on-scroll">Our 4-Phase <span class="text-gradient">Engineering Process</span></h1>
+                <p class="text-secondary animate-on-scroll" style="max-width: 720px; margin: 0 auto;">
+                    A rigorous 4-stage engineering protocol designed to take enterprise systems from discovery to zero-downtime deployment.
                 </p>
             </div>
-        </div>
-    </section>
+        </header>
 
-<!-- Timeline -->
-    <section class="section-padding" style="padding: 2rem 0 8rem;">
-        <div class="container">
-            <div class="timeline">
-                
-                <div class="timeline-step animate-on-scroll">
-                    <div class="timeline-marker">1</div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Discovery & Blueprinting</h3>
-                        <p class="timeline-desc">Before writing a single line of code, we map out the entire system architecture. We analyze your workflows, bottleneck dependencies, and business objectives to draft a comprehensive engineering blueprint.</p>
+        <!-- Process Grid -->
+        <section class="py-lg">
+            <div class="container" style="max-width: 1000px;">
+                <div class="grid-2 gap-4">
+                    
+                    <!-- Phase 1 -->
+                    <div class="bento-card animate-on-scroll">
+                        <div class="badge badge-gold mb-2">Phase 01</div>
+                        <h3 class="mb-2" style="font-size: 1.8rem;">Discovery & Surgical Telemetry</h3>
+                        <p class="text-secondary mb-3">
+                            We analyze legacy infrastructure, document data flow bottlenecks, and construct precise functional specs before writing line 1 of code.
+                        </p>
+                        <ul class="text-secondary" style="font-size: 0.9rem; list-style: circle; padding-left: 1.2rem;">
+                            <li>Technical Debt Audit</li>
+                            <li>Schema & API Contract Specs</li>
+                            <li>UX Friction Analysis</li>
+                        </ul>
                     </div>
-                </div>
 
-                <div class="timeline-step animate-on-scroll">
-                    <div class="timeline-marker">2</div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Systems Architecture</h3>
-                        <p class="timeline-desc">We select the optimal tech stack (Node.js, Next.js, etc.) and design the database schemas, microservice boundaries, and API integrations. This ensures the foundation can handle exponential growth without fracturing.</p>
+                    <!-- Phase 2 -->
+                    <div class="bento-card animate-on-scroll">
+                        <div class="badge mb-2">Phase 02</div>
+                        <h3 class="mb-2" style="font-size: 1.8rem;">Architectural Blueprinting</h3>
+                        <p class="text-secondary mb-3">
+                            Designing modular microservices, database entity relationships, and distributed serverless infrastructure for high concurrency.
+                        </p>
+                        <ul class="text-secondary" style="font-size: 0.9rem; list-style: circle; padding-left: 1.2rem;">
+                            <li>System Diagramming</li>
+                            <li>Granular Security RBAC</li>
+                            <li>CI/CD Pipeline Setup</li>
+                        </ul>
                     </div>
-                </div>
 
-                <div class="timeline-step animate-on-scroll">
-                    <div class="timeline-marker">3</div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Agile Engineering</h3>
-                        <p class="timeline-desc">Our engineers execute the blueprint in high-velocity sprints. You receive continuous transparency with staged demonstrations, allowing for rapid iteration and feedback loops throughout the development lifecycle.</p>
+                    <!-- Phase 3 -->
+                    <div class="bento-card animate-on-scroll">
+                        <div class="badge mb-2">Phase 03</div>
+                        <h3 class="mb-2" style="font-size: 1.8rem;">Rapid Sprint Development</h3>
+                        <p class="text-secondary mb-3">
+                            Bi-weekly engineering sprints with continuous automated integration testing, code reviews, and staging previews.
+                        </p>
+                        <ul class="text-secondary" style="font-size: 0.9rem; list-style: circle; padding-left: 1.2rem;">
+                            <li>Bi-Weekly Demo Deployments</li>
+                            <li>Automated End-to-End Testing</li>
+                            <li>Zero-Downtime Migration</li>
+                        </ul>
                     </div>
-                </div>
 
-                <div class="timeline-step animate-on-scroll">
-                    <div class="timeline-marker">4</div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Stress Testing & Deployment</h3>
-                        <p class="timeline-desc">The system undergoes rigorous automated QA, security penetration testing, and load balancing tests. Once cleared, we execute a zero-downtime deployment protocol to seamlessly launch your new infrastructure.</p>
+                    <!-- Phase 4 -->
+                    <div class="bento-card animate-on-scroll">
+                        <div class="badge badge-gold mb-2">Phase 04</div>
+                        <h3 class="mb-2" style="font-size: 1.8rem;">Continuous Telemetry & Scale</h3>
+                        <p class="text-secondary mb-3">
+                            Real-time monitoring, auto-scaling cloud policies, and fractional C-suite advisory to ensure long-term architectural health.
+                        </p>
+                        <ul class="text-secondary" style="font-size: 0.9rem; list-style: circle; padding-left: 1.2rem;">
+                            <li>Log Telemetry & APM</li>
+                            <li>Security Patch Audits</li>
+                            <li>Fractional CTO Reviews</li>
+                        </ul>
                     </div>
-                </div>
 
+                </div>
             </div>
-            
-            <div class="text-center animate-on-scroll" style="margin-top: 4rem;">
-                <a href="/contact" class="btn btn-blue" style="border-radius: 100px; padding: 1.2rem 3rem;">Initiate Discovery Phase</a>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer
-        style="padding: 8rem 0 4rem; background: #000; border-top: 1px solid rgba(255,255,255,0.05); color: #a1a1aa; font-size: 0.95rem;">
+    <footer class="main-footer">
         <div class="container">
             <div class="footer-grid">
-                <div>
-                    <h3
-                        style="color: #fff; font-size: 1.25rem; margin-bottom: 1.5rem; letter-spacing: 0.1em; font-weight: 800;">
-                        THE SOLIAN WOLVES SOFTWARE COMPANY</h3>
-                    <p style="max-width: 400px; line-height: 1.7; color: #777;">Engineering mission-critical software
-                        and scalable systems for visionary founders. We build the architecture that powers digital
-                        growth.</p>
+                <div class="footer-brand">
+                    <div class="nav-brand mb-2">
+                        <img src="assets/logo.jpg" alt="Solian Wolves Logo" class="nav-brand-logo">
+                        <span>THE SOLIAN WOLVES</span>
+                    </div>
+                    <p>Engineering mission-critical software, custom ERP engines, and autonomous systems.</p>
                 </div>
-                <div>
-                    <h4
-                        style="color: #fff; margin-bottom: 2rem; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700;">
-                        Solutions</h4>
-                    <ul style="list-style: none; padding: 0; line-height: 2.5;">
-                        <li><a href="/services" style="transition: color 0.3s;">Custom Engineering</a></li>
-                        <li><a href="/industries" style="transition: color 0.3s;">Industries</a></li>
-                        <li><a href="/labs" style="transition: color 0.3s;">Alpha Labs</a></li>
+
+                <div class="footer-column">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="services.html">Full-Cycle Engineering</a></li>
+                        <li><a href="services.html#erp">Custom ERP Systems</a></li>
                     </ul>
                 </div>
-                <div>
-                    <h4
-                        style="color: #fff; margin-bottom: 2rem; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700;">
-                        Company</h4>
-                    <ul style="list-style: none; padding: 0; line-height: 2.5;">
-                        <li><a href="/about" style="transition: color 0.3s;">Alpha Pack</a></li>
-                        <li><a href="/blog" style="transition: color 0.3s;">Blog</a></li>
-                        <li><a href="/contact" style="transition: color 0.3s;">Contact</a></li>
+
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About The Pack</a></li>
+                        <li><a href="methodology.html">Engineering Process</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
-            <div
-                style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 3rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem;">
-                <div style="color: #555;">&copy; 2026 The Solian Wolves Software Company. All rights reserved.</div>
-                <div style="display: flex; gap: 3rem;">
-                    <a href="#" style="color: #555; transition: color 0.3s;">Privacy Policy</a>
-                    <a href="#" style="color: #555; transition: color 0.3s;">Terms of Service</a>
-                </div>
+
+            <div class="footer-bottom">
+                <div>&copy; 2026 The Solian Wolves Software Company. All rights reserved.</div>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="assets/main.js" defer></script>
 </body>
+
 </html>

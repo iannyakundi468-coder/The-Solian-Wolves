@@ -4,57 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Solian Wolves Software Company</title>
+    <title>About Pack | The Solian Wolves Software Company</title>
     <meta name="description"
-        content="Transform your business operations with custom systems. Expert ERP development, automation, and scalable software solutions for ambitious SMEs.">
+        content="Architects of the Digital Frontier. Learn about The Solian Wolves engineering manifesto, pack values, and executive leadership team.">
 
-    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://solianwolves.com/">
-    <meta property="og:title" content="The Solian Wolves Software Company | Software Company">
-    <meta property="og:description"
-        content="Transform your business operations with custom systems. Expert ERP development, automation, and scalable software solutions.">
-    <meta property="og:image" content="assets/logo.jpg">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://solianwolves.com/">
-    <meta property="twitter:title" content="The Solian Wolves Software Company | Software Company">
-    <meta property="twitter:description"
-        content="Transform your business operations with custom systems. Expert ERP development, automation, and scalable software solutions.">
-    <meta property="twitter:image" content="assets/logo.jpg">
-
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap"
-        rel="stylesheet">
-
-    <!-- LCP Optimizations -->
-    <link rel="preload" as="image" href="assets/logo.jpg" fetchpriority="high">
-
-    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/main.css">
-
-    <!-- PayPal SDK -->
-    <script async
-        src="https://www.paypal.com/sdk/js?client-id=AaIj-jDw0zhnIbcX63U9xOhMKM0_DQoCa8q6zD_3kotNYLIJflIFCxXNyGZj5NMULNvKRSPQSnkBpHfg&currency=USD&vault=true"></script>
-
-    <!-- Removed AI inline styles -->
 </head>
 
 <body>
-        <nav class="main-nav">
-        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
-            <div style="font-weight: 700; font-size: 1.2rem; letter-spacing: -0.02em;">THE SOLIAN WOLVES SOFTWARE COMPANY</div>
-            
-            <!-- Mobile Menu Toggle -->
-            <button id="mobile-menu-btn" aria-label="Toggle Menu" style="display: none; background: transparent; border: none; color: white; cursor: pointer;">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <!-- Navigation Header -->
+    <nav class="main-nav">
+        <div class="container d-flex justify-between align-center">
+            <a href="index.html" class="nav-brand">
+                <img src="assets/logo.jpg" alt="Solian Wolves Logo" class="nav-brand-logo">
+                <span>THE SOLIAN WOLVES</span>
+            </a>
+
+            <button id="mobile-menu-btn" aria-label="Toggle Navigation Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <line x1="3" y1="12" x2="21" y2="12"></line>
                     <line x1="3" y1="6" x2="21" y2="6"></line>
                     <line x1="3" y1="18" x2="21" y2="18"></line>
@@ -62,139 +35,149 @@
             </button>
 
             <div class="nav-links">
+                <div class="nav-dropdown">
+                    <button class="nav-dropbtn text-gold">Company <span>&#9662;</span></button>
+                    <div class="nav-dropdown-content">
+                        <a href="about.html" class="active">About Pack</a>
+                        <a href="methodology.html">Engineering Methodology</a>
+                        <a href="careers.html">Careers</a>
+                    </div>
+                </div>
 
-                <div class="nav-dropdown" style="margin-left: 2rem;">
-                    <button class="nav-dropbtn" style="font-size: 0.9rem; text-transform: uppercase; color: var(--gold);">Company <span>&#9662;</span></button>
+                <div class="nav-dropdown">
+                    <button class="nav-dropbtn">Solutions <span>&#9662;</span></button>
                     <div class="nav-dropdown-content">
-                        <a href="/about" class="active-link" style="color: var(--gold);">About</a>
-                        <a href="/methodology">Methodology</a>
-                        <a href="/careers">Careers</a>
+                        <a href="services.html">Services & Pricing</a>
+                        <a href="industries.html">Target Industries</a>
+                        <a href="labs.html">Alpha R&D Labs</a>
                     </div>
                 </div>
-                <div class="nav-dropdown" style="margin-left: 2rem;">
-                    <button class="nav-dropbtn" style="font-size: 0.9rem; text-transform: uppercase;">Solutions <span>&#9662;</span></button>
-                    <div class="nav-dropdown-content">
-                        <a href="/services">Services</a>
-                        <a href="/industries">Industries</a>
-                        <a href="/labs">Alpha Labs</a>
-                    </div>
-                </div>
-                <a href="/blog" style="margin-left: 2rem; font-size: 0.9rem; text-transform: uppercase;">Blog</a>
-                <a href="/contact" class="btn btn-outline" style="padding: 0.6rem 1.8rem; margin-left: 2rem;">Contact</a>
+
+                <a href="blog.html">Technical Blog</a>
+                <a href="contact.html" class="btn btn-outline">Contact Us</a>
             </div>
         </div>
     </nav>
 
-    <!-- About -->
-    <section id="about" class="section-padding" style="padding: 8rem 0;">
-        <div class="container">
-            <div class="animate-on-scroll" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 4rem; align-items: center; max-width: 1200px; margin: 0 auto;">
-                <div style="text-align: left;">
-                    <div class="hero-badge" style="display: inline-block; margin-bottom: 1.5rem; color: #777; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;">Who We Are</div>
-                    <h2 style="font-size: 3rem; margin-bottom: 2rem;">Architects of the Digital Frontier</h2>
-                    <p style="color: #a1a1aa; font-size: 1.25rem; line-height: 1.7; margin-bottom: 2rem;">
-                        At The Solian Wolves Software Company, we don't just build software. We engineer resilient, dynamic systems and custom ERPs that streamline your operations and unlock continuous growth for your SME. Our pack of elite engineers and strategists are driven by an obsession with technical mastery and architectural excellence.
+    <main id="main-content">
+        <!-- Hero -->
+        <header class="hero" style="min-height: 50vh; padding-top: 8rem;">
+            <div class="hero-glow"></div>
+            <div class="container text-center">
+                <div class="badge mb-3 animate-on-scroll">Who We Are</div>
+                <h1 class="animate-on-scroll">Architects of the <span class="text-gradient">Digital Frontier</span></h1>
+                <p class="text-secondary animate-on-scroll" style="max-width: 720px; margin: 0 auto;">
+                    We engineer resilient, dynamic software systems and enterprise ERPs that eliminate operational chaos and unlock sustainable enterprise momentum.
+                </p>
+            </div>
+        </header>
+
+        <!-- Manifesto -->
+        <section class="py-lg">
+            <div class="container" style="max-width: 1000px;">
+                <div class="bento-card animate-on-scroll mb-8">
+                    <div class="badge badge-gold mb-3">Our Core Ethos</div>
+                    <h2 class="mb-3" style="font-size: 2.2rem;">Relentless Technical Mastery</h2>
+                    <p class="text-secondary mb-4" style="font-size: 1.1rem; line-height: 1.8;">
+                        At The Solian Wolves Software Company, software engineering is an exact discipline. We reject bloated, off-the-shelf templates in favor of modular, sub-second architectures engineered for high-concurrency business operations.
                     </p>
-                </div>
-</div>
-        </div>
-    </section>
-
-    <!-- Team -->
-    <section id="team" class="section-padding" style="padding: 8rem 0; border-top: 1px solid #27272a;">
-        <div class="container">
-            <h2 class="text-center animate-on-scroll" style="font-size: 3rem; margin-bottom: 4rem; text-align: center;">
-                The Alpha Pack</h2>
-            <div class="team-grid mobile-carousel">
-                <div class="team-card animate-on-scroll">
-                    <div class="initial-avatar">I</div>
-                    <div class="team-info">
-                        <h3>Ian</h3>
-                        <div class="team-role">CEO & Co-founder</div>
-                    </div>
-                </div>
-
-                <div class="team-card animate-on-scroll">
-                    <div class="initial-avatar">S</div>
-                    <div class="team-info">
-                        <h3>Solomon</h3>
-                        <div class="team-role">Chief Operations Officer & Co-founder</div>
-                    </div>
-                </div>
-
-                <div class="team-card animate-on-scroll">
-                    <div class="initial-avatar">A</div>
-                    <div class="team-info">
-                        <h3>Alfred</h3>
-                        <div class="team-role">Chief Technology Officer</div>
-                    </div>
-                </div>
-
-                <div class="team-card animate-on-scroll">
-                    <div class="initial-avatar">M</div>
-                    <div class="team-info">
-                        <h3>Melchizedek</h3>
-                        <div class="team-role">Chief Strategy Officer</div>
-                    </div>
-                </div>
-
-                <div class="team-card animate-on-scroll">
-                    <div class="initial-avatar">N</div>
-                    <div class="team-info">
-                        <h3>Noella</h3>
-                        <div class="team-role">Chief Growth Officer</div>
+                    <div class="grid-3 gap-3">
+                        <div class="calc-display-box text-left">
+                            <h4 class="mb-1 text-blue">Sub-Second Speed</h4>
+                            <p class="text-secondary" style="font-size: 0.85rem;">Zero latency rendering for global operational dashboards.</p>
+                        </div>
+                        <div class="calc-display-box text-left">
+                            <h4 class="mb-1 text-gold">Zero Debt Code</h4>
+                            <p class="text-secondary" style="font-size: 0.85rem;">Strict typing, comprehensive automated testing, clean separation of concerns.</p>
+                        </div>
+                        <div class="calc-display-box text-left">
+                            <h4 class="mb-1 text-emerald">High Concurrency</h4>
+                            <p class="text-secondary" style="font-size: 0.85rem;">Scalable cloud architecture built to support peak transaction volume.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Alpha Pack Team -->
+        <section id="team" class="py-lg" style="background: rgba(255,255,255,0.01); border-top: 1px solid var(--border-color);">
+            <div class="container">
+                <div class="text-center mb-8 animate-on-scroll">
+                    <div class="badge mb-2">Leadership</div>
+                    <h2 style="font-size: 3rem;">The Alpha Pack</h2>
+                </div>
+
+                <div class="grid-4 gap-3 animate-on-scroll">
+                    <div class="bento-card text-center" style="padding: 2.5rem 1.5rem;">
+                        <div class="bento-icon" style="margin: 0 auto 1.5rem; width: 64px; height: 64px; font-size: 1.8rem; font-weight: 800; color: var(--accent-blue);">I</div>
+                        <h3 class="mb-1" style="font-size: 1.3rem;">Ian</h3>
+                        <div class="text-gold" style="font-size: 0.85rem; text-transform: uppercase; font-weight: 600;">CEO & Co-founder</div>
+                    </div>
+
+                    <div class="bento-card text-center" style="padding: 2.5rem 1.5rem;">
+                        <div class="bento-icon" style="margin: 0 auto 1.5rem; width: 64px; height: 64px; font-size: 1.8rem; font-weight: 800; color: var(--accent-gold);">S</div>
+                        <h3 class="mb-1" style="font-size: 1.3rem;">Solomon</h3>
+                        <div class="text-gold" style="font-size: 0.85rem; text-transform: uppercase; font-weight: 600;">COO & Co-founder</div>
+                    </div>
+
+                    <div class="bento-card text-center" style="padding: 2.5rem 1.5rem;">
+                        <div class="bento-icon" style="margin: 0 auto 1.5rem; width: 64px; height: 64px; font-size: 1.8rem; font-weight: 800; color: var(--accent-emerald);">A</div>
+                        <h3 class="mb-1" style="font-size: 1.3rem;">Alfred</h3>
+                        <div class="text-gold" style="font-size: 0.85rem; text-transform: uppercase; font-weight: 600;">Chief Technology Officer</div>
+                    </div>
+
+                    <div class="bento-card text-center" style="padding: 2.5rem 1.5rem;">
+                        <div class="bento-icon" style="margin: 0 auto 1.5rem; width: 64px; height: 64px; font-size: 1.8rem; font-weight: 800; color: var(--accent-purple);">M</div>
+                        <h3 class="mb-1" style="font-size: 1.3rem;">Melchizedek</h3>
+                        <div class="text-gold" style="font-size: 0.85rem; text-transform: uppercase; font-weight: 600;">Chief Strategy Officer</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer
-        style="padding: 8rem 0 4rem; background: #000; border-top: 1px solid rgba(255,255,255,0.05); color: #a1a1aa; font-size: 0.95rem;">
+    <footer class="main-footer">
         <div class="container">
             <div class="footer-grid">
-                <div>
-                    <h3
-                        style="color: #fff; font-size: 1.25rem; margin-bottom: 1.5rem; letter-spacing: 0.1em; font-weight: 800;">
-                        THE SOLIAN WOLVES SOFTWARE COMPANY</h3>
-                    <p style="max-width: 400px; line-height: 1.7; color: #777;">Engineering mission-critical software
-                        and scalable systems for visionary founders. We build the architecture that powers digital
-                        growth.</p>
+                <div class="footer-brand">
+                    <div class="nav-brand mb-2">
+                        <img src="assets/logo.jpg" alt="Solian Wolves Logo" class="nav-brand-logo">
+                        <span>THE SOLIAN WOLVES</span>
+                    </div>
+                    <p>Engineering mission-critical software and enterprise ERP systems.</p>
                 </div>
-                <div>
-                    <h4
-                        style="color: #fff; margin-bottom: 2rem; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700;">
-                        Solutions</h4>
-                    <ul style="list-style: none; padding: 0; line-height: 2.5;">
-                        <li><a href="#services" style="transition: color 0.3s;">Custom Engineering</a></li>
-                        <li><a href="#services" style="transition: color 0.3s;">Cloud Architecture</a></li>
-                        <li><a href="#services" style="transition: color 0.3s;">Technical Rescue</a></li>
+
+                <div class="footer-column">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="services.html">Full-Cycle Development</a></li>
+                        <li><a href="services.html#erp">Custom ERP Engines</a></li>
                     </ul>
                 </div>
-                <div>
-                    <h4
-                        style="color: #fff; margin-bottom: 2rem; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700;">
-                        Company</h4>
-                    <ul style="list-style: none; padding: 0; line-height: 2.5;">
-                        <li><a href="#team" style="transition: color 0.3s;">Alpha Pack</a></li>
-                        <li><a href="#contact" style="transition: color 0.3s;">Contact</a></li>
-                        <li><a href="/blog" style="transition: color 0.3s;">Blog</a></li>
+
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About The Pack</a></li>
+                        <li><a href="methodology.html">Methodology</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
-            <div
-                style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 3rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem;">
-                <div style="color: #555;">&copy; 2026 The Solian Wolves Software Company. All rights reserved.</div>
-                <div style="display: flex; gap: 3rem;">
-                    <a href="#" style="color: #555; transition: color 0.3s;">Privacy Policy</a>
-                    <a href="#" style="color: #555; transition: color 0.3s;">Terms of Service</a>
-                </div>
+
+            <div class="footer-bottom">
+                <div>&copy; 2026 The Solian Wolves Software Company. All rights reserved.</div>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="assets/main.js" defer></script>
 </body>
 

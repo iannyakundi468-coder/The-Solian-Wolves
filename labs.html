@@ -4,57 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Labs | The Solian Wolves Software Company</title>
+    <title>Alpha R&D Labs | The Solian Wolves Software Company</title>
     <meta name="description"
         content="Alpha Labs is our internal incubator for open-source engineering, developer tools, and cutting-edge software experiments.">
 
-    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap"
-        rel="stylesheet">
-
-    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/main.css">
-    <style>
-        .lab-card {
-            background: #050505;
-            border: 1px solid #333;
-            border-left: 4px solid #10b981;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            position: relative;
-            transition: all 0.3s ease;
-        }
-        .lab-card:hover {
-            border-color: #10b981;
-            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.1);
-            transform: translateX(5px);
-        }
-        .lab-code {
-            font-family: 'Fira Code', monospace;
-            background: #000;
-            padding: 1rem;
-            border-radius: 4px;
-            color: #10b981;
-            font-size: 0.85rem;
-            margin-top: 1.5rem;
-            overflow-x: auto;
-        }
-    </style>
 </head>
 
 <body>
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <!-- Navigation Header -->
     <nav class="main-nav">
-        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
-            <div style="font-weight: 700; font-size: 1.2rem; letter-spacing: -0.02em;">THE SOLIAN WOLVES SOFTWARE COMPANY</div>
-            
-            <button id="mobile-menu-btn" aria-label="Toggle Menu" style="display: none; background: transparent; border: none; color: white; cursor: pointer;">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <div class="container d-flex justify-between align-center">
+            <a href="index.html" class="nav-brand">
+                <img src="assets/logo.jpg" alt="Solian Wolves Logo" class="nav-brand-logo">
+                <span>THE SOLIAN WOLVES</span>
+            </a>
+
+            <button id="mobile-menu-btn" aria-label="Toggle Navigation Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <line x1="3" y1="12" x2="21" y2="12"></line>
                     <line x1="3" y1="6" x2="21" y2="6"></line>
                     <line x1="3" y1="18" x2="21" y2="18"></line>
@@ -62,139 +35,137 @@
             </button>
 
             <div class="nav-links">
+                <div class="nav-dropdown">
+                    <button class="nav-dropbtn">Company <span>&#9662;</span></button>
+                    <div class="nav-dropdown-content">
+                        <a href="about.html">About Pack</a>
+                        <a href="methodology.html">Engineering Methodology</a>
+                        <a href="careers.html">Careers</a>
+                    </div>
+                </div>
 
-                <div class="nav-dropdown" style="margin-left: 2rem;">
-                    <button class="nav-dropbtn" style="font-size: 0.9rem; text-transform: uppercase;">Company <span>&#9662;</span></button>
+                <div class="nav-dropdown">
+                    <button class="nav-dropbtn text-gold">Solutions <span>&#9662;</span></button>
                     <div class="nav-dropdown-content">
-                        <a href="/about">About</a>
-                        <a href="/methodology">Methodology</a>
-                        <a href="/careers">Careers</a>
+                        <a href="services.html">Services & Pricing</a>
+                        <a href="industries.html">Target Industries</a>
+                        <a href="labs.html" class="active">Alpha R&D Labs</a>
                     </div>
                 </div>
-                <div class="nav-dropdown" style="margin-left: 2rem;">
-                    <button class="nav-dropbtn" style="font-size: 0.9rem; text-transform: uppercase; color: var(--gold);">Solutions <span>&#9662;</span></button>
-                    <div class="nav-dropdown-content">
-                        <a href="/services">Services</a>
-                        <a href="/industries">Industries</a>
-                        <a href="/labs" class="active-link" style="color: var(--gold);">Alpha Labs</a>
-                    </div>
-                </div>
-                <a href="/blog" style="margin-left: 2rem; font-size: 0.9rem; text-transform: uppercase;">Blog</a>
-                <a href="/contact" class="btn btn-outline" style="padding: 0.6rem 1.8rem; margin-left: 2rem;">Contact</a>
+
+                <a href="blog.html">Technical Blog</a>
+                <a href="contact.html" class="btn btn-outline">Contact Us</a>
             </div>
         </div>
     </nav>
 
-    <!-- Labs Hero -->
-    <section class="section-padding" style="padding: 10rem 0 4rem;">
-        <div class="container">
-            <div class="animate-on-scroll" style="max-width: 800px; margin: 0 auto; text-align: center;">
-                <div class="hero-badge" style="display: inline-block; margin-bottom: 1.5rem; color: #777; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; font-family: 'Fira Code', monospace;">> init alpha-labs</div>
-                <h1 style="font-size: clamp(2.5rem, 6vw, 4.5rem); margin-bottom: 1.5rem; line-height: 1.1; font-family: 'Fira Code', monospace;">Alpha <span style="color: #10b981;">Labs</span></h1>
-                <p style="color: #a1a1aa; font-size: 1.25rem; line-height: 1.7;">
-                    The incubator. This is where our engineers contribute to open-source, build experimental developer tooling, and push the limits of modern architecture.
+    <main id="main-content">
+        <!-- Hero Header -->
+        <header class="hero" style="min-height: 45vh; padding-top: 8rem;">
+            <div class="hero-glow"></div>
+            <div class="container text-center">
+                <div class="badge badge-gold mb-3 animate-on-scroll" style="font-family: 'Fira Code', monospace;">&gt; init alpha-labs</div>
+                <h1 class="animate-on-scroll" style="font-family: 'Fira Code', monospace;">Alpha <span class="text-emerald">Labs R&amp;D</span></h1>
+                <p class="text-secondary animate-on-scroll" style="max-width: 720px; margin: 0 auto;">
+                    Our internal incubator. This is where our engineers contribute to open-source, construct developer tooling, and benchmark high-throughput microservice patterns.
                 </p>
-                <div style="margin-top: 2rem; font-family: 'Fira Code', monospace; color: #777; font-size: 0.9rem;">
-                    System Status: <span style="color: #10b981;">Online</span> | Projects: 3
+            </div>
+        </header>
+
+        <!-- Lab Projects -->
+        <section class="py-lg">
+            <div class="container" style="max-width: 950px;">
+                <div class="d-flex flex-column gap-3">
+                    
+                    <div class="bento-card animate-on-scroll" style="border-left: 4px solid var(--accent-emerald);">
+                        <div class="d-flex justify-between align-center mb-2">
+                            <h3 style="font-family: 'Fira Code', monospace; font-size: 1.6rem;">solian-cache-db</h3>
+                            <span class="badge" style="background: rgba(16, 185, 129, 0.1); border-color: rgba(16, 185, 129, 0.3); color: var(--accent-emerald);">Open Source</span>
+                        </div>
+                        <p class="text-secondary mb-3">
+                            Ultra-lightweight distributed cache written in Go. Capable of handling over 500,000 operations/sec with zero garbage collection pause spikes.
+                        </p>
+                        <div class="calc-display-box text-left" style="font-family: 'Fira Code', monospace; font-size: 0.85rem; color: var(--accent-emerald); background: #030303;">
+                            $ go get github.com/solianwolves/cache-db<br>
+                            $ cache-db --port 6379 --memory 4GB
+                        </div>
+                    </div>
+
+                    <div class="bento-card animate-on-scroll" style="border-left: 4px solid var(--accent-blue);">
+                        <div class="d-flex justify-between align-center mb-2">
+                            <h3 style="font-family: 'Fira Code', monospace; font-size: 1.6rem;">AlphaStream CLI</h3>
+                            <span class="badge">Internal Tooling</span>
+                        </div>
+                        <p class="text-secondary mb-3">
+                            Scaffolding CLI for instant deployment of microservice architectures with zero-trust networking baked in.
+                        </p>
+                        <div class="calc-display-box text-left" style="font-family: 'Fira Code', monospace; font-size: 0.85rem; color: var(--accent-blue); background: #030303;">
+                            $ npx @solianwolves/alphastream init --preset enterprise-api
+                        </div>
+                    </div>
+
+                    <div class="bento-card animate-on-scroll" style="border-left: 4px solid var(--accent-purple);">
+                        <div class="d-flex justify-between align-center mb-2">
+                            <h3 style="font-family: 'Fira Code', monospace; font-size: 1.6rem;">WolfGuard Auth Protocol</h3>
+                            <span class="badge" style="background: rgba(139, 92, 246, 0.1); border-color: rgba(139, 92, 246, 0.3); color: var(--accent-purple);">Beta</span>
+                        </div>
+                        <p class="text-secondary mb-3">
+                            Headless RBAC authentication engine designed for heavily regulated FinTech and Healthcare data streams.
+                        </p>
+                        <div class="calc-display-box text-left" style="font-family: 'Fira Code', monospace; font-size: 0.85rem; color: var(--accent-purple); background: #030303;">
+                            import { verifyToken } from '@solianwolves/wolfguard';<br>
+                            await verifyToken(req.headers.authorization, { strict: true });
+                        </div>
+                    </div>
+
                 </div>
             </div>
-        </div>
-    </section>
-
-<!-- Projects Grid -->
-    <section class="section-padding" style="padding: 2rem 0 8rem;">
-        <div class="container" style="max-width: 900px;">
-            
-            <div class="lab-card animate-on-scroll">
-                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
-                    <h3 style="font-size: 1.5rem; font-family: 'Fira Code', monospace;">solian-cache-db</h3>
-                    <span style="background: rgba(16, 185, 129, 0.1); color: #10b981; padding: 0.2rem 0.6rem; font-size: 0.7rem; border-radius: 4px; font-weight: bold; text-transform: uppercase;">Open Source</span>
-                </div>
-                <p style="color: #a1a1aa; line-height: 1.6;">An ultra-lightweight, in-memory distributed cache written in Go. Designed to sit in front of Postgres for high-frequency trading APIs, capable of 500k ops/sec.</p>
-                <div class="lab-code">
-                    $ go get github.com/solianwolves/cache-db<br>
-                    $ cache-db --port 6379 --memory 4GB
-                </div>
-                <div style="margin-top: 1.5rem;">
-                    <a href="#" style="color: #fff; font-size: 0.9rem; text-decoration: underline; font-family: 'Fira Code', monospace;">> View Repository</a>
-                </div>
-            </div>
-
-            <div class="lab-card animate-on-scroll">
-                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
-                    <h3 style="font-size: 1.5rem; font-family: 'Fira Code', monospace;">AlphaStream CLI</h3>
-                    <span style="background: rgba(59, 130, 246, 0.1); color: #3b82f6; padding: 0.2rem 0.6rem; font-size: 0.7rem; border-radius: 4px; font-weight: bold; text-transform: uppercase;">Internal Tool</span>
-                </div>
-                <p style="color: #a1a1aa; line-height: 1.6;">Our proprietary CLI tool for scaffolding enterprise-grade Next.js and Node.js microservice architectures with zero-trust networking baked in.</p>
-                <div class="lab-code">
-                    $ npx @solianwolves/alphastream init --preset enterprise-api
-                </div>
-            </div>
-
-            <div class="lab-card animate-on-scroll">
-                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
-                    <h3 style="font-size: 1.5rem; font-family: 'Fira Code', monospace;">WolfGuard Auth</h3>
-                    <span style="background: rgba(16, 185, 129, 0.1); color: #10b981; padding: 0.2rem 0.6rem; font-size: 0.7rem; border-radius: 4px; font-weight: bold; text-transform: uppercase;">Beta</span>
-                </div>
-                <p style="color: #a1a1aa; line-height: 1.6;">A headless authentication and RBAC (Role-Based Access Control) engine designed for heavily regulated industries (Healthcare, FinTech).</p>
-                <div class="lab-code">
-                    import { verifyToken } from '@solianwolves/wolfguard';<br>
-                    await verifyToken(req.headers.authorization, { strict: true });
-                </div>
-                <div style="margin-top: 1.5rem;">
-                    <a href="#" style="color: #fff; font-size: 0.9rem; text-decoration: underline; font-family: 'Fira Code', monospace;">> Read Documentation</a>
-                </div>
-            </div>
-
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer
-        style="padding: 8rem 0 4rem; background: #000; border-top: 1px solid rgba(255,255,255,0.05); color: #a1a1aa; font-size: 0.95rem;">
+    <footer class="main-footer">
         <div class="container">
             <div class="footer-grid">
-                <div>
-                    <h3
-                        style="color: #fff; font-size: 1.25rem; margin-bottom: 1.5rem; letter-spacing: 0.1em; font-weight: 800;">
-                        THE SOLIAN WOLVES SOFTWARE COMPANY</h3>
-                    <p style="max-width: 400px; line-height: 1.7; color: #777;">Engineering mission-critical software
-                        and scalable systems for visionary founders. We build the architecture that powers digital
-                        growth.</p>
+                <div class="footer-brand">
+                    <div class="nav-brand mb-2">
+                        <img src="assets/logo.jpg" alt="Solian Wolves Logo" class="nav-brand-logo">
+                        <span>THE SOLIAN WOLVES</span>
+                    </div>
+                    <p>Engineering mission-critical software, custom ERP engines, and autonomous systems.</p>
                 </div>
-                <div>
-                    <h4
-                        style="color: #fff; margin-bottom: 2rem; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700;">
-                        Solutions</h4>
-                    <ul style="list-style: none; padding: 0; line-height: 2.5;">
-                        <li><a href="/services" style="transition: color 0.3s;">Custom Engineering</a></li>
-                        <li><a href="/industries" style="transition: color 0.3s;">Industries</a></li>
-                        <li><a href="/labs" style="transition: color 0.3s;">Alpha Labs</a></li>
+
+                <div class="footer-column">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="services.html">Full-Cycle Engineering</a></li>
+                        <li><a href="services.html#erp">Custom ERP Systems</a></li>
                     </ul>
                 </div>
-                <div>
-                    <h4
-                        style="color: #fff; margin-bottom: 2rem; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700;">
-                        Company</h4>
-                    <ul style="list-style: none; padding: 0; line-height: 2.5;">
-                        <li><a href="/about" style="transition: color 0.3s;">Alpha Pack</a></li>
-                        <li><a href="/blog" style="transition: color 0.3s;">Blog</a></li>
-                        <li><a href="/contact" style="transition: color 0.3s;">Contact</a></li>
+
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About The Pack</a></li>
+                        <li><a href="methodology.html">Engineering Process</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
-            <div
-                style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 3rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem;">
-                <div style="color: #555;">&copy; 2026 The Solian Wolves Software Company. All rights reserved.</div>
-                <div style="display: flex; gap: 3rem;">
-                    <a href="#" style="color: #555; transition: color 0.3s;">Privacy Policy</a>
-                    <a href="#" style="color: #555; transition: color 0.3s;">Terms of Service</a>
-                </div>
+
+            <div class="footer-bottom">
+                <div>&copy; 2026 The Solian Wolves Software Company. All rights reserved.</div>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="assets/main.js" defer></script>
 </body>
+
 </html>

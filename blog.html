@@ -4,147 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog | The Solian Wolves Software Company</title>
+    <title>Technical Blog & Whitepapers | The Solian Wolves Software Company</title>
     <meta name="description"
-        content="Insights, strategies, and technical deep-dives on custom software development, systems architecture, and engineering from The Solian Wolves.">
+        content="Deep-dive articles on custom ERP development, high-throughput microservices, sub-second web architecture, and zero-trust engineering.">
 
-    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap"
-        rel="stylesheet">
-
-    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/main.css">
-    
-    <style>
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .blog-card {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: var(--radius-md);
-            overflow: hidden;
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            display: flex;
-            flex-direction: column;
-            backdrop-filter: blur(10px);
-        }
-
-        .blog-card:hover {
-            transform: translateY(-8px);
-            border-color: rgba(59, 130, 246, 0.3);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-        }
-
-        .blog-image {
-            width: 100%;
-            height: 220px;
-            background: #111;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .blog-image::after {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.8) 100%);
-        }
-
-        .blog-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.6s ease;
-        }
-
-        .blog-card:hover .blog-image img {
-            transform: scale(1.05);
-        }
-
-        .blog-category {
-            position: absolute;
-            bottom: 1rem;
-            left: 1.5rem;
-            background: rgba(59, 130, 246, 0.9);
-            color: #fff;
-            padding: 0.3rem 0.8rem;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            border-radius: 4px;
-            z-index: 2;
-        }
-
-        .blog-content {
-            padding: 2rem 1.5rem;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-
-        .blog-meta {
-            font-size: 0.85rem;
-            color: #777;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .blog-title {
-            font-size: 1.5rem;
-            color: #fff;
-            margin-bottom: 1rem;
-            line-height: 1.4;
-            font-family: var(--font-heading);
-            font-weight: 700;
-        }
-
-        .blog-excerpt {
-            color: #a1a1aa;
-            font-size: 1rem;
-            line-height: 1.6;
-            margin-bottom: 2rem;
-            flex-grow: 1;
-        }
-
-        .blog-read-more {
-            color: #3b82f6;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            transition: gap 0.3s ease;
-        }
-
-        .blog-card:hover .blog-read-more {
-            gap: 1rem;
-        }
-    </style>
 </head>
 
 <body>
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <!-- Navigation Header -->
     <nav class="main-nav">
-        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
-            <div style="font-weight: 700; font-size: 1.2rem; letter-spacing: -0.02em;">THE SOLIAN WOLVES SOFTWARE COMPANY</div>
-            
-            <button id="mobile-menu-btn" aria-label="Toggle Menu" style="display: none; background: transparent; border: none; color: white; cursor: pointer;">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <div class="container d-flex justify-between align-center">
+            <a href="index.html" class="nav-brand">
+                <img src="assets/logo.jpg" alt="Solian Wolves Logo" class="nav-brand-logo">
+                <span>THE SOLIAN WOLVES</span>
+            </a>
+
+            <button id="mobile-menu-btn" aria-label="Toggle Navigation Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <line x1="3" y1="12" x2="21" y2="12"></line>
                     <line x1="3" y1="6" x2="21" y2="6"></line>
                     <line x1="3" y1="18" x2="21" y2="18"></line>
@@ -152,155 +35,126 @@
             </button>
 
             <div class="nav-links">
+                <div class="nav-dropdown">
+                    <button class="nav-dropbtn">Company <span>&#9662;</span></button>
+                    <div class="nav-dropdown-content">
+                        <a href="about.html">About Pack</a>
+                        <a href="methodology.html">Engineering Methodology</a>
+                        <a href="careers.html">Careers</a>
+                    </div>
+                </div>
 
-                <div class="nav-dropdown" style="margin-left: 2rem;">
-                    <button class="nav-dropbtn" style="font-size: 0.9rem; text-transform: uppercase;">Company <span>&#9662;</span></button>
+                <div class="nav-dropdown">
+                    <button class="nav-dropbtn">Solutions <span>&#9662;</span></button>
                     <div class="nav-dropdown-content">
-                        <a href="/about">About</a>
-                        <a href="/methodology">Methodology</a>
-                        <a href="/careers">Careers</a>
+                        <a href="services.html">Services & Pricing</a>
+                        <a href="industries.html">Target Industries</a>
+                        <a href="labs.html">Alpha R&D Labs</a>
                     </div>
                 </div>
-                <div class="nav-dropdown" style="margin-left: 2rem;">
-                    <button class="nav-dropbtn" style="font-size: 0.9rem; text-transform: uppercase;">Solutions <span>&#9662;</span></button>
-                    <div class="nav-dropdown-content">
-                        <a href="/services">Services</a>
-                        <a href="/industries">Industries</a>
-                        <a href="/labs">Alpha Labs</a>
-                    </div>
-                </div>
-                <a href="/blog" class="active-link" style="margin-left: 2rem; font-size: 0.9rem; text-transform: uppercase;">Blog</a>
-                <a href="/contact" class="btn btn-outline" style="padding: 0.6rem 1.8rem; margin-left: 2rem;">Contact</a>
+
+                <a href="blog.html" class="active">Technical Blog</a>
+                <a href="contact.html" class="btn btn-outline">Contact Us</a>
             </div>
         </div>
     </nav>
 
-    <!-- Blog Header -->
-    <section id="blog-hero" class="section-padding" style="padding: 10rem 0 4rem;">
-        <div class="container">
-            <div class="animate-on-scroll" style="max-width: 800px; margin: 0 auto; text-align: center;">
-                <div class="hero-badge" style="display: inline-block; margin-bottom: 1.5rem; color: #777; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;">Alpha Insights</div>
-                <h1 style="font-size: clamp(2.5rem, 6vw, 4.5rem); margin-bottom: 1.5rem; line-height: 1.1;">The Alpha <span class="text-gradient">Intel</span></h1>
-                <p style="color: #a1a1aa; font-size: 1.25rem; line-height: 1.7;">
-                    Deep dives into software architecture, enterprise systems, and the strategies we use to engineer growth for ambitious founders.
+    <main id="main-content">
+        <!-- Hero Header -->
+        <header class="hero" style="min-height: 45vh; padding-top: 8rem;">
+            <div class="hero-glow"></div>
+            <div class="container text-center">
+                <div class="badge mb-3 animate-on-scroll">Technical Field Notes</div>
+                <h1 class="animate-on-scroll">Engineering Insights &amp; <span class="text-gradient">Architecture Papers</span></h1>
+                <p class="text-secondary animate-on-scroll" style="max-width: 720px; margin: 0 auto;">
+                    Deep-dives into enterprise systems design, database optimization, custom ERP engines, and technical debt elimination.
                 </p>
             </div>
-        </div>
-    </section>
+        </header>
 
-    <!-- Blog Posts -->
-    <section class="section-padding" style="padding: 2rem 0 8rem;">
-        <div class="container">
-            <div class="blog-grid mobile-carousel">
-                <!-- Post 1 -->
-                <article class="blog-card animate-on-scroll">
-                    <div class="blog-image">
-                        <div class="blog-category">Engineering</div>
-                        <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%); display: flex; align-items: center; justify-content: center;">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
-                        </div>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span>July 4, 2026</span>
-                            <span>&bull;</span>
-                            <span>8 min read</span>
-                        </div>
-                        <h2 class="blog-title">Why Off-the-Shelf ERPs Fail Modern Ambitious SMEs</h2>
-                        <p class="blog-excerpt">We break down the hidden costs of SaaS bloat, why generic solutions stifle workflow efficiency, and how custom systems are the new competitive moat.</p>
-                        <a href="#" class="blog-read-more">Read Article <span>&rarr;</span></a>
-                    </div>
-                </article>
+        <!-- Blog Articles Grid -->
+        <section class="py-lg">
+            <div class="container">
+                <div class="grid-3 gap-3">
+                    
+                    <article class="bento-card animate-on-scroll">
+                        <div class="badge mb-2">Systems Design</div>
+                        <h3 class="mb-2" style="font-size: 1.5rem;">Why Off-the-Shelf ERPs Fail Mid-Sized Logistics Enterprise</h3>
+                        <div class="text-secondary mb-3" style="font-size: 0.85rem;">July 2026 &bull; 8 min read</div>
+                        <p class="text-secondary mb-4">
+                            Exploring database deadlock bottlenecks in generic SaaS platforms and how bespoke event-driven architectures solve high-volume telemetry.
+                        </p>
+                        <a href="contact.html" class="bento-link">Read Whitepaper &rarr;</a>
+                    </article>
 
-                <!-- Post 2 -->
-                <article class="blog-card animate-on-scroll" style="transition-delay: 0.1s;">
-                    <div class="blog-image">
-                        <div class="blog-category">Architecture</div>
-                        <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #3730a3 0%, #0f172a 100%); display: flex; align-items: center; justify-content: center;">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-                        </div>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span>June 28, 2026</span>
-                            <span>&bull;</span>
-                            <span>12 min read</span>
-                        </div>
-                        <h2 class="blog-title">Building Scalable Microservices: A Case Study</h2>
-                        <p class="blog-excerpt">An inside look at how we architected a high-throughput transaction engine capable of handling 10,000 requests per second with zero downtime.</p>
-                        <a href="#" class="blog-read-more">Read Article <span>&rarr;</span></a>
-                    </div>
-                </article>
+                    <article class="bento-card animate-on-scroll">
+                        <div class="badge badge-gold mb-2">Performance</div>
+                        <h3 class="mb-2" style="font-size: 1.5rem;">Achieving Sub-100ms API Latency with Go &amp; Distributed Caching</h3>
+                        <div class="text-secondary mb-3" style="font-size: 0.85rem;">June 2026 &bull; 12 min read</div>
+                        <p class="text-secondary mb-4">
+                            A step-by-step benchmark breakdown of zero-allocation JSON serialization and memory-mapped cache routing.
+                        </p>
+                        <a href="contact.html" class="bento-link">Read Whitepaper &rarr;</a>
+                    </article>
 
-                <!-- Post 3 -->
-                <article class="blog-card animate-on-scroll" style="transition-delay: 0.2s;">
-                    <div class="blog-image">
-                        <div class="blog-category">Strategy</div>
-                        <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #854d0e 0%, #0f172a 100%); display: flex; align-items: center; justify-content: center;">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                        </div>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span>June 15, 2026</span>
-                            <span>&bull;</span>
-                            <span>5 min read</span>
-                        </div>
-                        <h2 class="blog-title">The True ROI of Technical Rescue Operations</h2>
-                        <p class="blog-excerpt">When legacy codebases become liabilities. Learn how we stabilize, refactor, and migrate failing projects into robust, maintainable assets.</p>
-                        <a href="#" class="blog-read-more">Read Article <span>&rarr;</span></a>
-                    </div>
-                </article>
+                    <article class="bento-card animate-on-scroll">
+                        <div class="badge mb-2">AI Integration</div>
+                        <h3 class="mb-2" style="font-size: 1.5rem;">Embedding Autonomous AI Agents into Legacy SQL Databases</h3>
+                        <div class="text-secondary mb-3" style="font-size: 0.85rem;">May 2026 &bull; 10 min read</div>
+                        <p class="text-secondary mb-4">
+                            How to safely wrap LLM tool calls around strict schema constraints with zero security risk or unauthorized data mutations.
+                        </p>
+                        <a href="contact.html" class="bento-link">Read Whitepaper &rarr;</a>
+                    </article>
+
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer
-        style="padding: 8rem 0 4rem; background: #000; border-top: 1px solid rgba(255,255,255,0.05); color: #a1a1aa; font-size: 0.95rem;">
+    <footer class="main-footer">
         <div class="container">
             <div class="footer-grid">
-                <div>
-                    <h3
-                        style="color: #fff; font-size: 1.25rem; margin-bottom: 1.5rem; letter-spacing: 0.1em; font-weight: 800;">
-                        THE SOLIAN WOLVES SOFTWARE COMPANY</h3>
-                    <p style="max-width: 400px; line-height: 1.7; color: #777;">Engineering mission-critical software
-                        and scalable systems for visionary founders. We build the architecture that powers digital
-                        growth.</p>
+                <div class="footer-brand">
+                    <div class="nav-brand mb-2">
+                        <img src="assets/logo.jpg" alt="Solian Wolves Logo" class="nav-brand-logo">
+                        <span>THE SOLIAN WOLVES</span>
+                    </div>
+                    <p>Engineering mission-critical software, custom ERP engines, and autonomous systems.</p>
                 </div>
-                <div>
-                    <h4
-                        style="color: #fff; margin-bottom: 2rem; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700;">
-                        Solutions</h4>
-                    <ul style="list-style: none; padding: 0; line-height: 2.5;">
-                        <li><a href="/services" style="transition: color 0.3s;">Custom Engineering</a></li>
-                        <li><a href="/services" style="transition: color 0.3s;">Cloud Architecture</a></li>
-                        <li><a href="/services" style="transition: color 0.3s;">Technical Rescue</a></li>
+
+                <div class="footer-column">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="services.html">Full-Cycle Engineering</a></li>
+                        <li><a href="services.html#erp">Custom ERP Systems</a></li>
                     </ul>
                 </div>
-                <div>
-                    <h4
-                        style="color: #fff; margin-bottom: 2rem; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700;">
-                        Company</h4>
-                    <ul style="list-style: none; padding: 0; line-height: 2.5;">
-                        <li><a href="/about" style="transition: color 0.3s;">Alpha Pack</a></li>
-                        <li><a href="/blog" style="transition: color 0.3s;">Blog</a></li>
-                        <li><a href="/contact" style="transition: color 0.3s;">Contact</a></li>
+
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About The Pack</a></li>
+                        <li><a href="methodology.html">Engineering Process</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
-            <div
-                style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 3rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem;">
-                <div style="color: #555;">&copy; 2026 The Solian Wolves Software Company. All rights reserved.</div>
-                <div style="display: flex; gap: 3rem;">
-                    <a href="#" style="color: #555; transition: color 0.3s;">Privacy Policy</a>
-                    <a href="#" style="color: #555; transition: color 0.3s;">Terms of Service</a>
-                </div>
+
+            <div class="footer-bottom">
+                <div>&copy; 2026 The Solian Wolves Software Company. All rights reserved.</div>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="assets/main.js" defer></script>
 </body>
+
 </html>
