@@ -451,6 +451,23 @@ button {
     overflow: hidden;
 }
 
+.hero-logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1.75rem;
+    display: block;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 35px rgba(59, 130, 246, 0.3);
+    animation: heroLogoFloat 6s ease-in-out infinite;
+}
+
+@keyframes heroLogoFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
 .hero-glow {
     position: absolute;
     top: 20%;
